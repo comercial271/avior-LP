@@ -1,0 +1,110 @@
+{
+  "handle": "@sejaavior",
+  "slides": [
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "7 DIAS, 7 FERRAMENTAS DE IA",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "impacto",
+          "texto": "DIA 1.",
+          "cor": "champanhe"
+        },
+        {
+          "papel": "titulo",
+          "texto": "O processo que só existe na sua cabeça não é um processo. É um risco."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Eu vivi isso na FOCO."
+        },
+        {
+          "papel": "apoio",
+          "texto": "A operação funcionava porque eu estava lá.\nQuando eu saía, o padrão saía comigo."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "A FERRAMENTA DE HOJE",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "manchete",
+          "texto": "ChatGPT"
+        },
+        {
+          "papel": "apoio",
+          "texto": "Não para escrever legenda.\nPara documentar a sua operação."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Faz assim:",
+          "tamanho": 54
+        },
+        {
+          "papel": "lista",
+          "texto": "1. Grave um áudio explicando uma tarefa do seu jeito, sem filtro.\n\n2. Transcreva e cole no ChatGPT.\n\n3. Peça: transforme isso em um passo a passo simples, para quem nunca fez.\n\n4. Salve onde a equipe acessa."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Em uma tarde, sai da sua cabeça o que estava preso há anos."
+        },
+        {
+          "papel": "apoio",
+          "texto": "O manual não nasce perfeito.\nNasce existindo. E isso já muda o jogo.",
+          "cor": "champanhe"
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "citacao",
+          "texto": "Empresa organizada não é a que tem um dono que lembra de tudo. É a que funciona quando o dono esquece."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Salva esse post e faz ainda hoje."
+        },
+        {
+          "papel": "apoio",
+          "texto": "Amanhã, dia 2: a ferramenta que escreve\na ata da reunião por você.",
+          "cor": "champanhe"
+        }
+      ]
+    }
+  ]
+}

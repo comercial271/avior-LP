@@ -1,0 +1,110 @@
+{
+  "handle": "@sejaavior",
+  "slides": [
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "7 DIAS, 7 FERRAMENTAS DE IA",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "impacto",
+          "texto": "DIA 2.",
+          "cor": "champanhe"
+        },
+        {
+          "papel": "titulo",
+          "texto": "Reunião que termina sem registro é reunião que vai se repetir."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Todo mundo sai achando que entendeu."
+        },
+        {
+          "papel": "apoio",
+          "texto": "Uma semana depois, cada um entendeu uma coisa.\nE a culpa nunca é de ninguém."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "A FERRAMENTA DE HOJE",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "manchete",
+          "texto": "Tactiq"
+        },
+        {
+          "papel": "apoio",
+          "texto": "Entra na reunião com você.\nSai com transcrição, resumo e tarefas."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Faz assim:",
+          "tamanho": 54
+        },
+        {
+          "papel": "lista",
+          "texto": "1. Instale a extensão no navegador.\n\n2. Faça a reunião no Meet como sempre.\n\n3. No final, pegue o resumo pronto.\n\n4. Peça a lista de tarefas com responsável e prazo, e cole no seu sistema."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Eu parei de confiar na memória. Na da equipe e na minha."
+        },
+        {
+          "papel": "apoio",
+          "texto": "O que foi combinado fica escrito.\nO que fica escrito é cobrado.",
+          "cor": "champanhe"
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "citacao",
+          "texto": "O combinado só sai barato quando o combinado fica registrado."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Salva esse post."
+        },
+        {
+          "papel": "apoio",
+          "texto": "Amanhã, dia 3: a IA que treina\nfuncionário novo por você.",
+          "cor": "champanhe"
+        }
+      ]
+    }
+  ]
+}

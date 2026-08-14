@@ -1,0 +1,129 @@
+{
+  "handle": "@sejaavior",
+  "slides": [
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "7 DIAS, 7 FERRAMENTAS DE IA",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "impacto",
+          "texto": "DIA 7.",
+          "cor": "champanhe"
+        },
+        {
+          "papel": "titulo",
+          "texto": "A última não executa tarefa. Ela pensa a operação com você."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Dado eu tinha de sobra."
+        },
+        {
+          "papel": "apoio",
+          "texto": "Planilha, relatório, extrato.\nO que eu não tinha era tempo\nde sentar e ler."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "apoio",
+          "texto": "A FERRAMENTA DE HOJE",
+          "cor": "cinza",
+          "tamanho": 26
+        },
+        {
+          "papel": "manchete",
+          "texto": "Claude"
+        },
+        {
+          "papel": "apoio",
+          "texto": "Cole a sua planilha e pergunte:\nonde está o meu gargalo?"
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Faz assim:",
+          "tamanho": 54
+        },
+        {
+          "papel": "lista",
+          "texto": "1. Exporte uma planilha que você já tem: financeiro, escala, atendimento.\n\n2. Cole no Claude e peça uma análise honesta.\n\n3. Pergunte: o que eu não estou vendo?\n\n4. Repita todo mês. Vira rotina de gestão."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Foi assim que eu parei de gerenciar por sensação."
+        },
+        {
+          "papel": "apoio",
+          "texto": "O número já estava lá.\nFaltava alguém para conversar com ele.",
+          "cor": "champanhe"
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "A série completa:",
+          "tamanho": 54
+        },
+        {
+          "papel": "lista",
+          "texto": "Dia 1. ChatGPT: documentar processos\nDia 2. Tactiq: reuniões com registro\nDia 3. NotebookLM: treinar a equipe\nDia 4. Gamma: propostas em minutos\nDia 5. Perplexity: decidir com fonte\nDia 6. Lovable: páginas sem programador\nDia 7. Claude: analisar a operação"
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {
+          "papel": "manchete",
+          "texto": "Ferramenta sem processo vira brinquedo caro.",
+          "tamanho": 64
+        },
+        {
+          "papel": "apoio",
+          "texto": "No método ÓRBITA, a Inteligência é o terceiro pilar.\nEla entra depois que Cultura e Processo existem."
+        }
+      ]
+    },
+    {
+      "tipo": "texto",
+      "blocos": [
+        {
+          "papel": "titulo",
+          "texto": "Comenta IA e eu te mando a lista com os links das 7."
+        },
+        {
+          "papel": "apoio",
+          "texto": "E salva a série para voltar\nquando precisar.",
+          "cor": "champanhe"
+        }
+      ]
+    }
+  ]
+}
