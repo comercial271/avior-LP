@@ -429,3 +429,182 @@ Os itens 1 a 9 não dependem de nenhuma decisão e cobrem todas as travas urgent
 - **As RPCs de negócio não foram executadas end-to-end** — abortam sem sessão autenticada. Suas 105
   validações internas foram lidas, não testadas.
 - **O motor `calcular-beneficios` não foi executado.** Rodá-lo grava em competência real.
+
+---
+---
+
+# FASE 1E — O DESTINO DA PESSOA (inserir ANTES da 1B)
+
+Adicionada em 2026-08-30 após investigação do problema operacional relatado: colaborador some ou
+cliente pede a troca; a operação precisa encerrar a escala para cobrir o posto; a pessoa não está
+desligada; ela fica sem escala e sem status de desligamento.
+
+## Por que esta fase vem antes da 1B
+
+Todas as outras travas impedem **valor inválido** entrar. Esta impede **estado inválido** ser criado.
+É a única do plano que fecha uma porta de produção de dado ruim, em vez de barrar dado ruim na porta.
+
+## Diagnóstico em uma frase
+
+**O sistema pergunta o que acontece com a VAGA e nunca o que acontece com a PESSOA.**
+
+`criar_movimentacao_escala` recebe `p_destino_vaga` (`sem_reposicao | abrir_contratacao |
+remanejamento`). `movimentacoes_escala` tem coluna `destino_vaga` e **não tem `destino_colaborador`**.
+O `EncerrarEscalaWizard` faz quatro perguntas — último dia, motivo, tipo, destino da vaga — e a quinta,
+condicional, é "quem assume o posto", com a lista filtrada para *excluir* quem sai. O limbo não é
+bug: é a resposta que nunca foi pedida, sem lugar no modelo para ser guardada.
+
+## Evidência de que já acontece
+
+| fato | medição |
+|---|---|
+| Matrícula 05738 (PAMELA M. RODRIGUES) | escala encerrou 2026-04-13, rescisão 2026-05-07 → **24 dias em limbo** |
+| Matrícula 07382 (VALERIA LEMOS REIS) | `inativo` **sem `rescisao_data`**, escala encerrou 2026-08-26 |
+| Movimentações no ramo que não gera nada | **8 de 15** são `alteracao_operacional` + `sem_reposicao`; **2 delas com motivo literal `PEDIDO DO CLIENTE`** |
+| Desligamentos efetivados sem o fato correspondente | **4 de 4** com `rescisao_data` NULL; **1 dessas pessoas ainda está `ativo`** |
+| Escalas encerradas fora da RPC | **70** escalas `encerrado` sem nenhuma linha em `movimentacoes_escala` |
+| Motivo "abandono" | **não existe** nas 11 opções de `motivos_alteracao`; o mais honesto é `OUTROS` |
+
+O caminho "certo" também falha: quando o operador marca `desligamento`, a RPC cria uma
+`tarefas_areas` com um **texto** ("Gerar documento rescisório — Fulano"). Ela não escreve
+`rescisao_data`, e só essa coluna dispara `auto_status_on_rescisao` para virar `inativo`. Se ninguém
+executar a tarefa à mão, a pessoa permanece `ativo` para sempre.
+
+## Decisões já tomadas
+
+1. **Bloquear** o encerramento da última escala ativa até o destino da pessoa ser declarado.
+2. **Vínculo continua `ativo`**; o estado vive em `colaboradores_sem_escala_justificativa`.
+3. **Prazo de 30 dias** antes de virar decisão obrigatória.
+
+## Por que NÃO reusar o status `afastado`
+
+Levantado e descartado com base em evidência:
+- `afastado` tem **0 linhas** e só é alcançável automaticamente por `afastamento_tipo IN
+  ('sal_maternidade','servico_militar')` — tipos que **nunca foram cadastrados** na história da base.
+- `status_pre_afastamento` é **circuito fechado**: 4 funções escrevem e leem entre si, **zero**
+  consumidores externos, **0 linhas** preenchidas. A condição de captura exige status
+  `ativo_free`/`ativo_operacional`, e `ativo_operacional` tem 0 linhas porque o `ColaboradorForm`
+  converte silenciosamente para `ativo` ao carregar.
+- Marcar alguém `afastado` não é um estado tratado: é apenas *ausência* das listas de inclusão do
+  cálculo e do alerta. Não há motivo, período obrigatório nem trilha.
+
+Reusar essa peça seria empilhar sobre um mecanismo morto. O estado fica na tabela de justificativa.
+
+## 1E.1 — A trava (mecanismo)
+
+**Não pode ser trigger comum, e não pode ser só no wizard.** São quatro rotas que encerram escala:
+o wizard (via RPC), o `EscalaForm` fora do modo replace (que encerra **em silêncio**, sem passar pela
+RPC — origem provável das 70 órfãs), `substituir_escala_atomico`, e edição direta.
+
+**Mecanismo correto:** `CREATE CONSTRAINT TRIGGER ... DEFERRABLE INITIALLY DEFERRED` em `escalas`,
+avaliando no `COMMIT`. Razões:
+- Cobre **todas** as rotas, porque vive no banco e não na tela.
+- Não dá falso positivo em `substituir_escala_atomico`, que encerra a antiga e cria a nova na mesma
+  transação — no instante intermediário o colaborador tem zero escalas ativas, e um trigger comum
+  bloquearia uma substituição legítima.
+
+**Atenção:** o banco **não tem hoje nenhum trigger postergado** (verificado: zero linhas com
+`tgdeferrable` ou `tgconstraint <> 0`). É padrão novo no projeto e precisa de teste dedicado nas
+quatro rotas, em transação revertida, antes de ir para produção.
+
+**Regra:** ao `COMMIT`, se um colaborador com status operacional ficou sem nenhuma escala
+`ativo`/`futuro` e não possui justificativa vigente nem rescisão registrada, a transação é recusada
+com mensagem que ensina o caminho.
+
+## 1E.2 — O modelo (onde a resposta é guardada)
+
+- **`movimentacoes_escala` ganha `destino_colaborador`** — a coluna que falta. Valores propostos:
+  `desaparecido | aguardando_realocacao | desligamento | afastamento | ferias`.
+- **`motivos_alteracao` ganha `ABANDONO`** (e provavelmente `TROCA A PEDIDO DO CLIENTE`). É tabela de
+  cadastro, não código — inclusão barata.
+- **`colaboradores_sem_escala_justificativa.motivo` ganha um enum companheiro.** Enum para a máquina
+  decidir prazo e alerta; o texto livre continua para a pessoa explicar. Resolve de passagem o achado
+  "campo de texto livre onde existe enum disponível".
+- **Roteamento, não duplicação:** `desligamento`, `afastamento` e `ferias` **não** criam justificativa
+  — encaminham para os fluxos que já existem. Só `desaparecido` e `aguardando_realocacao` produzem
+  estado novo. Uma pergunta, cinco destinos, zero tabelas novas.
+
+## 1E.3 — A porta (sem isto, a trava vira parede)
+
+A peça reaproveitada **existe e é inoperável hoje**:
+
+- O **único `INSERT`** da tabela em todo o sistema está em `src/components/AlertasDirecionados.tsx`,
+  um modal global que **aparece sozinho**. Não há rota, menu ou botão em lugar nenhum.
+- Ele só aparece para **3 UUIDs cravados no código** da edge function
+  (`const DESTINATARIOS = [...] // Dargiele, Glaucia, Vera`). Quem não está na lista **nunca**
+  consegue justificar, mesmo sendo admin.
+- Políticas de `UPDATE` e `DELETE` existem na migração e **nenhuma linha de código as chama**. Não há
+  listagem, edição, renovação nem histórico. Há um registro `"teste teste"` em produção que nenhuma
+  tela consegue exibir ou remover. Não há `UNIQUE`: a matrícula 07161 tem duas justificativas para a
+  mesma competência.
+- `valido_ate_competencia` nasce com default no dia 1º do **mês corrente** — a justificativa morre na
+  virada do mês. Para quem some dia 28, são dois dias. **Não é o prazo de 30 dias decidido.**
+- **Ninguém avisa que venceu.** Não há renovação, só re-justificação: no mês seguinte o operador
+  digita o motivo inteiro de novo, e a linha antiga fica órfã.
+- O **motivo nunca é exibido** no pré-cálculo (a consulta traz só `colaborador_id, id`). Quem calcula
+  vê "justificado" e nunca sabe por quê.
+
+**Entregável:** tela real de justificativa — registrar, listar, editar, renovar, encerrar, com
+histórico — alcançável **a partir do ponto onde o operador está travado** (hoje, no
+`PreCheckCalculoDialog`, o botão de calcular não é desabilitado: ele **não existe no DOM**, e o texto
+de orientação manda "cadastrar escalas faltantes" sem nunca mencionar justificar).
+
+## 1E.4 — O alinhamento (senão a trava cria casos insolúveis)
+
+Existem **dois detectores de "sem escala" que não concordam**:
+
+| | `alertar-sem-escala` (cria o alerta) | `preCheckCalculo` (trava o cálculo) |
+|---|---|---|
+| status | `ativo, ativo_operacional, ativo_free` | `ativo, ativo_free` |
+| escalas | `ativo, futuro` — sem janela de data | `ativo, futuro, encerrado` — com interseção da quinzena |
+| competência de referência | mês de hoje | competência sendo calculada |
+
+Consequência: **quem o pré-check acusa e o alerta não acusa não tem como ser justificado por interface
+nenhuma** — trava permanente, por construção. Unificar os dois critérios numa única função é
+pré-requisito da trava, não melhoria opcional.
+
+## 1E.5 — Bugs vizinhos que aparecem de brinde
+
+- **`substituir_escala_atomico` esquece quem sai.** A última linha usa
+  `PERFORM recalcular_lotacao_colaborador(COALESCE(v_nova.colaborador_id, v_e.colaborador_id))`, que
+  resolve para o colaborador **novo**. Quando a pessoa muda, quem saiu nunca tem a lotação recalculada
+  e fica com as horas da escala antiga penduradas em `colaboradores_lotacao`. Compare com
+  `criar_movimentacao_escala`, que chama para os dois lados.
+- **A tarefa do DP não cria o fato.** Ver evidência acima: 4 de 4 desligamentos efetivados sem
+  `rescisao_data`.
+- **Duas telas brigando no `ColaboradorForm`.** O Select de status escreve `colaboradores.status`
+  direto; a aba "Rescisão/Afastamentos" faz upsert que dispara `trg_sync_status_from_ra`, que
+  **sobrescreve** o que o Select escreveu. Ambos no mesmo submit.
+- **`ativo_operacional` é rebaixado em silêncio:**
+  `setStatus(colab.status === "ativo_operacional" ? "ativo" : ...)`. Abrir e salvar converte. A edge
+  function e a `ColaboradoresList` ainda esperam esse status.
+- **`afastamento_tipo = 'desligado'`** tem 22 linhas, **todas com `rescisao_data`**. O operador usa o
+  campo de *tipo de afastamento* para dizer "isto é uma rescisão" — o mesmo conceito escrito em quatro
+  camadas. Nenhuma função do banco lê esse valor. Candidato a remoção na Fase 2.
+- **Código morto em produção:** o ramo `revisao_escalas_colaborador` de `AlertasDirecionados.tsx` tem
+  datas de julho/2026 cravadas e um botão "Encerrar selecionadas em 14/07/2026". Nenhum código cria
+  esse tipo de alerta. Entra na Fase 3.
+
+## 1E.6 — Os casos existentes
+
+As duas pessoas hoje em desacordo (05738 e 07382) e as 70 escalas encerradas sem movimentação **não
+são corrigidas automaticamente**. Vão para a tela de pendências (item 5.1), com o estado descrito, e
+uma pessoa decide. Respeita o princípio de não mexer em dado inserido pelo usuário.
+
+## Critério de aceite da Fase 1E
+
+1. Bateria E2E em transação revertida cobrindo as **quatro** rotas de encerramento: nenhuma consegue
+   deixar colaborador sem escala e sem destino declarado.
+2. `substituir_escala_atomico` continua funcionando (a trava postergada não pode dar falso positivo).
+3. O operador travado no pré-cálculo consegue resolver **sem** depender de pop-up e sem estar numa
+   lista cravada em código.
+4. Os dois detectores de "sem escala" passam a usar a mesma função.
+5. Nenhuma linha histórica alterada.
+
+## Decisões pendentes desta fase
+
+- **Os 3 UUIDs cravados na edge function** — substituir por papel (`admin`/`operador`) ou por tabela
+  de destinatários configurável? Recomendo papel: é o mecanismo que o projeto já usa em todo o RLS.
+- **Os valores de `destino_colaborador`** — a lista proposta cobre a operação de vocês ou falta caso?
+- **O registro `"teste teste"` e a justificativa duplicada da 07161** — remover ou manter como
+  histórico?
