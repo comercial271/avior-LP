@@ -164,6 +164,19 @@ daqui para frente. Não renomear as antigas — é dado de auditoria.
 
 ## 1D — A cascata da hora invertida (a mais importante da fase)
 
+> **STATUS: APLICADO em 2026-08-30** — `migracoes/FASE-1D-cascata-hora-invertida.sql`
+>
+> **Correção do diagnóstico:** o caso que eu usei como prova (`ter 09:00-11:00` contra um
+> turno `ter 18:00→08:00`) **não é conflito** — a trigger acertou ao aceitá-lo. O furo real,
+> confirmado por teste, era não enxergar sobreposição *dentro* do turno noturno
+> (`ter 20:00-22:00`) nem o transbordo para a madrugada seguinte (`qua 06:00-10:00`).
+>
+> A solução aplicada é a que estava desenhada: **não** um `CHECK (fim > inicio)`, e sim a
+> normalização da travessia de meia-noite numa linha do tempo semanal, comparando
+> intervalos de verdade. Antes de aplicar, verifiquei que **zero dos 41 pares de escalas
+> vigentes** passaria a conflitar. Bateria de 8 casos passou em produção, incluindo
+> regressão da detecção diurna e da paridade 12x36.
+
 **O problema, confirmado por teste:** o sistema aceita `seg_inicio = 18:00, seg_fim = 08:00`; calcula
 e grava isso como jornada de 13h (`horas_semanais = 17.00`); e essa escala fica **invisível** para a
 trigger de sobreposição, porque `check_escala_overlap` compara horários crus e `09:00 < 08:00` é
