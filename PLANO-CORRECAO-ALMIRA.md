@@ -117,6 +117,21 @@ nenhuma linha alterada.
 
 ## 1B — As 3 travas com dado legado
 
+> **STATUS: APLICADO em 2026-08-30** — `migracoes/FASE-1B-datas-legadas.sql`
+>
+> **Correção do escopo:** eram 3 travas no papel, mas `escalas_data_fim_apos_inicio`
+> **já existia antes deste trabalho**, criada `NOT VALID` por outra pessoa (conferido em
+> `pg_constraint`). Só duas eram minhas, e as duas estavam faltando — eu havia dito que a
+> fase inteira dependia de decisão sua, o que era falso. O que dependia de decisão era o
+> **destino das linhas legadas**, não a existência da trava.
+>
+> Aplicadas: `chk_colab_operacional_apos_admissao` (`NOT VALID`) e a trigger
+> `trg_validar_rescisao_apos_admissao` (`BEFORE INSERT OR UPDATE OF rescisao_data,
+> colaborador_id`, não revalida o existente). Bateria 5/5 em `BEGIN…ROLLBACK` contra os
+> objetos vivos, incluindo o caso que prova que a linha legada continua editável nas outras
+> colunas. Contagem intacta: 99 colaboradores, 99 linhas de rescisão/afastamento.
+> CHECKs em `public`: 62 → 63.
+
 Aqui mora a regra "não mexer em dado do usuário".
 
 **`escalas.data_fim >= data_inicio`** — a constraint já existe, criada `NOT VALID`. Ela **já barra
