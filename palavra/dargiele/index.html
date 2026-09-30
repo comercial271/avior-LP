@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uma Palavra · Apresentadora</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: uma coluna para celular; ranking primeiro, nuvem depois. */
+  :root {
+    --bg: #0f1a33;
+    --bg-2: #16213d;
+    --fg: #f5efe4;
+    --muted: #a7b0c4;
+    --border: #2b3856;
+    --amber: #f2a44a;
+    --amber-ink: #1a1408;
+    --coral: #e8785a;
+    --danger: #ff7b6b;
+    --display: "Fraunces", ui-serif, Georgia, serif;
+    --sans: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(60% 55% at 15% 8%, rgba(214, 120, 56, .28), transparent 70%),
+      radial-gradient(55% 50% at 88% 92%, rgba(190, 70, 50, .22), transparent 72%);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 20px 96px; display: flex; flex-direction: column; gap: 22px; }
+  .eyebrow { margin: 0; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--amber); font-weight: 600; }
+  h1 { margin: 12px 0 0; font-family: var(--display); font-weight: 600; font-size: clamp(1.5rem, 6vw, 2.1rem); line-height: 1.15; text-wrap: balance; }
+  h2 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 1.25rem; }
+  .total { margin: 0; color: var(--muted); font-size: 16px; }
+  .total strong { font-family: var(--display); font-size: 2rem; color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .cartao { border: 1px solid var(--border); border-radius: 22px; background: rgba(22, 33, 61, .6); padding: 18px; }
+  .ranking { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .linha { display: grid; grid-template-columns: 1.6em 1fr auto; gap: 10px; align-items: center; }
+  .pos { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .pal { min-width: 0; }
+  .pal .nome { font-weight: 600; font-size: 17px; overflow-wrap: anywhere; }
+  .barra { height: 6px; border-radius: 999px; background: rgba(255,255,255,.08); margin-top: 6px; overflow: hidden; }
+  .barra i { display: block; height: 100%; width: 0; background: var(--muted); border-radius: 999px; transition: width .6s cubic-bezier(.22,1,.36,1); }
+  .linha.top .barra i { background: var(--amber); }
+  .linha.top .nome { color: var(--amber); }
+  .num { font-family: var(--display); font-size: 1.35rem; font-weight: 600; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .vazio { color: var(--muted); font-size: 15px; margin: 12px 0 0; }
+  .nuvem { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 18px; margin-top: 14px; }
+  .nuvem span { font-family: var(--display); font-weight: 600; line-height: 1; animation: entrar .6s both; }
+  @keyframes entrar { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .nuvem span { animation: none; } }
+  .acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+  button { font-family: var(--sans); cursor: pointer; }
+  .btn { border: 1px solid var(--border); background: rgba(22,33,61,.8); color: var(--fg); border-radius: 14px; padding: 12px 16px; font-weight: 600; font-size: 15px; }
+  .btn.primario { background: var(--amber); color: var(--amber-ink); border-color: var(--amber); }
+  .btn.perigo { color: var(--danger); border-color: rgba(255,123,107,.5); }
+  .btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+  .link-box { font-size: 15px; color: var(--muted); overflow-wrap: anywhere; }
+  .link-box b { color: var(--fg); }
+  .status { margin: 0; font-size: 13px; color: var(--muted); }
+  .engrenagem { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: rgba(22,33,61,.9); color: var(--muted); display: grid; place-items: center; }
+  .sobre { position: fixed; inset: 0; background: rgba(15,26,51,.85); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 10; }
+  .caixa { width: 100%; max-width: 420px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px; }
+  .caixa header { display: flex; justify-content: space-between; align-items: center; }
+  .fechar { background: none; border: 0; color: var(--muted); font-size: 14px; }
+  textarea, input[type=text], input[type=password] { width: 100%; border: 1px solid var(--border); border-radius: 14px; background: var(--bg); color: var(--fg); font: 500 16px var(--sans); padding: 12px 14px; outline: none; }
+  textarea:focus, input:focus { border-color: var(--amber); }
+  .pin { text-align: center; font-size: 28px; letter-spacing: .5em; padding: 16px; }
+  label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
+  .gate { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 24px 20px; max-width: 420px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<section id="gate" class="gate" hidden>
+  <p class="eyebrow">Cuidar • Conectar • Crescer</p>
+  <h1>Área da apresentadora</h1>
+  <p class="total" style="font-size:14px">Digite o PIN para ver as respostas.</p>
+  <form id="form-pin">
+    <input id="pin" class="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="one-time-code" aria-label="PIN de 4 dígitos" placeholder="••••">
+    <button class="btn primario" type="submit" style="width:100%;margin-top:12px">Entrar</button>
+    <p class="status" id="pin-erro" role="alert" style="margin-top:10px" hidden>PIN incorreto.</p>
+  </form>
+</section>
+
+<main id="painel" hidden>
+  <header>
+    <p class="eyebrow">Cuidar • Conectar • Crescer · Dinâmica: Uma Palavra</p>
+    <h1 id="pergunta">Em uma palavra, como você está se sentindo?</h1>
+  </header>
+
+  <p class="total"><strong id="total">0</strong> <span id="total-label">pessoas responderam</span></p>
+
+  <section class="cartao" aria-label="Ranking das palavras">
+    <h2>Palavras mais repetidas</h2>
+    <ol class="ranking" id="ranking"></ol>
+    <p class="vazio" id="vazio">Nenhuma resposta ainda. Compartilhe o link no chat da live.</p>
+  </section>
+
+  <section class="cartao" aria-label="Nuvem de palavras" id="cartao-nuvem" hidden>
+    <h2>Nuvem</h2>
+    <div class="nuvem" id="nuvem"></div>
+  </section>
+
+  <section class="cartao">
+    <h2>Link para a plateia</h2>
+    <p class="link-box" style="margin:10px 0 12px">Cole no chat da live: <b id="link-texto"></b></p>
+    <div class="acoes">
+      <button class="btn primario" id="copiar" type="button">Copiar link para o chat da live</button>
+    </div>
+    <p class="status" id="status" style="margin-top:12px">Atualiza sozinho a cada 3 segundos.</p>
+  </section>
+</main>
+
+<button class="engrenagem" id="abrir-painel" type="button" aria-label="Abrir painel de controle" hidden>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6 1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+</button>
+
+<div class="sobre" id="controle" hidden>
+  <div class="caixa" role="dialog" aria-labelledby="controle-titulo" aria-modal="true">
+    <header>
+      <h2 id="controle-titulo">Painel de controle</h2>
+      <button class="fechar" id="fechar-painel" type="button">Fechar</button>
+    </header>
+    <label>Pergunta da rodada
+      <textarea id="edit-pergunta" rows="3" maxlength="200"></textarea>
+    </label>
+    <button class="btn primario" id="salvar-pergunta" type="button">Salvar pergunta</button>
+    <button class="btn" id="nova-rodada" type="button">Nova rodada (zera a contagem, mantém o histórico)</button>
+    <button class="btn perigo" id="apagar" type="button">Apagar respostas desta rodada</button>
+    <p class="status" id="aviso"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var URL_BASE = "https://svhraqmypbpiyzbowdga.supabase.co/rest/v1";
+  var CHAVE = "sb_publishable_P9_GVnEmjOHgwP_hFIX33g_WYA0hMFB";
+  var PIN = "2026"; // proteção simples, só no front; não compartilhe este link.
+  var PERGUNTA_PADRAO = "Em uma palavra, como você está se sentindo?";
+  var LINK_PLATEIA = location.origin + location.pathname.replace(/dargiele\/?(index\.html)?$/, "");
+  var INTERVALO = 3000;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var sessao = null;
+  var ultimaAssinatura = "";
+  var confirmarApagar = false;
+
+  function api(caminho, opcoes) {
+    opcoes = opcoes || {};
+    var headers = { "apikey": CHAVE, "Content-Type": "application/json" };
+    if (opcoes.headers) for (var k in opcoes.headers) headers[k] = opcoes.headers[k];
+    return fetch(URL_BASE + caminho, { method: opcoes.method || "GET", headers: headers, body: opcoes.body })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text().then(function (t) { return t ? JSON.parse(t) : null; });
+      });
+  }
+  function ler(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function gravar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  // ---- PIN ----
+  function liberar() {
+    $("gate").hidden = true;
+    $("painel").hidden = false;
+    $("abrir-painel").hidden = false;
+    $("link-texto").textContent = LINK_PLATEIA.replace(/^https?:\/\//, "");
+    atualizar();
+    setInterval(atualizar, INTERVALO);
+  }
+  if (ler("uma-palavra:pin-ok") === "1") liberar(); else $("gate").hidden = false;
+  $("form-pin").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if ($("pin").value === PIN) { gravar("uma-palavra:pin-ok", "1"); liberar(); }
+    else { $("pin-erro").hidden = false; $("pin").value = ""; $("pin").focus(); }
+  });
+
+  // ---- dados ----
+  function agrupar(palavras) {
+    var mapa = {};
+    palavras.forEach(function (p) {
+      var g = mapa[p.palavra_normalizada] || (mapa[p.palavra_normalizada] = { contagem: 0, formas: {} });
+      g.contagem++;
+      g.formas[p.palavra_original] = (g.formas[p.palavra_original] || 0) + 1;
+    });
+    return Object.keys(mapa).map(function (chave) {
+      var g = mapa[chave];
+      var exibicao = Object.keys(g.formas).sort(function (a, b) { return g.formas[b] - g.formas[a]; })[0];
+      return { chave: chave, exibicao: exibicao, contagem: g.contagem };
+    }).sort(function (a, b) { return b.contagem - a.contagem || a.exibicao.localeCompare(b.exibicao); });
+  }
+
+  function render(grupos, total) {
+    $("total").textContent = total;
+    $("total-label").textContent = total === 1 ? "pessoa respondeu" : "pessoas responderam";
+    var max = grupos.length ? grupos[0].contagem : 1;
+
+    var ol = $("ranking");
+    ol.innerHTML = "";
+    grupos.forEach(function (g, i) {
+      var li = document.createElement("li");
+      li.className = "linha" + (i < 3 ? " top" : "");
+      var pos = document.createElement("span"); pos.className = "pos"; pos.textContent = i + 1;
+      var pal = document.createElement("div"); pal.className = "pal";
+      var nome = document.createElement("div"); nome.className = "nome"; nome.textContent = g.exibicao;
+      var barra = document.createElement("div"); barra.className = "barra";
+      var fill = document.createElement("i"); fill.style.width = Math.round(g.contagem / max * 100) + "%";
+      barra.appendChild(fill); pal.appendChild(nome); pal.appendChild(barra);
+      var num = document.createElement("span"); num.className = "num"; num.textContent = g.contagem;
+      li.appendChild(pos); li.appendChild(pal); li.appendChild(num);
+      ol.appendChild(li);
+    });
+    $("vazio").hidden = grupos.length > 0;
+
+    var nuvem = $("nuvem");
+    nuvem.innerHTML = "";
+    $("cartao-nuvem").hidden = grupos.length === 0;
+    grupos.slice().sort(function (a, b) { return a.chave.localeCompare(b.chave); }).forEach(function (g) {
+      var peso = g.contagem / max;
+      var s = document.createElement("span");
+      s.textContent = g.exibicao;
+      s.style.fontSize = (1.05 + peso * 1.9) + "rem";
+      s.style.color = peso > .75 ? "var(--amber)" : peso > .4 ? "var(--coral)" : "var(--fg)";
+      s.style.opacity = String(.6 + peso * .4);
+      nuvem.appendChild(s);
+    });
+  }
+
+  function atualizar() {
+    return api("/sessoes?select=id,pergunta&ativa=eq.true&order=created_at.desc&limit=1")
+      .then(function (linhas) {
+        var s = linhas && linhas[0];
+        if (!s) throw new Error("sem sessão ativa");
+        sessao = s;
+        $("pergunta").textContent = s.pergunta || PERGUNTA_PADRAO;
+        return api("/palavras?select=palavra_original,palavra_normalizada&sessao_id=eq." + s.id + "&order=created_at.asc");
+      })
+      .then(function (palavras) {
+        var assinatura = palavras.length + ":" + palavras.map(function (p) { return p.palavra_normalizada; }).join("|");
+        if (assinatura !== ultimaAssinatura) { ultimaAssinatura = assinatura; render(agrupar(palavras), palavras.length); }
+        $("status").textContent = "Atualizado às " + new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) + ". Atualiza sozinho a cada 3 segundos.";
+      })
+      .catch(function () {
+        $("status").textContent = "Sem conexão com o banco agora. Tentando de novo…";
+      });
+  }
+
+  // ---- copiar link ----
+  $("copiar").addEventListener("click", function () {
+    var btn = this;
+    var feito = function () { btn.textContent = "Copiado!"; setTimeout(function () { btn.textContent = "Copiar link para o chat da live"; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(LINK_PLATEIA).then(feito, function () { selecionarLink(); });
+    } else { selecionarLink(); }
+  });
+  function selecionarLink() {
+    var r = document.createRange(); r.selectNodeContents($("link-texto"));
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }
+
+  // ---- painel de controle ----
+  $("abrir-painel").addEventListener("click", function () {
+    $("edit-pergunta").value = sessao ? sessao.pergunta : PERGUNTA_PADRAO;
+    $("aviso").textContent = ""; confirmarApagar = false; $("apagar").textContent = "Apagar respostas desta rodada";
+    $("controle").hidden = false;
+  });
+  $("fechar-painel").addEventListener("click", function () { $("controle").hidden = true; });
+
+  $("salvar-pergunta").addEventListener("click", function () {
+    if (!sessao) return;
+    var texto = $("edit-pergunta").value.trim() || PERGUNTA_PADRAO;
+    api("/sessoes?id=eq." + sessao.id, { method: "PATCH", headers: { "Prefer": "return=minimal" }, body: JSON.stringify({ pergunta: texto }) })
+      .then(function () { $("aviso").textContent = "Pergunta atualizada."; return atualizar(); })
+      .catch(function () { $("aviso").textContent = "Não foi possível salvar."; });
+  });
+
+  $("nova-rodada").addEventListener("click", function () {
+    var texto = $("edit-pergunta").value.trim() || PERGUNTA_PADRAO;
+    var desativar = sessao
+      ? api("/sessoes?id=eq." + sessao.id, { method: "PATCH", headers: { "Prefer": "return=minimal" }, body: JSON.stringify({ ativa: false }) })
+      : Promise.resolve();
+    desativar
+      .then(function () { return api("/sessoes", { method: "POST", headers: { "Prefer": "return=minimal" }, body: JSON.stringify({ pergunta: texto, ativa: true }) }); })
+      .then(function () { ultimaAssinatura = ""; $("aviso").textContent = "Nova rodada iniciada."; return atualizar(); })
+      .catch(function () { $("aviso").textContent = "Não foi possível criar a rodada."; });
+  });
+
+  $("apagar").addEventListener("click", function () {
+    if (!sessao) return;
+    if (!confirmarApagar) { confirmarApagar = true; this.textContent = "Tem certeza? Toque de novo para apagar"; return; }
+    var btn = this;
+    api("/palavras?sessao_id=eq." + sessao.id, { method: "DELETE", headers: { "Prefer": "return=minimal" } })
+      .then(function () { ultimaAssinatura = ""; $("aviso").textContent = "Respostas desta rodada apagadas."; return atualizar(); })
+      .catch(function () { $("aviso").textContent = "Não foi possível apagar."; })
+      .then(function () { confirmarApagar = false; btn.textContent = "Apagar respostas desta rodada"; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uma Palavra · Cuidar, Conectar, Crescer</title>
+<meta name="description" content="Em uma palavra, como você está se sentindo? Resposta anônima, leva dez segundos.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: uma coluna, tudo cabe em uma tela de celular sem rolar. */
+  :root {
+    --bg: #0f1a33;
+    --bg-2: #16213d;
+    --fg: #f5efe4;
+    --muted: #a7b0c4;
+    --border: #2b3856;
+    --amber: #f2a44a;
+    --amber-ink: #1a1408;
+    --coral: #e8785a;
+    --danger: #ff7b6b;
+    --display: "Fraunces", ui-serif, Georgia, serif;
+    --sans: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(60% 55% at 15% 8%, rgba(214, 120, 56, .28), transparent 70%),
+      radial-gradient(55% 50% at 88% 92%, rgba(190, 70, 50, .22), transparent 72%);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    padding: 24px 20px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  .anon { margin: 0; color: var(--muted); font-size: 14px; }
+  form { display: flex; flex-direction: column; gap: 12px; }
+  input[type=text] {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--bg-2);
+    color: var(--fg);
+    font: 600 24px/1.2 var(--sans);
+    text-align: center;
+    padding: 18px 16px;
+    outline: none;
+  }
+  input[type=text]::placeholder { color: var(--muted); font-weight: 400; }
+  input[type=text]:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(242, 164, 74, .25); }
+  .hint { margin: 0; text-align: center; font-size: 12px; color: var(--muted); }
+  .chips-title { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 1px solid var(--border);
+    background: rgba(22, 33, 61, .7);
+    color: var(--fg);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font: 500 14px var(--sans);
+    cursor: pointer;
+  }
+  .chip:hover, .chip:focus-visible { border-color: var(--amber); outline: none; }
+  .chip[aria-pressed="true"] { background: var(--amber); color: var(--amber-ink); border-color: var(--amber); }
+  button.primary {
+    width: 100%;
+    border: 0;
+    border-radius: 18px;
+    background: var(--amber);
+    color: var(--amber-ink);
+    font: 700 18px var(--sans);
+    padding: 18px;
+    cursor: pointer;
+  }
+  button.primary:disabled { opacity: .55; cursor: default; }
+  .erro { margin: 0; text-align: center; color: var(--danger); font-size: 14px; }
+  .obrigada { text-align: center; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .palavra-enviada {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(2.6rem, 14vw, 4rem);
+    line-height: 1;
+    color: var(--amber);
+    overflow-wrap: anywhere;
+  }
+  .link-sutil {
+    background: none; border: 0; color: var(--muted);
+    text-decoration: underline dotted; text-underline-offset: 4px;
+    font: 500 14px var(--sans); cursor: pointer;
+  }
+  .entrar { animation: entrar .6s cubic-bezier(.22, 1, .36, 1) both; }
+  @keyframes entrar { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .entrar { animation: none; } }
+  @media (max-height: 640px) {
+    main { gap: 12px; padding: 16px 18px; }
+    input[type=text] { padding: 14px; font-size: 20px; }
+    button.primary { padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<main id="app">
+  <section id="tela-form">
+    <p class="eyebrow">Cuidar • Conectar • Crescer</p>
+    <h1 id="pergunta" style="margin-top:14px">Em uma palavra, como você está se sentindo?</h1>
+    <p class="anon" style="margin-top:10px">Não precisa colocar o nome. É anônimo.</p>
+
+    <form id="form" style="margin-top:20px" novalidate>
+      <input id="campo" type="text" maxlength="30" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="sua palavra" aria-label="Sua palavra">
+      <p class="hint">Apenas uma palavra, até 30 caracteres.</p>
+      <p class="chips-title">Pode ser, por exemplo:</p>
+      <div class="chips" id="chips" role="group" aria-label="Sugestões"></div>
+      <button class="primary" id="enviar" type="submit">Enviar</button>
+      <p class="erro" id="erro" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <section id="tela-obrigada" class="obrigada" hidden>
+    <div class="entrar">
+      <p class="eyebrow">Cuidar • Conectar • Crescer</p>
+      <h1 style="margin-top:14px">Obrigada por compartilhar.</h1>
+      <p class="anon" style="margin-top:10px">Sua palavra foi registrada e vai ajudar a começar a live.</p>
+    </div>
+    <p class="palavra-enviada entrar" id="palavra-enviada"></p>
+    <button class="link-sutil" id="outra" type="button">Enviar outra palavra</button>
+  </section>
+</main>
+
+<script>
+(function () {
+  // Mesmo banco do app "Palavra Viva" no Lovable Cloud. A chave publicável é
+  // pública por desenho; o acesso é controlado pelas políticas RLS do banco.
+  var URL_BASE = "https://svhraqmypbpiyzbowdga.supabase.co/rest/v1";
+  var CHAVE = "sb_publishable_P9_GVnEmjOHgwP_hFIX33g_WYA0hMFB";
+  var PERGUNTA_PADRAO = "Em uma palavra, como você está se sentindo?";
+  var SUGESTOES = ["Motivada", "Cansada", "Ansiosa", "Confiante", "Insegura",
+                   "Esperançosa", "Desafiada", "Curiosa", "Preocupada", "Tranquila"];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var sessao = null;
+
+  function api(caminho, opcoes) {
+    opcoes = opcoes || {};
+    var headers = { "apikey": CHAVE, "Content-Type": "application/json" };
+    if (opcoes.headers) for (var k in opcoes.headers) headers[k] = opcoes.headers[k];
+    return fetch(URL_BASE + caminho, { method: opcoes.method || "GET", headers: headers, body: opcoes.body })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text().then(function (t) { return t ? JSON.parse(t) : null; });
+      });
+  }
+
+  // trim + minúsculas + sem acentos: "Confiança" e "confianca" contam juntas.
+  function normalizar(t) {
+    return t.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-");
+  }
+  function sanitizar(t) {
+    return t.replace(/\s+/g, "-").slice(0, 30);
+  }
+  function chaveLocal(id) { return "uma-palavra:" + id; }
+  function ler(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function gravar(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
+
+  function mostrarObrigada(palavra) {
+    $("palavra-enviada").textContent = palavra;
+    $("tela-form").hidden = true;
+    $("tela-obrigada").hidden = false;
+  }
+  function mostrarForm() {
+    $("tela-obrigada").hidden = true;
+    $("tela-form").hidden = false;
+    $("campo").value = "";
+    marcarChip(null);
+    $("campo").focus();
+  }
+  function marcarChip(palavra) {
+    var botoes = $("chips").querySelectorAll(".chip");
+    for (var i = 0; i < botoes.length; i++) {
+      botoes[i].setAttribute("aria-pressed", botoes[i].textContent === palavra ? "true" : "false");
+    }
+  }
+
+  SUGESTOES.forEach(function (p) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = p; b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function () { $("campo").value = p; marcarChip(p); $("campo").focus(); });
+    $("chips").appendChild(b);
+  });
+  $("campo").addEventListener("input", function () {
+    this.value = sanitizar(this.value);
+    marcarChip(this.value);
+  });
+
+  function carregarSessao() {
+    return api("/sessoes?select=id,pergunta&ativa=eq.true&order=created_at.desc&limit=1")
+      .then(function (linhas) {
+        var s = linhas && linhas[0];
+        if (!s) return;
+        var trocou = sessao && sessao.id !== s.id;
+        sessao = s;
+        $("pergunta").textContent = s.pergunta || PERGUNTA_PADRAO;
+        var salva = ler(chaveLocal(s.id));
+        if (salva && $("tela-form").hidden === false && !trocou) mostrarObrigada(salva);
+        if (trocou) { salva ? mostrarObrigada(salva) : mostrarForm(); }
+      })
+      .catch(function () { /* mantém a pergunta padrão já na tela */ });
+  }
+
+  $("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var erro = $("erro");
+    erro.hidden = true;
+    var limpa = sanitizar($("campo").value).replace(/^-+|-+$/g, "");
+    if (limpa.length < 2) { erro.textContent = "Escreva uma palavra com pelo menos 2 letras."; erro.hidden = false; return; }
+    if (!sessao) { erro.textContent = "Ainda carregando a pergunta. Tente de novo em instantes."; erro.hidden = false; carregarSessao(); return; }
+    var btn = $("enviar");
+    btn.disabled = true; btn.textContent = "Enviando…";
+    api("/palavras", {
+      method: "POST",
+      headers: { "Prefer": "return=minimal" },
+      body: JSON.stringify({ sessao_id: sessao.id, palavra_original: limpa, palavra_normalizada: normalizar(limpa) })
+    }).then(function () {
+      gravar(chaveLocal(sessao.id), limpa);
+      mostrarObrigada(limpa);
+    }).catch(function () {
+      erro.textContent = "Não conseguimos enviar sua palavra. Tente de novo."; erro.hidden = false;
+    }).then(function () {
+      btn.disabled = false; btn.textContent = "Enviar";
+    });
+  });
+
+  $("outra").addEventListener("click", function () {
+    if (sessao) gravar(chaveLocal(sessao.id), null);
+    mostrarForm();
+  });
+
+  carregarSessao();
+  setInterval(carregarSessao, 15000);
+})();
+</script>
+</body>
+</html>
