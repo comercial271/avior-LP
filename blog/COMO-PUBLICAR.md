@@ -12,4 +12,4 @@
    O primeiro card (`post featured`) é o destaque do topo: coloque nele o artigo mais recente.
 4. Se quiser, atualize o "Continue lendo" no fim dos outros artigos.
 
-A chamada no fim de cada artigo leva para `/diagnostico/` (LP do diagnóstico gratuito).
+A chamada no fim de cada artigo abre o formulário de diagnóstico gratuito da página inicial (`/#diagnostico`).

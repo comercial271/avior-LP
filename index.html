@@ -1272,6 +1272,7 @@ class Component extends DCLogic {
     this.onChange();
     this.mq.addEventListener("change", this.onChange);
     this.navMq.addEventListener("change", this.onChange);
+    if (window.location.hash === "#diagnostico") this.setState({ modalOpen: true });
   }
   componentWillUnmount() {
     if (this.mq) this.mq.removeEventListener("change", this.onChange);
