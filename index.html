@@ -210,6 +210,7 @@
           <a href="#numeros" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Números</a>
           <a href="#cases" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Cases</a>
           <a href="#time" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Quem somos</a>
+          <a href="/blog/" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Blog</a>
         </nav>
       </sc-if>
       <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 13px 24px; border-radius: 1px; border: 1px solid #BAB196; color: #C2B89D; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; transition: background 160ms ease, color 160ms ease" style-hover="background: #BAB196; color: #000000">Quero disputar uma vaga</a>
@@ -1166,6 +1167,7 @@
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
         <span style="font-size: 12.5px; color: rgba(140,133,116,0.75)">© 2026 AVIOR. Todos os direitos reservados.</span>
         <div style="display: flex; align-items: center; gap: 24px">
+          <a href="/blog/" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Blog</a>
           <a href="#" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Política de Privacidade</a>
           <a href="#" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Termos de Uso</a>
         </div>
@@ -1270,6 +1272,7 @@ class Component extends DCLogic {
     this.onChange();
     this.mq.addEventListener("change", this.onChange);
     this.navMq.addEventListener("change", this.onChange);
+    if (window.location.hash === "#diagnostico") this.setState({ modalOpen: true });
   }
   componentWillUnmount() {
     if (this.mq) this.mq.removeEventListener("change", this.onChange);
