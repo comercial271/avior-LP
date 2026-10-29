@@ -84,3 +84,4 @@ footer a:hover{color:var(--cream)}
 .sources li{font-size:14px;line-height:1.5;padding:6px 0}
 .sources a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px;overflow-wrap:anywhere}
 .sources a:hover{color:var(--cream)}
+.body h3{font-weight:400;font-size:clamp(18px,2vw,20px);color:var(--cream);margin:1.6em 0 .5em;line-height:1.35}
