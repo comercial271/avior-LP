@@ -76,3 +76,12 @@ footer a:hover{color:var(--cream)}
   .post{min-height:0}
   .nums{grid-template-columns:1fr}
 }
+
+/* fontes das notícias */
+.sources{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.sources h4{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px}
+.sources ul{list-style:none}
+.sources li{font-size:14px;line-height:1.5;padding:6px 0}
+.sources a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px;overflow-wrap:anywhere}
+.sources a:hover{color:var(--cream)}
+.body h3{font-weight:400;font-size:clamp(18px,2vw,20px);color:var(--cream);margin:1.6em 0 .5em;line-height:1.35}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avior.ia.br/sitemap.xml
