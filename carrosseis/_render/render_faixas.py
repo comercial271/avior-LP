@@ -156,6 +156,45 @@ def metade_baixo(d, s, y0):
         escreve(d, s["sintese"], pop(36, "Bold"), MARGIN, y + 34, PRETO, BRONZE, 1.45)
 
 
+def recorta(caminho, w, h, topo=0.06, foco_x=0.5):
+    """Recorte tipo 'cover' de um retrato, ancorado perto do rosto."""
+    ph = Image.open(caminho).convert("RGB")
+    esc = max(w / ph.size[0], h / ph.size[1])
+    ph = ph.resize((int(ph.size[0] * esc) + 1, int(ph.size[1] * esc) + 1), Image.LANCZOS)
+    x = int(min(max(ph.size[0] * foco_x - w / 2, 0), ph.size[0] - w))
+    y = int(min(ph.size[1] * topo, ph.size[1] - h))
+    return ph.crop((x, y, x + w, y + h))
+
+
+def esmaece(ph, cor, largura):
+    """Funde a borda esquerda da foto na cor da faixa."""
+    w, h = ph.size
+    grad = Image.new("L", (w, 1))
+    for i in range(w):
+        grad.putpixel((i, 0), int(255 * max(0.0, 1 - i / largura) ** 1.4))
+    return Image.composite(Image.new("RGB", ph.size, cor), ph, grad.resize(ph.size))
+
+
+def etiqueta(d, texto, x_dir, y, cor):
+    f = pop(19, "SemiBold")
+    sp = 5
+    larg = sum(d.textlength(c, font=f) + sp for c in texto) - sp
+    cx = x_dir - larg
+    for c in texto:
+        d.text((cx, y), c, font=f, fill=cor)
+        cx += d.textlength(c, font=f) + sp
+
+
+def vazado(base, xy, texto, fn, cor, espessura=3):
+    """Desenha so o contorno do texto (o PIL preenche quando nao ha fill)."""
+    borda = Image.new("L", base.size, 0)
+    miolo = Image.new("L", base.size, 0)
+    ImageDraw.Draw(borda).text(xy, texto, font=fn, fill=255, stroke_width=espessura, stroke_fill=255)
+    ImageDraw.Draw(miolo).text(xy, texto, font=fn, fill=255)
+    from PIL import ImageChops
+    base.paste(Image.new("RGB", base.size, cor), (0, 0), ImageChops.subtract(borda, miolo))
+
+
 def slide_item(s, spec):
     img = Image.new("RGB", (W, H), CLARO)
     d = ImageDraw.Draw(img)
@@ -166,12 +205,38 @@ def slide_item(s, spec):
 
     faixa = Image.new("RGB", (W, FAIXA), fundo)
     fd = ImageDraw.Draw(faixa)
-    fn = anton(700)
     n = s["numero"]
-    nx = W - fd.textlength(n, font=fn) + 120
-    fd.text((nx, 40), n, font=fn, fill=fundo, stroke_width=3, stroke_fill=traco)
-    ft = anton(s.get("tamanho", 108))
-    escreve(fd, s["titulo"], ft, MARGIN, 120, cor_tit, cor_ac, 1.08, maxw=s.get("largura", MAXW))
+    pessoa = s.get("pessoa")
+    if pessoa:
+        # retrato do time na direita, fundido na faixa; numero vazado por cima
+        PW = 600
+        ph = recorta(pessoa["foto"], PW, FAIXA, pessoa.get("topo", 0.06), pessoa.get("foco_x", 0.5))
+        if escura:
+            ph = Image.blend(ph, Image.new("RGB", ph.size, PRETO), 0.12)
+        faixa.paste(esmaece(ph, fundo, 380), (W - PW, 0))
+        rodape_foto = Image.new("L", (1, 120))
+        for i in range(120):
+            rodape_foto.putpixel((0, i), int(200 * (i / 120) ** 1.3))
+        faixa.paste(Image.new("RGB", (PW, 120), PRETO), (W - PW, FAIXA - 120),
+                    rodape_foto.resize((PW, 120)))
+        etiqueta(fd, pessoa["nome"].upper(), W - 50, FAIXA - 82, BRANCO)
+        etiqueta(fd, pessoa["cargo"].upper(), W - 50, FAIXA - 50, CHAMP)
+        largura = s.get("largura", 520)
+        ft = anton(s.get("tamanho", 92))
+        y_fim = escreve(fd, s["titulo"], ft, MARGIN, 110, cor_tit, cor_ac, 1.08, maxw=largura)
+        # numero vazado embaixo do titulo, cortado pela borda da faixa
+        vazado(faixa, (MARGIN - 12, max(y_fim - 40, 330)), n, anton(400), traco)
+        img.paste(faixa, (0, 0))
+        metade_baixo(d, s, FAIXA)
+        assinatura(img, d, spec)
+        return img
+    else:
+        fn = anton(700)
+        nx = W - fd.textlength(n, font=fn) + 120
+        fd.text((nx, 40), n, font=fn, fill=fundo, stroke_width=3, stroke_fill=traco)
+        largura = s.get("largura", MAXW)
+    ft = anton(s.get("tamanho", 108 if not pessoa else 92))
+    escreve(fd, s["titulo"], ft, MARGIN, 110, cor_tit, cor_ac, 1.08, maxw=largura)
     img.paste(faixa, (0, 0))
 
     metade_baixo(d, s, FAIXA)
@@ -182,19 +247,40 @@ def slide_item(s, spec):
 def slide_foto(s, spec):
     img = Image.new("RGB", (W, H), CLARO)
     d = ImageDraw.Draw(img)
-    ph = Image.open(s["imagem"]).convert("RGB")
-    esc = W / ph.size[0]
-    ph = ph.resize((W, int(ph.size[1] * esc)), Image.LANCZOS)
-    top = int(ph.size[1] * s.get("foto_topo", 0.0))
-    ph = ph.crop((0, top, W, top + FAIXA))
-    # gradiente escuro na esquerda para o titulo respirar
-    grad = Image.new("L", (W, 1))
-    for i in range(W):
-        grad.putpixel((i, 0), int(235 * max(0.0, 1 - i / (W * 0.75)) ** 1.2))
-    ph = Image.composite(Image.new("RGB", ph.size, PRETO), ph, grad.resize(ph.size))
-    img.paste(ph, (0, 0))
+    if s.get("time"):
+        # mosaico do time: uma faixa vertical por pessoa
+        n = len(s["time"])
+        larg = W // n
+        ph = Image.new("RGB", (W, FAIXA), PRETO)
+        for i, p in enumerate(s["time"]):
+            w = larg if i < n - 1 else W - larg * (n - 1)
+            ph.paste(recorta(p["foto"], w, FAIXA, p.get("topo", 0.04), p.get("foco_x", 0.5)), (i * larg, 0))
+        grad = Image.new("L", (1, FAIXA))
+        for i in range(FAIXA):
+            grad.putpixel((0, i), int(245 * max(0.0, (i - FAIXA * 0.38) / (FAIXA * 0.62)) ** 1.2))
+        ph = Image.composite(Image.new("RGB", ph.size, PRETO), ph, grad.resize(ph.size))
+        img.paste(ph, (0, 0))
+        ft = anton(s.get("tamanho", 100))
+        alt = len(quebra(d, s["titulo"], ft, MAXW)) * ft.size * 1.08
+        escreve(d, s["titulo"], ft, MARGIN, FAIXA - 50 - alt, BRANCO, CHAMP, 1.08)
+        metade_baixo(d, s, FAIXA)
+        assinatura(img, d, spec)
+        return img
+    else:
+        ph = Image.open(s["imagem"]).convert("RGB")
+        esc = W / ph.size[0]
+        ph = ph.resize((W, int(ph.size[1] * esc)), Image.LANCZOS)
+        top = int(ph.size[1] * s.get("foto_topo", 0.0))
+        ph = ph.crop((0, top, W, top + FAIXA))
+        # gradiente escuro na esquerda para o titulo respirar
+        grad = Image.new("L", (W, 1))
+        for i in range(W):
+            grad.putpixel((i, 0), int(235 * max(0.0, 1 - i / (W * 0.75)) ** 1.2))
+        ph = Image.composite(Image.new("RGB", ph.size, PRETO), ph, grad.resize(ph.size))
+        img.paste(ph, (0, 0))
+        largura = s.get("largura", 560)
     ft = anton(s.get("tamanho", 108))
-    escreve(d, s["titulo"], ft, MARGIN, 120, BRANCO, CHAMP, 1.08, maxw=s.get("largura", 560))
+    escreve(d, s["titulo"], ft, MARGIN, 90, BRANCO, CHAMP, 1.08, maxw=largura)
     metade_baixo(d, s, FAIXA)
     assinatura(img, d, spec)
     return img
