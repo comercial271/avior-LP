@@ -1,0 +1,63 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "O DONO ANTES {X} DEPOIS\nDE DEIXAR A EMPRESA\n{TRABALHANDO SOZINHA}",
+      "tamanho": 100,
+      "apoio": "O que os números dos EUA mostram."
+    },
+    {
+      "tipo": "item",
+      "numero": "01",
+      "faixa": "preta",
+      "titulo": "A SEMANA\nDO {DONO.}",
+      "texto": "{Antes:} você resolvia tudo, do ponto do funcionário à cobrança do cliente.\n{Depois:} nos EUA, donos que já usam IA ganham de volta 5 horas por semana.",
+      "sintese": "Mais de 20 horas por mês. {Quase três dias de trabalho.}",
+      "fonte": "SBE Council, 517 donos de pequenas empresas, fev/2026 (mediana)."
+    },
+    {
+      "tipo": "item",
+      "numero": "02",
+      "faixa": "champanhe",
+      "titulo": "A MESA\nDO DONO.",
+      "texto": "{Antes:} tudo passava por você antes de sair.\n{Depois, do jeito errado:} 55% dos donos gastam 3 horas ou mais por semana conferindo o que a IA fez.",
+      "sintese": "Sem critério escrito, a IA {só troca uma tarefa sua por outra.}",
+      "fonte": "Pax8, SMB AI Pulse Report, 3º tri/2026."
+    },
+    {
+      "tipo": "item",
+      "numero": "03",
+      "faixa": "preta",
+      "titulo": "A {FERRAMENTA.}",
+      "texto": "{Antes:} alguém do time pede um texto pro ChatGPT de vez em quando.\n{Depois:} a IA roda dentro da escala, do ponto e da folha. Nos EUA, 76% usam IA. Só 14% chegaram aqui.",
+      "sintese": "Usar, todo mundo usa. {Ganhar é pra quem integra.}",
+      "fonte": "Goldman Sachs 10,000 Small Businesses, mar/2026."
+    },
+    {
+      "tipo": "item",
+      "numero": "04",
+      "faixa": "champanhe",
+      "titulo": "O PROJETO\nDE IA.",
+      "texto": "{Antes:} escolhe a ferramenta e faz um piloto bonito.\n{Depois:} começa pelo processo escrito. Lá fora, 42% das empresas abandonaram a maior parte dos projetos de IA.",
+      "sintese": "A IA não falha sozinha. {Falha em cima de bagunça.}",
+      "fonte": "S&P Global Market Intelligence, via CIO Dive."
+    },
+    {
+      "tipo": "item",
+      "numero": "05",
+      "faixa": "preta",
+      "titulo": "A {FOLHA.}",
+      "texto": "{Antes:} pra faturar mais, contratar mais.\n{Depois:} o faturamento cresce sem o back office crescer junto. Na FOCO, foi de 14 pra 5 pessoas, e duas foram pro comercial.",
+      "sintese": "Não é ter menos gente. {É ter gente onde gera receita.}",
+      "fonte": "Pax8, jun/2026, e case FOCO."
+    },
+    {
+      "tipo": "item",
+      "numero": "",
+      "faixa": "champanhe",
+      "titulo": "E VOCÊ, TÁ NO\nANTES OU NO DEPOIS?",
+      "texto": "Comenta ANTES ou DEPOIS aqui embaixo.",
+      "sintese": "Cultura, processo e só então inteligência. {Nessa ordem.}"
+    }
+  ]
+}

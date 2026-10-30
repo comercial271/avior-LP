@@ -153,7 +153,9 @@ def slide_capa(s, spec):
 def metade_baixo(d, s, y0):
     y = escreve(d, s["texto"], pop(34), MARGIN, y0 + 74, TEXTO, BRONZE, 1.55)
     if s.get("sintese"):
-        escreve(d, s["sintese"], pop(36, "Bold"), MARGIN, y + 34, PRETO, BRONZE, 1.45)
+        y = escreve(d, s["sintese"], pop(36, "Bold"), MARGIN, y + 34, PRETO, BRONZE, 1.45)
+    if s.get("fonte"):
+        escreve(d, "Fonte: " + s["fonte"], pop(24), MARGIN, y + 30, CINZA, CINZA, 1.4)
 
 
 def recorta(caminho, w, h, topo=0.06, foco_x=0.5):
@@ -318,7 +320,8 @@ def main():
     avisos, caminhos = [], []
     for i, s in enumerate(spec["slides"], 1):
         img = TIPOS[s["tipo"]](s, spec)
-        verifica(img, i, avisos)
+        if spec.get("assinatura"):
+            verifica(img, i, avisos)
         p = os.path.join(a.out, "slide_%02d.png" % i)
         img.save(p)
         caminhos.append(p)
