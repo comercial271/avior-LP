@@ -137,7 +137,7 @@ def slide_capa(s, spec):
     f = anton(s.get("tamanho", 124))
     linhas = quebra(d, s["titulo"], f, MAXW)
     alt = len(linhas) * f.size * 1.08
-    y = (H - 230 - alt) / 2 + 20
+    y = (H - alt) / 2 - 40
     d.rectangle([MARGIN, y - 60, MARGIN + 90, y - 52], fill=BRONZE)
     y = escreve(d, s["titulo"], f, MARGIN, y, PRETO, BRONZE, 1.08)
     if s.get("apoio"):
