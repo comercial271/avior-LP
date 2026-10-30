@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html><head><style>body{padding-bottom:calc(96px + env(safe-area-inset-bottom)) !important}</style><script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"assets/9b9ab363-84bd-486e-86d2-0df3516d1bc0.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"assets/6f4c348b-ac48-4421-a828-da423c75abf4.js"};</script>
 <meta charset="utf-8">
+<meta name="theme-color" content="#FAFBF7">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/f85dd20a-97c2-46e2-8ec6-ded5799cc52f.js"></script>
 </head>
@@ -149,10 +150,10 @@
 <script src="assets/457f674b-8c0a-4742-a743-2aa9803fd8d7.js"></script>
 <style>
   html { scroll-behavior: smooth; }
-  html, body { margin: 0; padding: 0; background: #000000; }
+  html, body { margin: 0; padding: 0; background: #FAFBF7; }
   * { box-sizing: border-box; }
-  a { color: #C2B89D; text-decoration: none; }
-  a:hover { color: #F5F1E8; }
+  a { color: #4A7A00; text-decoration: none; }
+  a:hover { color: #131711; }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .om-plus { transform: rotate(45deg); }
@@ -199,135 +200,135 @@
 </style>
 </helmet>
 
-<div style="background: #000000; color: #F5F1E8; font-family: Poppins, sans-serif; font-weight: 300; overflow-x: hidden">
+<div style="background: #FAFBF7; color: #131711; font-family: Poppins, sans-serif; font-weight: 300; overflow-x: hidden">
 
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(0,0,0,0.86); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(186,177,150,0.16)">
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(250,251,247,0.86); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(19,23,17,0.08)">
     <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-      <a href="#topo" style="display: flex; align-items: center; height: 44px"><span style="font-weight: 200; font-size: 20px; letter-spacing: 0.34em; text-indent: 0.34em; color: #C2B89D; white-space: nowrap">AVIOR</span></a>
+      <a href="#topo" style="display: flex; align-items: center; height: 44px"><span style="font-weight: 200; font-size: 20px; letter-spacing: 0.34em; text-indent: 0.34em; color: #4A7A00; white-space: nowrap">AVIOR</span></a>
       <sc-if value="{{ navWide }}" hint-placeholder-val="{{ true }}">
         <nav style="display: flex; align-items: center; gap: clamp(16px, 2.2vw, 34px); min-width: 0; flex-shrink: 1">
-          <a href="#sistemas" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Sistemas</a>
-          <a href="#numeros" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Números</a>
-          <a href="#cases" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Cases</a>
-          <a href="#time" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Quem somos</a>
-          <a href="/blog/" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #8C8574; transition: color 160ms ease" style-hover="color: #F5F1E8">Blog</a>
+          <a href="#sistemas" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #5F665A; transition: color 160ms ease" style-hover="color: #131711">Sistemas</a>
+          <a href="#numeros" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #5F665A; transition: color 160ms ease" style-hover="color: #131711">Números</a>
+          <a href="#cases" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #5F665A; transition: color 160ms ease" style-hover="color: #131711">Cases</a>
+          <a href="#time" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #5F665A; transition: color 160ms ease" style-hover="color: #131711">Quem somos</a>
+          <a href="/blog/" style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: #5F665A; transition: color 160ms ease" style-hover="color: #131711">Blog</a>
         </nav>
       </sc-if>
-      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 13px 24px; border-radius: 1px; border: 1px solid #BAB196; color: #C2B89D; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; transition: background 160ms ease, color 160ms ease" style-hover="background: #BAB196; color: #000000">Quero disputar uma vaga</a>
+      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 13px 24px; border-radius: 1px; border: 1px solid #A3D61C; color: #4A7A00; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; transition: background 160ms ease, color 160ms ease" style-hover="background: #B4E62A; color: #131711">Quero disputar uma vaga</a>
     </div>
   </header>
 
   <section id="topo" style="position: relative; padding: 34px clamp(20px, 5vw, 72px) 0">
-    <div style="position: absolute; inset: 0; background: radial-gradient(115% 75% at 50% 0%, rgba(186,177,150,0.12) 0%, rgba(0,0,0,0) 60%); pointer-events: none"></div>
+    <div style="position: absolute; inset: 0; background: radial-gradient(115% 75% at 50% 0%, rgba(170,225,40,0.12) 0%, rgba(40,52,24,0) 60%); pointer-events: none"></div>
     <div style="position: relative; max-width: 1180px; margin: 0 auto">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: clamp(38px, 5vw, 76px); align-items: center; padding: clamp(34px, 5vw, 66px) 0 clamp(56px, 7vw, 92px)">
         <div style="display: flex; flex-direction: column; gap: 28px">
           <h1 style="margin: 0; font-weight: 200; font-size: clamp(33px, 4.6vw, 60px); line-height: 1.1; letter-spacing: -0.005em; text-wrap: pretty">
             Transformamos operações
-            <span style="display: block; margin-top: 0.2em; font-weight: 300; font-style: italic; background: linear-gradient(100deg, #C2B89D 0%, #BAB196 55%, #8C8574 100%); -webkit-background-clip: text; background-clip: text; color: transparent">em liberdade para o dono.</span>
+            <span style="display: block; margin-top: 0.2em; font-weight: 300; font-style: italic; background: linear-gradient(100deg, #2F5200 0%, #4A7A00 55%, #6E9A12 100%); -webkit-background-clip: text; background-clip: text; color: transparent">em liberdade para o dono.</span>
           </h1>
-          <p style="margin: 0; max-width: 34em; font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.75; color: #8C8574; text-wrap: pretty">
+          <p style="margin: 0; max-width: 34em; font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.75; color: #5F665A; text-wrap: pretty">
             A AVIOR reconstrói sua operação começando por cultura e processo, e só então coloca inteligência artificial em cima. Para a empresa andar sem você repetir a mesma coisa todos os dias.
           </p>
           <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 4px">
-            <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 21px 44px; border-radius: 1px; background: linear-gradient(100deg, #C2B89D 0%, #BAB196 60%, #A9A085 100%); color: #000000; font-weight: 500; font-size: clamp(12px, 1.3vw, 14px); letter-spacing: 0.14em; text-transform: uppercase; transition: transform 180ms ease, box-shadow 180ms ease; box-shadow: 0 16px 44px -22px rgba(186,177,150,0.75)" style-hover="transform: translateY(-2px); box-shadow: 0 26px 56px -22px rgba(186,177,150,0.9); color: #000000">Quero conhecer mais</a>
+            <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 21px 44px; border-radius: 1px; background: linear-gradient(100deg, #C6F23E 0%, #B4E62A 60%, #A3D61C 100%); color: #131711; font-weight: 500; font-size: clamp(12px, 1.3vw, 14px); letter-spacing: 0.14em; text-transform: uppercase; transition: transform 180ms ease, box-shadow 180ms ease; box-shadow: 0 16px 44px -22px rgba(140,200,20,0.525)" style-hover="transform: translateY(-2px); box-shadow: 0 26px 56px -22px rgba(140,200,20,0.63); color: #131711">Quero conhecer mais</a>
           </div>
         </div>
         <div style="position: relative; width: calc(100% + clamp(20px, 5vw, 72px) + 4vw); margin-right: calc(-1 * (clamp(20px, 5vw, 72px) + 4vw)); aspect-ratio: 1 / 1; max-height: 700px; perspective: 1700px">
-          <div style="position: absolute; left: 50%; top: 50%; width: 82%; height: 60%; transform: translate(-50%, -50%); background: radial-gradient(50% 50% at 50% 50%, rgba(194,184,157,0.18) 0%, rgba(0,0,0,0) 74%); pointer-events: none"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 82%; height: 60%; transform: translate(-50%, -50%); background: radial-gradient(50% 50% at 50% 50%, rgba(170,225,40,0.18) 0%, rgba(40,52,24,0) 74%); pointer-events: none"></div>
           <div style="position: absolute; inset: 0; transform-style: preserve-3d; transform: translate(-10%, -2%) rotateX(58deg) rotateZ(-45deg) scale(0.74)">
-            <div style="position: absolute; top: -34%; bottom: -34%; left: 50%; width: 1px; background: linear-gradient(180deg, rgba(186,177,150,0) 0%, rgba(194,184,157,0.45) 22%, rgba(194,184,157,0.45) 78%, rgba(186,177,150,0) 100%)"></div>
-            <div style="position: absolute; left: 50%; right: -34%; top: 50%; height: 1px; background: linear-gradient(90deg, rgba(194,184,157,0.45) 0%, rgba(194,184,157,0.45) 62%, rgba(186,177,150,0) 100%)"></div>
+            <div style="position: absolute; top: -34%; bottom: -34%; left: 50%; width: 1px; background: linear-gradient(180deg, rgba(170,225,40,0) 0%, rgba(170,225,40,0.3) 22%, rgba(170,225,40,0.3) 78%, rgba(170,225,40,0) 100%)"></div>
+            <div style="position: absolute; left: 50%; right: -34%; top: 50%; height: 1px; background: linear-gradient(90deg, rgba(170,225,40,0.3) 0%, rgba(170,225,40,0.3) 62%, rgba(170,225,40,0) 100%)"></div>
 
             <div style="position: absolute; left: 19%; top: -46%; width: 62%; height: 44%; transform: translateZ(0px); transform-style: preserve-3d">
-              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 52%, rgba(0,0,0,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #16120d; transform: translateZ(-2.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #14110c; transform: translateZ(-4.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #130f0b; transform: translateZ(-6.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #110e0a; transform: translateZ(-8.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #100d09; transform: translateZ(-10.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0e0c08; transform: translateZ(-12.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0d0a08; transform: translateZ(-14.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0b0907; transform: translateZ(-16.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0a0806; transform: translateZ(-18.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #080705; transform: translateZ(-20.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #070504; transform: translateZ(-22.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #050403; transform: translateZ(-24.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #040302; transform: translateZ(-26.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #2A2418 0%, #131009 46%, #050403 100%); border: 1px solid rgba(194,184,157,0.42); box-shadow: inset 0 1px 0 rgba(255,251,240,0.34), inset 0 -20px 34px -22px rgba(194,184,157,0.6); display: flex; align-items: center; justify-content: center; overflow: hidden">
-                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(255,251,240,0.16) 0%, rgba(255,251,240,0) 68%); pointer-events: none"></div>
-                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(255,251,240,0.09) 0%, rgba(255,251,240,0) 100%); pointer-events: none"></div>
-                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #F5F1E8; white-space: nowrap; text-shadow: 0 2px 10px rgba(0,0,0,0.8)">CULTURA</span>
+              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(250,251,247,0.92) 0%, rgba(40,52,24,0.11) 52%, rgba(40,52,24,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FEFEFD; transform: translateZ(-2.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FDFDFC; transform: translateZ(-4.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFCFA; transform: translateZ(-6.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFBF9; transform: translateZ(-8.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FAFBF8; transform: translateZ(-10.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F9FAF6; transform: translateZ(-12.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F8F9F5; transform: translateZ(-14.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F7F8F4; transform: translateZ(-16.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F6F7F3; transform: translateZ(-18.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F5F7F1; transform: translateZ(-20.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F4F5F0; transform: translateZ(-22.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F3F5EE; transform: translateZ(-24.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F2F4ED; transform: translateZ(-26.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #E9F6CC 0%, #FCFCFB 46%, #F3F5EE 100%); border: 1px solid rgba(19,23,17,0.2); box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), inset 0 -20px 34px -22px rgba(140,200,20,0.42); display: flex; align-items: center; justify-content: center; overflow: hidden">
+                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(19,23,17,0.056) 0%, rgba(19,23,17,0) 68%); pointer-events: none"></div>
+                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(19,23,17,0.032) 0%, rgba(19,23,17,0) 100%); pointer-events: none"></div>
+                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #131711; white-space: nowrap; text-shadow: 0 2px 10px rgba(255,255,255,0)">CULTURA</span>
               </div>
             </div>
             <div style="position: absolute; left: 101%; top: 28%; width: 62%; height: 44%; transform: translateZ(0px); transform-style: preserve-3d">
-              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 52%, rgba(0,0,0,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #16120d; transform: translateZ(-2.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #14110c; transform: translateZ(-4.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #130f0b; transform: translateZ(-6.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #110e0a; transform: translateZ(-8.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #100d09; transform: translateZ(-10.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0e0c08; transform: translateZ(-12.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0d0a08; transform: translateZ(-14.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0b0907; transform: translateZ(-16.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0a0806; transform: translateZ(-18.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #080705; transform: translateZ(-20.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #070504; transform: translateZ(-22.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #050403; transform: translateZ(-24.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #040302; transform: translateZ(-26.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #2A2418 0%, #131009 46%, #050403 100%); border: 1px solid rgba(194,184,157,0.42); box-shadow: inset 0 1px 0 rgba(255,251,240,0.34), inset 0 -20px 34px -22px rgba(194,184,157,0.6); display: flex; align-items: center; justify-content: center; overflow: hidden">
-                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(255,251,240,0.16) 0%, rgba(255,251,240,0) 68%); pointer-events: none"></div>
-                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(255,251,240,0.09) 0%, rgba(255,251,240,0) 100%); pointer-events: none"></div>
-                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #F5F1E8; white-space: nowrap; text-shadow: 0 2px 10px rgba(0,0,0,0.8)">PROCESSO</span>
+              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(250,251,247,0.92) 0%, rgba(40,52,24,0.11) 52%, rgba(40,52,24,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FEFEFD; transform: translateZ(-2.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FDFDFC; transform: translateZ(-4.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFCFA; transform: translateZ(-6.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFBF9; transform: translateZ(-8.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FAFBF8; transform: translateZ(-10.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F9FAF6; transform: translateZ(-12.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F8F9F5; transform: translateZ(-14.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F7F8F4; transform: translateZ(-16.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F6F7F3; transform: translateZ(-18.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F5F7F1; transform: translateZ(-20.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F4F5F0; transform: translateZ(-22.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F3F5EE; transform: translateZ(-24.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F2F4ED; transform: translateZ(-26.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #E9F6CC 0%, #FCFCFB 46%, #F3F5EE 100%); border: 1px solid rgba(19,23,17,0.2); box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), inset 0 -20px 34px -22px rgba(140,200,20,0.42); display: flex; align-items: center; justify-content: center; overflow: hidden">
+                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(19,23,17,0.056) 0%, rgba(19,23,17,0) 68%); pointer-events: none"></div>
+                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(19,23,17,0.032) 0%, rgba(19,23,17,0) 100%); pointer-events: none"></div>
+                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #131711; white-space: nowrap; text-shadow: 0 2px 10px rgba(255,255,255,0)">PROCESSO</span>
               </div>
             </div>
             <div style="position: absolute; left: 19%; top: 92%; width: 62%; height: 44%; transform: translateZ(0px); transform-style: preserve-3d">
-              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 52%, rgba(0,0,0,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #16120d; transform: translateZ(-2.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #14110c; transform: translateZ(-4.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #130f0b; transform: translateZ(-6.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #110e0a; transform: translateZ(-8.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #100d09; transform: translateZ(-10.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0e0c08; transform: translateZ(-12.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0d0a08; transform: translateZ(-14.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0b0907; transform: translateZ(-16.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #0a0806; transform: translateZ(-18.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #080705; transform: translateZ(-20.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #070504; transform: translateZ(-22.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #050403; transform: translateZ(-24.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: #040302; transform: translateZ(-26.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #2A2418 0%, #131009 46%, #050403 100%); border: 1px solid rgba(194,184,157,0.42); box-shadow: inset 0 1px 0 rgba(255,251,240,0.34), inset 0 -20px 34px -22px rgba(194,184,157,0.6); display: flex; align-items: center; justify-content: center; overflow: hidden">
-                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(255,251,240,0.16) 0%, rgba(255,251,240,0) 68%); pointer-events: none"></div>
-                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(255,251,240,0.09) 0%, rgba(255,251,240,0) 100%); pointer-events: none"></div>
-                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #F5F1E8; white-space: nowrap; text-shadow: 0 2px 10px rgba(0,0,0,0.8)">INTELIGÊNCIA</span>
+              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(250,251,247,0.92) 0%, rgba(40,52,24,0.11) 52%, rgba(40,52,24,0) 78%); filter: blur(18px); transform: translateZ(-40px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FEFEFD; transform: translateZ(-2.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FDFDFC; transform: translateZ(-4.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFCFA; transform: translateZ(-6.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FBFBF9; transform: translateZ(-8.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #FAFBF8; transform: translateZ(-10.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F9FAF6; transform: translateZ(-12.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F8F9F5; transform: translateZ(-14.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F7F8F4; transform: translateZ(-16.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F6F7F3; transform: translateZ(-18.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F5F7F1; transform: translateZ(-20.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F4F5F0; transform: translateZ(-22.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F3F5EE; transform: translateZ(-24.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: #F2F4ED; transform: translateZ(-26.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(152deg, #E9F6CC 0%, #FCFCFB 46%, #F3F5EE 100%); border: 1px solid rgba(19,23,17,0.2); box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), inset 0 -20px 34px -22px rgba(140,200,20,0.42); display: flex; align-items: center; justify-content: center; overflow: hidden">
+                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(19,23,17,0.056) 0%, rgba(19,23,17,0) 68%); pointer-events: none"></div>
+                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(19,23,17,0.032) 0%, rgba(19,23,17,0) 100%); pointer-events: none"></div>
+                <span style="position: relative; font-weight: 300; font-size: 34px; letter-spacing: 0.01em; color: #131711; white-space: nowrap; text-shadow: 0 2px 10px rgba(255,255,255,0)">INTELIGÊNCIA</span>
               </div>
             </div>
             <div style="position: absolute; left: 19%; top: 28%; width: 62%; height: 44%; transform: translateZ(96px); transform-style: preserve-3d">
-              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 52%, rgba(0,0,0,0) 78%); filter: blur(18px); transform: translateZ(-54px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #16120d; transform: translateZ(-2.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #15110d; transform: translateZ(-4.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #14110c; transform: translateZ(-6.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #13100c; transform: translateZ(-8.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #120f0b; transform: translateZ(-10.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #110e0a; transform: translateZ(-12.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #100d0a; transform: translateZ(-14.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0f0d09; transform: translateZ(-16.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0e0c09; transform: translateZ(-18.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0e0b08; transform: translateZ(-20.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0d0a07; transform: translateZ(-22.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0c0907; transform: translateZ(-24.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0b0906; transform: translateZ(-26.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #0a0806; transform: translateZ(-28.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #090705; transform: translateZ(-30.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #080604; transform: translateZ(-32.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #070504; transform: translateZ(-34.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #060503; transform: translateZ(-36.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #050403; transform: translateZ(-38.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: #040302; transform: translateZ(-40.0px)"></div>
-              <div style="position: absolute; inset: 0; border-radius: 32px; background: linear-gradient(152deg, #3A3020 0%, #17130C 48%, #050403 100%); border: 1px solid rgba(255,251,240,0.5); box-shadow: inset 0 1px 0 rgba(255,251,240,0.6), inset 0 -24px 40px -24px rgba(255,251,240,0.6), 0 0 90px -10px rgba(194,184,157,0.42); display: flex; align-items: center; justify-content: center; overflow: hidden">
-                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(255,251,240,0.16) 0%, rgba(255,251,240,0) 68%); pointer-events: none"></div>
-                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(255,251,240,0.09) 0%, rgba(255,251,240,0) 100%); pointer-events: none"></div>
-                <span style="position: relative; font-weight: 200; font-size: 40px; letter-spacing: 0.26em; text-indent: 0.26em; color: #C2B89D; white-space: nowrap">AVIOR</span>
+              <div style="position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(250,251,247,0.92) 0%, rgba(40,52,24,0.11) 52%, rgba(40,52,24,0) 78%); filter: blur(18px); transform: translateZ(-54px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FEFEFD; transform: translateZ(-2.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FDFDFC; transform: translateZ(-4.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FDFDFC; transform: translateZ(-6.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FCFCFB; transform: translateZ(-8.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FBFCFA; transform: translateZ(-10.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FBFBF9; transform: translateZ(-12.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FAFBF8; transform: translateZ(-14.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #FAFAF8; transform: translateZ(-16.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F9FAF7; transform: translateZ(-18.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F8F9F6; transform: translateZ(-20.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F8F9F5; transform: translateZ(-22.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F7F8F4; transform: translateZ(-24.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F7F8F3; transform: translateZ(-26.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F6F7F3; transform: translateZ(-28.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F5F7F1; transform: translateZ(-30.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F5F6F0; transform: translateZ(-32.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F4F5F0; transform: translateZ(-34.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F4F5EF; transform: translateZ(-36.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F3F5EE; transform: translateZ(-38.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: #F2F4ED; transform: translateZ(-40.0px)"></div>
+              <div style="position: absolute; inset: 0; border-radius: 32px; background: linear-gradient(152deg, #E9F6CC 0%, #FEFEFE 48%, #F3F5EE 100%); border: 1px solid rgba(19,23,17,0.2); box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -24px 40px -24px rgba(255,255,255,0.6), 0 0 90px -10px rgba(140,200,20,0.294); display: flex; align-items: center; justify-content: center; overflow: hidden">
+                <div style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 22% 12%, rgba(19,23,17,0.056) 0%, rgba(19,23,17,0) 68%); pointer-events: none"></div>
+                <div style="position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, rgba(19,23,17,0.032) 0%, rgba(19,23,17,0) 100%); pointer-events: none"></div>
+                <span style="position: relative; font-weight: 200; font-size: 40px; letter-spacing: 0.26em; text-indent: 0.26em; color: #4A7A00; white-space: nowrap">AVIOR</span>
               </div>
             </div>
           </div>
@@ -341,40 +342,40 @@
     <div style="max-width: 1180px; margin: 0 auto">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; padding: clamp(72px, 9vw, 120px) 0 clamp(48px, 6vw, 76px); text-align: center">
         <span id="sistemas" style="display: block; position: relative; top: -110px"></span><h2 style="margin: 0; font-weight: 200; font-size: clamp(28px, 3.8vw, 46px); line-height: 1.2; max-width: 24em; text-wrap: pretty">O que entra na sua operação</h2>
-        <p style="margin: 0; max-width: 34em; font-size: clamp(15px, 1.6vw, 17.5px); line-height: 1.72; color: #8C8574; text-wrap: pretty">Processo escrito, time formado e sistemas próprios rodando dentro da sua empresa.</p>
+        <p style="margin: 0; max-width: 34em; font-size: clamp(15px, 1.6vw, 17.5px); line-height: 1.72; color: #5F665A; text-wrap: pretty">Processo escrito, time formado e sistemas próprios rodando dentro da sua empresa.</p>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: clamp(64px, 8vw, 112px); padding-bottom: clamp(20px, 3vw, 40px)">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(30px, 4.5vw, 72px); align-items: center">
           <div style="position: relative; order: 1">
-            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(186,177,150,0.22); box-shadow: 0 44px 80px -30px rgba(0,0,0,1), 0 0 70px -30px rgba(194,184,157,0.35); container-type: size; background: #FAF4EC">
+            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(19,23,17,0.11); box-shadow: 0 44px 80px -30px rgba(40,52,24,0.16), 0 0 70px -30px rgba(140,200,20,0.245); container-type: size; background: #FAF4EC">
               <div style="position: absolute; inset: 0; display: flex; animation: omScrA 16s ease-in-out infinite">
-                <div style="width: 23cqw; flex-shrink: 0; background: #17130F; display: flex; flex-direction: column; gap: 0.6cqw; padding: 2.2cqw 1.6cqw">
+                <div style="width: 23cqw; flex-shrink: 0; background: #FEFEFE; display: flex; flex-direction: column; gap: 0.6cqw; padding: 2.2cqw 1.6cqw">
                   <div style="display: flex; flex-direction: column; gap: 0.5cqw; padding: 0 0.9cqw 2.4cqw">
-                    <span style="font-size: 2.3cqw; letter-spacing: 0.24em; color: #F5F1E8">ALMIRA</span>
-                    <span style="font-size: 1.05cqw; line-height: 1.4; color: rgba(186,177,150,0.95)">o pulso da sua operação</span>
+                    <span style="font-size: 2.3cqw; letter-spacing: 0.24em; color: #131711">ALMIRA</span>
+                    <span style="font-size: 1.05cqw; line-height: 1.4; color: rgba(74,122,0,0.95)">o pulso da sua operação</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; background: #BAB196; color: #000000; font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; background: #B4E62A; color: #131711; font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Início</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Cadastro</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Operação</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Benefícios</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Relatórios</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Administração</span>
                   </div>
@@ -383,17 +384,17 @@
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.8cqw 2.4cqw; border-bottom: 0.1cqw solid rgba(28,22,16,0.09)">
                     <span style="font-size: 1.7cqw; color: #2A2118">Início</span>
                     <div style="display: flex; align-items: center; gap: 1.2cqw">
-                      <span style="width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #BAB196; animation: omDemoPulse 2.4s ease-in-out infinite"></span>
-                      <span style="width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #E8DCC9; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; color: #2A2118">C</span>
+                      <span style="width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #B4E62A; animation: omDemoPulse 2.4s ease-in-out infinite"></span>
+                      <span style="width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #E3F4BE; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; color: #2A2118">C</span>
                     </div>
                   </div>
                   <div style="display: flex; flex-direction: column; gap: 1.6cqw; padding: 2.2cqw 2.4cqw">
-                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 2cqw; padding: 2.2cqw 2.4cqw; background: #17130F; border-radius: 1.4cqw">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 2cqw; padding: 2.2cqw 2.4cqw; background: #FEFEFE; border-radius: 1.4cqw">
                       <div style="display: flex; flex-direction: column; gap: 0.7cqw">
-                        <span style="font-size: 1.15cqw; letter-spacing: 0.16em; color: rgba(186,177,150,0.95)">QUARTA-FEIRA, 29 DE JULHO</span>
-                        <span style="font-size: 3.2cqw; color: #F5F1E8">Olá, Juliana</span>
+                        <span style="font-size: 1.15cqw; letter-spacing: 0.16em; color: rgba(74,122,0,0.95)">QUARTA-FEIRA, 29 DE JULHO</span>
+                        <span style="font-size: 3.2cqw; color: #131711">Olá, Juliana</span>
                       </div>
-                      <span style="font-size: 3cqw; letter-spacing: 0.06em; color: #F5F1E8">15:36</span>
+                      <span style="font-size: 3cqw; letter-spacing: 0.06em; color: #131711">15:36</span>
                     </div>
                     <div style="display: flex; gap: 1.4cqw">
                     <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1cqw; padding: 1.8cqw; background: #FFFDF9; border: 0.1cqw solid rgba(28,22,16,0.09); border-radius: 1.2cqw">
@@ -420,7 +421,7 @@
                       </div>
                       <span style="font-size: 1.15cqw; line-height: 1.5; color: #8C8072">admissões 2 e desligamentos 3</span>
                     </div>
-                    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1cqw; padding: 1.8cqw; background: rgba(186,177,150,0.14); border: 0.1cqw solid rgba(186,177,150,0.34); border-radius: 1.2cqw">
+                    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1cqw; padding: 1.8cqw; background: rgba(170,225,40,0.14); border: 0.1cqw solid rgba(19,23,17,0.17); border-radius: 1.2cqw">
                       <span style="font-size: 1.4cqw; font-weight: 500; color: #2A2118">Experiência vencendo</span>
                       <div style="display: flex; align-items: baseline; gap: 0.7cqw">
                         <span style="font-size: 3.6cqw; font-weight: 500; color: #17120C; letter-spacing: -0.02em">2</span>
@@ -429,24 +430,24 @@
                       <span style="font-size: 1.15cqw; line-height: 1.5; color: #8C8072">ação necessária esta semana</span>
                     </div>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.8cqw 2cqw; background: rgba(186,177,150,0.1); border: 0.1cqw solid rgba(186,177,150,0.3); border-radius: 1.2cqw">
-                      <span style="font-size: 1.1cqw; letter-spacing: 0.16em; color: #8C7A4E">RANKING · MENOR TURNOVER 12 MESES</span>
+                    <div style="display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.8cqw 2cqw; background: rgba(170,225,40,0.1); border: 0.1cqw solid rgba(19,23,17,0.15); border-radius: 1.2cqw">
+                      <span style="font-size: 1.1cqw; letter-spacing: 0.16em; color: #4E7D0B">RANKING · MENOR TURNOVER 12 MESES</span>
                       <div style="display: flex; align-items: center; gap: 1.2cqw; font-size: 1.35cqw; color: #2A2118">
-                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(186,177,150,0.22); color: #8C7A4E; font-size: 1.05cqw; font-weight: 600">1</span>
+                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.05cqw; font-weight: 600">1</span>
                         <span style="font-weight: 600">REDE NORTE</span>
-                        <span style="color: #8C7A4E; font-weight: 600">0,00%</span>
+                        <span style="color: #4E7D0B; font-weight: 600">0,00%</span>
                         <span style="color: #8C8072; font-size: 1.2cqw">equipe: 11</span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1.2cqw; font-size: 1.35cqw; color: #2A2118">
-                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(186,177,150,0.22); color: #8C7A4E; font-size: 1.05cqw; font-weight: 600">2</span>
+                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.05cqw; font-weight: 600">2</span>
                         <span style="font-weight: 600">GRUPO VALE</span>
-                        <span style="color: #8C7A4E; font-weight: 600">0,00%</span>
+                        <span style="color: #4E7D0B; font-weight: 600">0,00%</span>
                         <span style="color: #8C8072; font-size: 1.2cqw">equipe: 3</span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1.2cqw; font-size: 1.35cqw; color: #2A2118">
-                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(186,177,150,0.22); color: #8C7A4E; font-size: 1.05cqw; font-weight: 600">3</span>
+                        <span style="width: 1.9cqw; height: 1.9cqw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.05cqw; font-weight: 600">3</span>
                         <span style="font-weight: 600">CLÍNICA SUL</span>
-                        <span style="color: #8C7A4E; font-weight: 600">0,00%</span>
+                        <span style="color: #4E7D0B; font-weight: 600">0,00%</span>
                         <span style="color: #8C8072; font-size: 1.2cqw">equipe: 3</span>
                       </div>
                     </div>
@@ -454,31 +455,31 @@
                 </div>
               </div>
               <div style="position: absolute; inset: 0; display: flex; animation: omScrB 16s ease-in-out infinite">
-                <div style="width: 23cqw; flex-shrink: 0; background: #17130F; display: flex; flex-direction: column; gap: 0.6cqw; padding: 2.2cqw 1.6cqw">
+                <div style="width: 23cqw; flex-shrink: 0; background: #FEFEFE; display: flex; flex-direction: column; gap: 0.6cqw; padding: 2.2cqw 1.6cqw">
                   <div style="display: flex; flex-direction: column; gap: 0.5cqw; padding: 0 0.9cqw 2.4cqw">
-                    <span style="font-size: 2.3cqw; letter-spacing: 0.24em; color: #F5F1E8">ALMIRA</span>
-                    <span style="font-size: 1.05cqw; line-height: 1.4; color: rgba(186,177,150,0.95)">o pulso da sua operação</span>
+                    <span style="font-size: 2.3cqw; letter-spacing: 0.24em; color: #131711">ALMIRA</span>
+                    <span style="font-size: 1.05cqw; line-height: 1.4; color: rgba(74,122,0,0.95)">o pulso da sua operação</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Início</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; background: #BAB196; color: #000000; font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; background: #B4E62A; color: #131711; font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Cadastro</span>
                   </div>
-                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; color: rgba(245,241,232,0.6);">Colaboradores</div>
-                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; background: #BAB196; color: #000000;">Clientes</div>
-                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; color: rgba(245,241,232,0.6);">Documentos</div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; color: rgba(19,23,17,0.6);">Colaboradores</div>
+                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; background: #B4E62A; color: #131711;">Clientes</div>
+                  <div style="padding: 1.1cqw 1.8cqw 1.1cqw 4.6cqw; border-radius: 0.7cqw; font-size: 1.45cqw; color: rgba(19,23,17,0.6);">Documentos</div>
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Operação</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Benefícios</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(245,241,232,0.72); font-size: 1.6cqw">
+                  <div style="display: flex; align-items: center; gap: 1.4cqw; padding: 1.5cqw 1.8cqw; border-radius: 0.8cqw; color: rgba(19,23,17,0.72); font-size: 1.6cqw">
                     <div style="width: 1.5cqw; height: 1.5cqw; border: 0.2cqw solid currentColor; border-radius: 0.3cqw; opacity: 0.9"></div>
                     <span>Relatórios</span>
                   </div>
@@ -487,8 +488,8 @@
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.8cqw 2.4cqw; border-bottom: 0.1cqw solid rgba(28,22,16,0.09)">
                     <span style="font-size: 1.7cqw; color: #2A2118">Início / Clientes</span>
                     <div style="display: flex; align-items: center; gap: 1.2cqw">
-                      <span style="width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #BAB196; animation: omDemoPulse 2.4s ease-in-out infinite"></span>
-                      <span style="width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #E8DCC9; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; color: #2A2118">C</span>
+                      <span style="width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #B4E62A; animation: omDemoPulse 2.4s ease-in-out infinite"></span>
+                      <span style="width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #E3F4BE; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; color: #2A2118">C</span>
                     </div>
                   </div>
                   <div style="display: flex; flex-direction: column; gap: 1.6cqw; padding: 2.2cqw 2.4cqw">
@@ -497,7 +498,7 @@
                         <span style="font-size: 2.8cqw; font-weight: 500; color: #17120C">Clientes</span>
                         <span style="font-size: 1.3cqw; color: #8C8072">cadastro centralizado de clientes</span>
                       </div>
-                      <span style="padding: 1.2cqw 1.8cqw; border-radius: 0.8cqw; background: #BAB196; color: #000000; font-size: 1.3cqw; font-weight: 500">Novo cliente</span>
+                      <span style="padding: 1.2cqw 1.8cqw; border-radius: 0.8cqw; background: #B4E62A; color: #131711; font-size: 1.3cqw; font-weight: 500">Novo cliente</span>
                     </div>
                     <div style="display: flex; gap: 1.2cqw">
                       <span style="flex: 1; padding: 1.3cqw 1.6cqw; background: #FFFDF9; border: 0.1cqw solid rgba(28,22,16,0.12); border-radius: 0.8cqw; font-size: 1.3cqw; color: #A0968A">Buscar por nome, razão social ou código</span>
@@ -514,7 +515,7 @@
                         <span style="width: 30%">REDE NORTE COMERCIO LTDA</span>
                         <span style="width: 18%; color: #6E6355">00.000.000/0001</span>
                         <span style="width: 12%; color: #6E6355">01/01/2021</span>
-                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(186,177,150,0.22); color: #7A6B42; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
+                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.3cqw 1.6cqw; border-top: 0.1cqw solid rgba(28,22,16,0.07); font-size: 1.3cqw; color: #2A2118">
                         <span style="width: 8%; color: #8C8072">C020</span>
@@ -522,7 +523,7 @@
                         <span style="width: 30%">GRUPO VALE SERVICOS SA</span>
                         <span style="width: 18%; color: #6E6355">00.000.000/0002</span>
                         <span style="width: 12%; color: #6E6355">01/06/2024</span>
-                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(186,177,150,0.22); color: #7A6B42; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
+                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.3cqw 1.6cqw; border-top: 0.1cqw solid rgba(28,22,16,0.07); font-size: 1.3cqw; color: #2A2118">
                         <span style="width: 8%; color: #8C8072">C022</span>
@@ -530,7 +531,7 @@
                         <span style="width: 30%">CLINICA SUL SAUDE LTDA</span>
                         <span style="width: 18%; color: #6E6355">00.000.000/0003</span>
                         <span style="width: 12%; color: #6E6355">01/01/2024</span>
-                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(186,177,150,0.22); color: #7A6B42; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
+                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.3cqw 1.6cqw; border-top: 0.1cqw solid rgba(28,22,16,0.07); font-size: 1.3cqw; color: #2A2118">
                         <span style="width: 8%; color: #8C8072">C023</span>
@@ -538,7 +539,7 @@
                         <span style="width: 30%">CASA VERDE ALIMENTOS LTDA</span>
                         <span style="width: 18%; color: #6E6355">00.000.000/0004</span>
                         <span style="width: 12%; color: #6E6355">19/06/2024</span>
-                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(186,177,150,0.22); color: #7A6B42; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
+                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.3cqw 1.6cqw; border-top: 0.1cqw solid rgba(28,22,16,0.07); font-size: 1.3cqw; color: #2A2118">
                         <span style="width: 8%; color: #8C8072">C025</span>
@@ -546,38 +547,38 @@
                         <span style="width: 30%">PORTO LESTE LOGISTICA LTDA</span>
                         <span style="width: 18%; color: #6E6355">00.000.000/0005</span>
                         <span style="width: 12%; color: #6E6355">01/07/2022</span>
-                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(186,177,150,0.22); color: #7A6B42; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
+                        <span style="width: 12%"><span style="padding: 0.5cqw 1.1cqw; border-radius: 4cqw; background: rgba(170,225,40,0.22); color: #4E7D0B; font-size: 1.1cqw; font-weight: 600">Ativo</span></span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div style="position: absolute; left: 25.6cqw; top: 21.8cqw; width: 17cqw; height: 20.3cqw; border: 0.25cqw solid #BAB196; border-radius: 1.2cqw; box-shadow: 0 0 0 0.6cqw rgba(186,177,150,0.14); animation: omRingA 16s ease-in-out infinite; pointer-events: none"></div>
-              <div style="position: absolute; left: 1.6cqw; top: 16.7cqw; width: 19.8cqw; height: 5.3cqw; border: 0.25cqw solid #BAB196; border-radius: 0.9cqw; animation: omRingB 16s ease-in-out infinite; pointer-events: none"></div>
-              <div style="position: absolute; left: 25.6cqw; top: 32.7cqw; width: 71.9cqw; height: 4.6cqw; border: 0.25cqw solid #BAB196; border-radius: 0.6cqw; animation: omRingC 16s ease-in-out infinite; pointer-events: none"></div>
-              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(0,0,0,0.6)); animation: omDemoCursor 16s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 25.6cqw; top: 21.8cqw; width: 17cqw; height: 20.3cqw; border: 0.25cqw solid #A3D61C; border-radius: 1.2cqw; box-shadow: 0 0 0 0.6cqw rgba(140,200,20,0.098); animation: omRingA 16s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 1.6cqw; top: 16.7cqw; width: 19.8cqw; height: 5.3cqw; border: 0.25cqw solid #A3D61C; border-radius: 0.9cqw; animation: omRingB 16s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 25.6cqw; top: 32.7cqw; width: 71.9cqw; height: 4.6cqw; border: 0.25cqw solid #A3D61C; border-radius: 0.6cqw; animation: omRingC 16s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(40,52,24,0.12)); animation: omDemoCursor 16s ease-in-out infinite; pointer-events: none"></div>
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 20px; order: 2">
-            <span style="font-size: 10px; letter-spacing: 0.3em; color: #8C8574; font-weight: 400">SISTEMAS FEITOS PARA VOCÊ</span>
-            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #F5F1E8; text-wrap: pretty">Sistemas com o seu processo dentro</h3>
-            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #8C8574; text-wrap: pretty">No lugar de licença que você aluga e que nunca encaixa na sua rotina, a AVIOR constrói o sistema em cima do processo que a sua operação já usa. Na FOCO, isso derrubou R$ 8 mil por mês em software.</p>
+            <span style="font-size: 10px; letter-spacing: 0.3em; color: #5F665A; font-weight: 400">SISTEMAS FEITOS PARA VOCÊ</span>
+            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #131711; text-wrap: pretty">Sistemas com o seu processo dentro</h3>
+            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #5F665A; text-wrap: pretty">No lugar de licença que você aluga e que nunca encaixa na sua rotina, a AVIOR constrói o sistema em cima do processo que a sua operação já usa. Na FOCO, isso derrubou R$ 8 mil por mês em software.</p>
           </div>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(30px, 4.5vw, 72px); align-items: center">
           <div style="position: relative; order: 2">
-            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(186,177,150,0.22); box-shadow: 0 44px 80px -30px rgba(0,0,0,1), 0 0 70px -30px rgba(194,184,157,0.35); container-type: size; background: #FFFFFF">
+            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(19,23,17,0.11); box-shadow: 0 44px 80px -30px rgba(40,52,24,0.16), 0 0 70px -30px rgba(140,200,20,0.245); container-type: size; background: #FFFFFF">
               <div style="position: absolute; inset: 0; display: flex; background: #FFFFFF; animation: omHubA 18s ease-in-out infinite">
                 <div style="width: 6.4cqw; flex-shrink: 0; background: #14161C; display: flex; flex-direction: column; align-items: center; gap: 2.6cqw; padding: 1.6cqw 0">
-                  <div style="width: 3cqw; height: 3cqw; border-radius: 0.8cqw; background: #BAB196; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.5cqw; font-weight: 700">F</div>
+                  <div style="width: 3cqw; height: 3cqw; border-radius: 0.8cqw; background: #B4E62A; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.5cqw; font-weight: 700">F</div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.55); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.6)">Início</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">IA</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">Equipes</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">Docs</span></div>
                 </div>
                 <div style="width: 21cqw; flex-shrink: 0; background: #FFFFFF; border-right: 0.1cqw solid #E7EAF0; display: flex; flex-direction: column; padding: 1.4cqw 0.9cqw">
-                  <div style="display: flex; align-items: center; gap: 1cqw; padding: 0.6cqw 1.4cqw 1.6cqw"><div style="width: 2.4cqw; height: 2.4cqw; border-radius: 50%; background: #BAB196; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; font-weight: 700">F</div><span style="font-size: 1.5cqw; font-weight: 600; color: #1B2130">Sinapse</span></div>
+                  <div style="display: flex; align-items: center; gap: 1cqw; padding: 0.6cqw 1.4cqw 1.6cqw"><div style="width: 2.4cqw; height: 2.4cqw; border-radius: 50%; background: #B4E62A; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; font-weight: 700">F</div><span style="font-size: 1.5cqw; font-weight: 600; color: #1B2130">Sinapse</span></div>
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.1cqw 1.4cqw 0.5cqw; font-size: 1.05cqw; letter-spacing: 0.1em; color: #98A0AE">PESSOAL</div>
                   <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw;  font-size: 1.3cqw; color: #3E4757">
                     <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #DDE3EC"></div><span>Meu Kanban</span></div>
@@ -601,8 +602,8 @@
                     <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #DDE3EC"></div><span>Kanban de Ponto</span></div>
                     
                   </div>
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw; background: #FDF3E3; box-shadow: inset 0.25cqw 0 0 #BAB196; font-size: 1.3cqw; color: #1B2130">
-                    <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #8C7A4E"></div><span>Rotina Semanal</span></div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw; background: #FDF3E3; box-shadow: inset 0.25cqw 0 0 #A3D61C; font-size: 1.3cqw; color: #1B2130">
+                    <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #4E7D0B"></div><span>Rotina Semanal</span></div>
                     
                   </div>
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.1cqw 1.4cqw 0.5cqw; font-size: 1.05cqw; letter-spacing: 0.1em; color: #98A0AE">FINANCEIRO</div>
@@ -626,20 +627,20 @@
                         <span style="font-size: 1.2cqw; line-height: 1.35; color: #2A3140; ">Conferir o ponto do dia</span>
                       </div></div>
                         <div style="position: absolute; inset: 0; animation: omHubCheckOn 18s ease-in-out infinite"><div style="padding: 1.1cqw 1.2cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-radius: 0.7cqw; display: flex; gap: 0.9cqw; align-items: flex-start">
-                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #8C7A4E;"></div>
+                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #4E7D0B;"></div>
                         <span style="font-size: 1.2cqw; line-height: 1.35; color: #98A0AE; text-decoration: line-through;">Conferir o ponto do dia</span>
                       </div></div>
                       </div>
                       <div style="padding: 1.1cqw 1.2cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-radius: 0.7cqw; display: flex; gap: 0.9cqw; align-items: flex-start">
-                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #8C7A4E;"></div>
+                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #4E7D0B;"></div>
                         <span style="font-size: 1.2cqw; line-height: 1.35; color: #98A0AE; text-decoration: line-through;">Olhar solicitações abertas</span>
                       </div>
                       <div style="padding: 1.1cqw 1.2cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-radius: 0.7cqw; display: flex; gap: 0.9cqw; align-items: flex-start">
-                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #8C7A4E;"></div>
+                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #4E7D0B;"></div>
                         <span style="font-size: 1.2cqw; line-height: 1.35; color: #98A0AE; text-decoration: line-through;">Ajustar escalas da semana</span>
                       </div>
                       <div style="padding: 1.1cqw 1.2cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-radius: 0.7cqw; display: flex; gap: 0.9cqw; align-items: flex-start">
-                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #8C7A4E;"></div>
+                        <div style="width: 1.5cqw; height: 1.5cqw; border-radius: 0.35cqw; flex-shrink: 0; background: #4E7D0B;"></div>
                         <span style="font-size: 1.2cqw; line-height: 1.35; color: #98A0AE; text-decoration: line-through;">Cobrar assinaturas pendentes</span>
                       </div>
                     </div>
@@ -672,17 +673,17 @@
               </div>
               <div style="position: absolute; inset: 0; display: flex; background: #FFFFFF; animation: omHubB 18s ease-in-out infinite">
                 <div style="width: 6.4cqw; flex-shrink: 0; background: #14161C; display: flex; flex-direction: column; align-items: center; gap: 2.6cqw; padding: 1.6cqw 0">
-                  <div style="width: 3cqw; height: 3cqw; border-radius: 0.8cqw; background: #BAB196; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.5cqw; font-weight: 700">F</div>
+                  <div style="width: 3cqw; height: 3cqw; border-radius: 0.8cqw; background: #B4E62A; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.5cqw; font-weight: 700">F</div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.55); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.6)">Início</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">IA</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">Equipes</span></div>
                   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw"><div style="width: 2.2cqw; height: 2.2cqw; border: 0.2cqw solid rgba(255,255,255,0.4); border-radius: 0.4cqw"></div><span style="font-size: 0.95cqw; color: rgba(255,255,255,0.45)">Docs</span></div>
                 </div>
                 <div style="width: 21cqw; flex-shrink: 0; background: #FFFFFF; border-right: 0.1cqw solid #E7EAF0; display: flex; flex-direction: column; padding: 1.4cqw 0.9cqw">
-                  <div style="display: flex; align-items: center; gap: 1cqw; padding: 0.6cqw 1.4cqw 1.6cqw"><div style="width: 2.4cqw; height: 2.4cqw; border-radius: 50%; background: #BAB196; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; font-weight: 700">F</div><span style="font-size: 1.5cqw; font-weight: 600; color: #1B2130">Sinapse</span></div>
+                  <div style="display: flex; align-items: center; gap: 1cqw; padding: 0.6cqw 1.4cqw 1.6cqw"><div style="width: 2.4cqw; height: 2.4cqw; border-radius: 50%; background: #B4E62A; color: #14161C; display: flex; align-items: center; justify-content: center; font-size: 1.2cqw; font-weight: 700">F</div><span style="font-size: 1.5cqw; font-weight: 600; color: #1B2130">Sinapse</span></div>
                   <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.1cqw 1.4cqw 0.5cqw; font-size: 1.05cqw; letter-spacing: 0.1em; color: #98A0AE">PESSOAL</div>
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw; background: #FDF3E3; box-shadow: inset 0.25cqw 0 0 #BAB196; font-size: 1.3cqw; color: #1B2130">
-                    <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #8C7A4E"></div><span>Meu Kanban</span></div>
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw; background: #FDF3E3; box-shadow: inset 0.25cqw 0 0 #A3D61C; font-size: 1.3cqw; color: #1B2130">
+                    <div style="display: flex; align-items: center; gap: 1cqw"><div style="width: 1.7cqw; height: 1.7cqw; border-radius: 0.4cqw; background: #4E7D0B"></div><span>Meu Kanban</span></div>
                     
                   </div>
                   <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.8cqw; padding: 1.05cqw 1.4cqw; border-radius: 0.7cqw;  font-size: 1.3cqw; color: #3E4757">
@@ -727,7 +728,7 @@
                         <span style="font-size: 1.25cqw; line-height: 1.35; color: #2A3140; letter-spacing: 0.01em">COMPRA DE UNIFORMES PARA A EQUIPE DE LIMPEZA</span>
                       </div>
                       <div style="padding: 1.2cqw 1.3cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-left: 0.35cqw solid #1E2A5A; border-radius: 0.7cqw; display: flex; flex-direction: column; gap: 0.8cqw">
-                        <span style="align-self: flex-start; padding: 0.35cqw 0.9cqw; border-radius: 3cqw; background: #FDF0DF; color: #9A6516; font-size: 1cqw; font-weight: 600">Assinatura CTPS</span>
+                        <span style="align-self: flex-start; padding: 0.35cqw 0.9cqw; border-radius: 3cqw; background: #FDF0DF; color: #4E7D0B; font-size: 1cqw; font-weight: 600">Assinatura CTPS</span>
                         <span style="font-size: 1.25cqw; line-height: 1.35; color: #2A3140; letter-spacing: 0.01em">CTPS · COLABORADORA A</span>
                       </div>
                       <div style="padding: 1.2cqw 1.3cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-left: 0.35cqw solid #1E2A5A; border-radius: 0.7cqw; display: flex; flex-direction: column; gap: 0.8cqw">
@@ -735,16 +736,16 @@
                         <span style="font-size: 1.25cqw; line-height: 1.35; color: #2A3140; letter-spacing: 0.01em">RESCISÃO · COLABORADOR B</span>
                       </div>
                       <div style="padding: 1.2cqw 1.3cqw; background: #FFFFFF; border: 0.1cqw solid #E7EAF0; border-left: 0.35cqw solid #1E2A5A; border-radius: 0.7cqw; display: flex; flex-direction: column; gap: 0.8cqw">
-                        <span style="align-self: flex-start; padding: 0.35cqw 0.9cqw; border-radius: 3cqw; background: #FDF0DF; color: #9A6516; font-size: 1cqw; font-weight: 600">Assinatura CTPS</span>
+                        <span style="align-self: flex-start; padding: 0.35cqw 0.9cqw; border-radius: 3cqw; background: #FDF0DF; color: #4E7D0B; font-size: 1cqw; font-weight: 600">Assinatura CTPS</span>
                         <span style="font-size: 1.25cqw; line-height: 1.35; color: #2A3140; letter-spacing: 0.01em">CTPS · COLABORADOR C</span>
                       </div>
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1cqw">
-                        <div style="padding: 1.1cqw 1.3cqw; background: #FDF7E6; border-radius: 0.8cqw; font-size: 1.2cqw; font-weight: 600; color: #7A6118">ANDAMENTO (0)</div>
+                        <div style="padding: 1.1cqw 1.3cqw; background: #FDF7E6; border-radius: 0.8cqw; font-size: 1.2cqw; font-weight: 600; color: #4E7D0B">ANDAMENTO (0)</div>
                         <div style="padding: 3cqw 1.3cqw; background: #FBFCFE; border: 0.1cqw dashed #E1E6EF; border-radius: 0.8cqw; text-align: center; font-size: 1.15cqw; color: #98A0AE">sem tarefas</div>
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1cqw">
-                        <div style="padding: 1.1cqw 1.3cqw; background: #E9F6EE; border-radius: 0.8cqw; font-size: 1.2cqw; font-weight: 600; color: #8C7A4E">CONCLUÍDO (0)</div>
+                        <div style="padding: 1.1cqw 1.3cqw; background: #E9F6EE; border-radius: 0.8cqw; font-size: 1.2cqw; font-weight: 600; color: #4E7D0B">CONCLUÍDO (0)</div>
                         <div style="padding: 3cqw 1.3cqw; background: #FBFCFE; border: 0.1cqw dashed #E1E6EF; border-radius: 0.8cqw; text-align: center; font-size: 1.15cqw; color: #98A0AE">sem tarefas</div>
                       </div>
                     </div>
@@ -752,22 +753,22 @@
                 </div>
               </div>
 
-              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(0,0,0,0.6)); animation: omHubCursor 18s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(40,52,24,0.12)); animation: omHubCursor 18s ease-in-out infinite; pointer-events: none"></div>
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 20px; order: 1">
-            <span style="font-size: 10px; letter-spacing: 0.3em; color: #8C8574; font-weight: 400">FORMAÇÃO PRÁTICA</span>
-            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #F5F1E8; text-wrap: pretty">O time aprende com a rotina dele</h3>
-            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #8C8574; text-wrap: pretty">Nada de treinamento genérico. Cada pessoa aprende usando as tarefas que ela já faz, na linguagem dela, e sai da formação com a IA resolvendo a parte que ela mais odeia fazer.</p>
+            <span style="font-size: 10px; letter-spacing: 0.3em; color: #5F665A; font-weight: 400">FORMAÇÃO PRÁTICA</span>
+            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #131711; text-wrap: pretty">O time aprende com a rotina dele</h3>
+            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #5F665A; text-wrap: pretty">Nada de treinamento genérico. Cada pessoa aprende usando as tarefas que ela já faz, na linguagem dela, e sai da formação com a IA resolvendo a parte que ela mais odeia fazer.</p>
           </div>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(30px, 4.5vw, 72px); align-items: center">
           <div style="position: relative; order: 1">
-            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(186,177,150,0.22); box-shadow: 0 44px 80px -30px rgba(0,0,0,1), 0 0 70px -30px rgba(194,184,157,0.35); container-type: size; background: #F8F9FC">
+            <div style="position: relative; width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; border: 1px solid rgba(19,23,17,0.11); box-shadow: 0 44px 80px -30px rgba(40,52,24,0.16), 0 0 70px -30px rgba(140,200,20,0.245); container-type: size; background: #F8F9FC">
               <div style="position: absolute; inset: 0; display: flex; background: #F8F9FC; animation: omRecA 18s ease-in-out infinite">
                 <div style="width: 21cqw; flex-shrink: 0; background: #FFFFFF; border-right: 0.1cqw solid #ECEEF4; display: flex; flex-direction: column; padding: 1.8cqw 1.1cqw">
-                  <div style="padding: 0.4cqw 1.2cqw 2.2cqw; font-size: 1.9cqw; font-weight: 700; color: #14162B">Recruta<span style="color: #8C7A4E">.AI</span></div>
-                  <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; background: #8C7A4E; color: #FFFFFF; font-size: 1.3cqw">
+                  <div style="padding: 0.4cqw 1.2cqw 2.2cqw; font-size: 1.9cqw; font-weight: 700; color: #14162B">Recruta<span style="color: #4E7D0B">.AI</span></div>
+                  <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; background: #4E7D0B; color: #FFFFFF; font-size: 1.3cqw">
                     <div style="width: 1.6cqw; height: 1.6cqw; border: 0.2cqw solid currentColor; border-radius: 0.35cqw; opacity: 0.85"></div><span>Painel Inicial</span>
                   </div>
                   <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; color: #4B5266; font-size: 1.3cqw">
@@ -798,26 +799,26 @@
                   <div style="display: flex; flex-direction: column; gap: 1.6cqw; padding: 1.8cqw 2.2cqw">
                     <div style="display: flex; gap: 1.2cqw">
                       <div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 1.2cqw; padding: 1.6cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
-                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.22); flex-shrink: 0"></div>
+                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.22); flex-shrink: 0"></div>
                         <div style="display: flex; flex-direction: column; gap: 0.3cqw; min-width: 0"><span style="font-size: 1.1cqw; color: #6C7488; white-space: nowrap">Vagas abertas</span><span style="font-size: 2.4cqw; font-weight: 700; color: #14162B">18</span></div>
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 1.2cqw; padding: 1.6cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
-                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.16); flex-shrink: 0"></div>
+                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.16); flex-shrink: 0"></div>
                         <div style="display: flex; flex-direction: column; gap: 0.3cqw; min-width: 0"><span style="font-size: 1.1cqw; color: #6C7488; white-space: nowrap">Candidatos avaliados</span><span style="font-size: 2.4cqw; font-weight: 700; color: #14162B">311</span></div>
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 1.2cqw; padding: 1.6cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
-                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.12); flex-shrink: 0"></div>
+                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.12); flex-shrink: 0"></div>
                         <div style="display: flex; flex-direction: column; gap: 0.3cqw; min-width: 0"><span style="font-size: 1.1cqw; color: #6C7488; white-space: nowrap">Nota média</span><span style="font-size: 2.4cqw; font-weight: 700; color: #14162B">44%</span></div>
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 1.2cqw; padding: 1.6cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
-                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.2); flex-shrink: 0"></div>
+                        <div style="width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.2); flex-shrink: 0"></div>
                         <div style="display: flex; flex-direction: column; gap: 0.3cqw; min-width: 0"><span style="font-size: 1.1cqw; color: #6C7488; white-space: nowrap">Aprovados</span><span style="font-size: 2.4cqw; font-weight: 700; color: #14162B">3</span></div>
                       </div>
                     </div>
                     <div style="background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw; overflow: hidden">
                       <div style="display: flex; align-items: center; justify-content: space-between; gap: 1cqw; padding: 1.5cqw 1.6cqw">
                         <span style="font-size: 1.6cqw; font-weight: 700; color: #14162B">Últimas vagas</span>
-                        <span style="padding: 0.9cqw 1.4cqw; background: #8C7A4E; color: #FFFFFF; border-radius: 0.7cqw; font-size: 1.1cqw; font-weight: 600; white-space: nowrap">Nova vaga</span>
+                        <span style="padding: 0.9cqw 1.4cqw; background: #4E7D0B; color: #FFFFFF; border-radius: 0.7cqw; font-size: 1.1cqw; font-weight: 600; white-space: nowrap">Nova vaga</span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1cqw 1.6cqw; background: #F8F9FC; font-size: 1cqw; letter-spacing: 0.08em; color: #9AA0B0">
                         <span style="width: 40%">VAGA</span><span style="width: 15%">CANDIDATOS</span><span style="width: 15%">NOTA MÉDIA</span><span style="width: 18%">DATA</span><span style="width: 12%">STATUS</span>
@@ -827,28 +828,28 @@
                         <span style="width: 15%; color: #4B5266">47</span>
                         <span style="width: 15%; color: #4B5266">43%</span>
                         <span style="width: 18%; color: #9AA0B0">27/07/2026</span>
-                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(186,177,150,0.2); color: #6E5F3D; font-size: 1cqw; font-weight: 600">Ativa</span></span>
+                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(170,225,40,0.2); color: #4E7D0B; font-size: 1cqw; font-weight: 600">Ativa</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.25cqw 1.6cqw; border-top: 0.1cqw solid #F1F3F8; font-size: 1.2cqw; color: #2A3040">
                         <span style="width: 40%">Cobertura de férias</span>
                         <span style="width: 15%; color: #4B5266">9</span>
                         <span style="width: 15%; color: #4B5266">44%</span>
                         <span style="width: 18%; color: #9AA0B0">27/07/2026</span>
-                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(186,177,150,0.2); color: #6E5F3D; font-size: 1cqw; font-weight: 600">Ativa</span></span>
+                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(170,225,40,0.2); color: #4E7D0B; font-size: 1cqw; font-weight: 600">Ativa</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.25cqw 1.6cqw; border-top: 0.1cqw solid #F1F3F8; font-size: 1.2cqw; color: #2A3040">
                         <span style="width: 40%">Vigilante</span>
                         <span style="width: 15%; color: #4B5266">26</span>
                         <span style="width: 15%; color: #4B5266">46%</span>
                         <span style="width: 18%; color: #9AA0B0">01/07/2026</span>
-                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(186,177,150,0.2); color: #6E5F3D; font-size: 1cqw; font-weight: 600">Ativa</span></span>
+                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(170,225,40,0.2); color: #4E7D0B; font-size: 1cqw; font-weight: 600">Ativa</span></span>
                       </div>
                       <div style="display: flex; align-items: center; gap: 1cqw; padding: 1.25cqw 1.6cqw; border-top: 0.1cqw solid #F1F3F8; font-size: 1.2cqw; color: #2A3040">
                         <span style="width: 40%">Recepcionista</span>
                         <span style="width: 15%; color: #4B5266">86</span>
                         <span style="width: 15%; color: #4B5266">37%</span>
                         <span style="width: 18%; color: #9AA0B0">21/05/2026</span>
-                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(186,177,150,0.2); color: #6E5F3D; font-size: 1cqw; font-weight: 600">Ativa</span></span>
+                        <span style="width: 12%"><span style="padding: 0.4cqw 1cqw; border-radius: 3cqw; background: rgba(170,225,40,0.2); color: #4E7D0B; font-size: 1cqw; font-weight: 600">Ativa</span></span>
                       </div>
                     </div>
                   </div>
@@ -856,11 +857,11 @@
               </div>
               <div style="position: absolute; inset: 0; display: flex; background: #F8F9FC; animation: omRecB 18s ease-in-out infinite">
                 <div style="width: 21cqw; flex-shrink: 0; background: #FFFFFF; border-right: 0.1cqw solid #ECEEF4; display: flex; flex-direction: column; padding: 1.8cqw 1.1cqw">
-                  <div style="padding: 0.4cqw 1.2cqw 2.2cqw; font-size: 1.9cqw; font-weight: 700; color: #14162B">Recruta<span style="color: #8C7A4E">.AI</span></div>
+                  <div style="padding: 0.4cqw 1.2cqw 2.2cqw; font-size: 1.9cqw; font-weight: 700; color: #14162B">Recruta<span style="color: #4E7D0B">.AI</span></div>
                   <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; color: #4B5266; font-size: 1.3cqw">
                     <div style="width: 1.6cqw; height: 1.6cqw; border: 0.2cqw solid currentColor; border-radius: 0.35cqw; opacity: 0.85"></div><span>Painel Inicial</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; background: #8C7A4E; color: #FFFFFF; font-size: 1.3cqw">
+                  <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; background: #4E7D0B; color: #FFFFFF; font-size: 1.3cqw">
                     <div style="width: 1.6cqw; height: 1.6cqw; border: 0.2cqw solid currentColor; border-radius: 0.35cqw; opacity: 0.85"></div><span>Vagas</span>
                   </div>
                   <div style="display: flex; align-items: center; gap: 1.1cqw; padding: 1.1cqw 1.2cqw; border-radius: 0.8cqw; color: #4B5266; font-size: 1.3cqw">
@@ -888,13 +889,13 @@
                   <div style="display: flex; flex-direction: column; gap: 1.5cqw; padding: 1.8cqw 2.2cqw">
                     <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 1.4cqw">
                       <div style="display: flex; flex-direction: column; gap: 0.3cqw"><span style="font-size: 2.2cqw; font-weight: 700; color: #14162B">Vagas</span><span style="font-size: 1.15cqw; color: #6C7488">acompanhe suas vagas e candidatos</span></div>
-                      <span style="padding: 1cqw 1.5cqw; background: #8C7A4E; color: #FFFFFF; border-radius: 0.7cqw; font-size: 1.15cqw; font-weight: 600; white-space: nowrap">Nova vaga</span>
+                      <span style="padding: 1cqw 1.5cqw; background: #4E7D0B; color: #FFFFFF; border-radius: 0.7cqw; font-size: 1.15cqw; font-weight: 600; white-space: nowrap">Nova vaga</span>
                     </div>
                     <div style="padding: 1.1cqw 1.4cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 0.8cqw; font-size: 1.15cqw; color: #9AA0B0">Buscar vaga...</div>
                     <div style="display: flex; gap: 1.2cqw; align-items: stretch">
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.5cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8cqw">
-                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.22)"></div>
+                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.22)"></div>
                           <span style="padding: 0.35cqw 0.9cqw; border-radius: 0.4cqw; background: #F1F3F8; color: #6C7488; font-size: 0.9cqw; letter-spacing: 0.08em; font-weight: 600">ATIVA</span>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.25cqw"><span style="font-size: 1.35cqw; font-weight: 700; color: #14162B; line-height: 1.25">Higienização e limpeza</span><span style="font-size: 1cqw; letter-spacing: 0.06em; color: #9AA0B0">SINAPSE</span></div>
@@ -905,7 +906,7 @@
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.5cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8cqw">
-                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.22)"></div>
+                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.22)"></div>
                           <span style="padding: 0.35cqw 0.9cqw; border-radius: 0.4cqw; background: #F1F3F8; color: #6C7488; font-size: 0.9cqw; letter-spacing: 0.08em; font-weight: 600">ATIVA</span>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.25cqw"><span style="font-size: 1.35cqw; font-weight: 700; color: #14162B; line-height: 1.25">Cobertura de férias</span><span style="font-size: 1cqw; letter-spacing: 0.06em; color: #9AA0B0">SINAPSE</span></div>
@@ -916,7 +917,7 @@
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.5cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8cqw">
-                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.22)"></div>
+                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.22)"></div>
                           <span style="padding: 0.35cqw 0.9cqw; border-radius: 0.4cqw; background: #F1F3F8; color: #6C7488; font-size: 0.9cqw; letter-spacing: 0.08em; font-weight: 600">ATIVA</span>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.25cqw"><span style="font-size: 1.35cqw; font-weight: 700; color: #14162B; line-height: 1.25">Vigilante</span><span style="font-size: 1cqw; letter-spacing: 0.06em; color: #9AA0B0">SINAPSE</span></div>
@@ -927,7 +928,7 @@
                       </div>
                       <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.1cqw; padding: 1.5cqw; background: #FFFFFF; border: 0.1cqw solid #ECEEF4; border-radius: 1cqw">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8cqw">
-                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(186,177,150,0.22)"></div>
+                          <div style="width: 3cqw; height: 3cqw; border-radius: 0.7cqw; background: rgba(170,225,40,0.22)"></div>
                           <span style="padding: 0.35cqw 0.9cqw; border-radius: 0.4cqw; background: #F1F3F8; color: #6C7488; font-size: 0.9cqw; letter-spacing: 0.08em; font-weight: 600">ATIVA</span>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.25cqw"><span style="font-size: 1.35cqw; font-weight: 700; color: #14162B; line-height: 1.25">Recepcionista</span><span style="font-size: 1cqw; letter-spacing: 0.06em; color: #9AA0B0">SINAPSE</span></div>
@@ -941,256 +942,256 @@
                 </div>
               </div>
 
-              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(0,0,0,0.45)); animation: omRecCursor 18s ease-in-out infinite; pointer-events: none"></div>
+              <div style="position: absolute; left: 0; top: 0; width: 1.7cqw; height: 2.4cqw; background: #FFFFFF; clip-path: polygon(0% 0%, 0% 78%, 26% 60%, 46% 100%, 62% 90%, 42% 52%, 74% 48%); filter: drop-shadow(0 0.3cqw 0.7cqw rgba(40,52,24,0.09)); animation: omRecCursor 18s ease-in-out infinite; pointer-events: none"></div>
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 20px; order: 2">
-            <span style="font-size: 10px; letter-spacing: 0.3em; color: #8C8574; font-weight: 400">RECRUTAMENTO COM IA</span>
-            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #F5F1E8; text-wrap: pretty">Contratar deixou de depender de você</h3>
-            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #8C8574; text-wrap: pretty">A IA aplica prova e nota cada candidato antes de alguém do seu time olhar. Foram 311 candidatos avaliados em 18 vagas abertas, com o dono só decidindo no final.</p>
+            <span style="font-size: 10px; letter-spacing: 0.3em; color: #5F665A; font-weight: 400">RECRUTAMENTO COM IA</span>
+            <h3 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; color: #131711; text-wrap: pretty">Contratar deixou de depender de você</h3>
+            <p style="margin: 0; max-width: 32em; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.78; color: #5F665A; text-wrap: pretty">A IA aplica prova e nota cada candidato antes de alguém do seu time olhar. Foram 311 candidatos avaliados em 18 vagas abertas, com o dono só decidindo no final.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px); background: #12100E; border-top: 1px solid rgba(186,177,150,0.14); border-bottom: 1px solid rgba(186,177,150,0.14)">
+  <section style="padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px); background: #FCFCFB; border-top: 1px solid rgba(19,23,17,0.07); border-bottom: 1px solid rgba(19,23,17,0.07)">
     <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: clamp(34px, 4.5vw, 52px)">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
         <span id="numeros" style="display: block; position: relative; top: -110px"></span><h2 style="margin: 0; font-weight: 200; font-size: clamp(28px, 3.8vw, 46px); line-height: 1.2; max-width: 26em; text-wrap: pretty">A AVIOR em números reais</h2>
-        <p style="margin: 0; max-width: 40em; font-size: clamp(15px, 1.5vw, 16.5px); line-height: 1.78; color: #8C8574; text-wrap: pretty">O método não foi testado em cliente. Foi testado na minha folha, com mais de 100 pessoas dependendo de mim para receber no dia certo.</p>
+        <p style="margin: 0; max-width: 40em; font-size: clamp(15px, 1.5vw, 16.5px); line-height: 1.78; color: #5F665A; text-wrap: pretty">O método não foi testado em cliente. Foi testado na minha folha, com mais de 100 pessoas dependendo de mim para receber no dia certo.</p>
       </div>
 
-      <div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(172px, 1fr)); gap: clamp(26px, 3vw, 40px) clamp(16px, 2.1vw, 32px); padding: clamp(30px, 4vw, 54px) clamp(20px, 2.8vw, 40px); background: linear-gradient(160deg, rgba(194,184,157,0.09) 0%, rgba(0,0,0,0) 72%); border: 1px solid rgba(186,177,150,0.2); border-radius: 22px">
+      <div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(172px, 1fr)); gap: clamp(26px, 3vw, 40px) clamp(16px, 2.1vw, 32px); padding: clamp(30px, 4vw, 54px) clamp(20px, 2.8vw, 40px); background: linear-gradient(160deg, rgba(170,225,40,0.09) 0%, rgba(40,52,24,0) 72%); border: 1px solid rgba(19,23,17,0.1); border-radius: 22px">
           <div style="min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; ">
-            <span style="font-size: 12px; letter-spacing: 0.1em; color: #8C8574">Custo de mão de obra</span>
-            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #FFFBF0 0%, #C2B89D 48%, #BAB196 100%); -webkit-background-clip: text; background-clip: text; color: transparent">R$ 50 mil</span>
-            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #8C8574; text-wrap: pretty">a menos por mês, sem deixar de atender nenhum contrato que já estava na rua</p>
+            <span style="font-size: 12px; letter-spacing: 0.1em; color: #5F665A">Custo de mão de obra</span>
+            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #4A7A00 0%, #2F5200 48%, #4A7A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent">R$ 50 mil</span>
+            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #5F665A; text-wrap: pretty">a menos por mês, sem deixar de atender nenhum contrato que já estava na rua</p>
           </div>
           <div style="min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; ">
-            <span style="font-size: 12px; letter-spacing: 0.1em; color: #8C8574">Custo de sistemas</span>
-            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #FFFBF0 0%, #C2B89D 48%, #BAB196 100%); -webkit-background-clip: text; background-clip: text; color: transparent">R$ 8 mil</span>
-            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #8C8574; text-wrap: pretty">a menos por mês, com licenças canceladas e o problema resolvido em casa</p>
+            <span style="font-size: 12px; letter-spacing: 0.1em; color: #5F665A">Custo de sistemas</span>
+            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #4A7A00 0%, #2F5200 48%, #4A7A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent">R$ 8 mil</span>
+            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #5F665A; text-wrap: pretty">a menos por mês, com licenças canceladas e o problema resolvido em casa</p>
           </div>
           <div style="min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; ">
-            <span style="font-size: 12px; letter-spacing: 0.1em; color: #8C8574">Back office</span>
-            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #FFFBF0 0%, #C2B89D 48%, #BAB196 100%); -webkit-background-clip: text; background-clip: text; color: transparent">14 para 5</span>
-            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #8C8574; text-wrap: pretty">pessoas, e duas delas foram realocadas para o comercial. Foi realocação, não demissão</p>
+            <span style="font-size: 12px; letter-spacing: 0.1em; color: #5F665A">Back office</span>
+            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #4A7A00 0%, #2F5200 48%, #4A7A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent">14 para 5</span>
+            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #5F665A; text-wrap: pretty">pessoas, e duas delas foram realocadas para o comercial. Foi realocação, não demissão</p>
           </div>
           <div style="min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; ">
-            <span style="font-size: 12px; letter-spacing: 0.1em; color: #8C8574">Tempo de processo</span>
-            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #FFFBF0 0%, #C2B89D 48%, #BAB196 100%); -webkit-background-clip: text; background-clip: text; color: transparent">2 semanas</span>
-            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #8C8574; text-wrap: pretty">viraram 30 minutos em um processo que travava a operação inteira</p>
+            <span style="font-size: 12px; letter-spacing: 0.1em; color: #5F665A">Tempo de processo</span>
+            <span style="font-weight: 200; font-size: clamp(30px, 3.6vw, 46px); line-height: 1; white-space: nowrap; background: linear-gradient(100deg, #4A7A00 0%, #2F5200 48%, #4A7A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent">2 semanas</span>
+            <p style="margin: 0; max-width: 100%; font-size: 13.5px; line-height: 1.6; color: #5F665A; text-wrap: pretty">viraram 30 minutos em um processo que travava a operação inteira</p>
           </div>
       </div>
 
-      <p style="margin: 0; max-width: 46em; text-align: center; font-size: 12.5px; line-height: 1.7; color: rgba(140,133,116,0.8); text-wrap: pretty">Números medidos dentro da FOCO, empresa de terceirização de serviços da própria fundadora. Resultados passados não garantem resultados futuros: cada operação tem o seu ponto de partida.</p>
+      <p style="margin: 0; max-width: 46em; text-align: center; font-size: 12.5px; line-height: 1.7; color: rgba(95,102,90,0.85); text-wrap: pretty">Números medidos dentro da FOCO, empresa de terceirização de serviços da própria fundadora. Resultados passados não garantem resultados futuros: cada operação tem o seu ponto de partida.</p>
     </div>
   </section>
 
   <section style="padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px)">
     <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(40px, 5vw, 58px)">
       <div style="display: flex; flex-direction: column; gap: 18px; max-width: 34em">
-        <span id="cases" style="display: block; position: relative; top: -110px"></span><span style="font-size: 10px; letter-spacing: 0.34em; color: #BAB196; font-weight: 500">O MAIOR CASE</span>
+        <span id="cases" style="display: block; position: relative; top: -110px"></span><span style="font-size: 10px; letter-spacing: 0.34em; color: #4A7A00; font-weight: 500">O MAIOR CASE</span>
         <h2 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.25; text-wrap: pretty">Mais do que ter cases, a FOCO é o nosso maior case.</h2>
-        <p style="margin: 0; font-size: 15px; line-height: 1.72; color: #8C8574; max-width: 40em; text-wrap: pretty">Não foi uma área isolada. Foi a empresa inteira: DP, jurídico, RH, operação, marketing e administrativo, todos reconstruídos pelo mesmo método.</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.72; color: #5F665A; max-width: 40em; text-wrap: pretty">Não foi uma área isolada. Foi a empresa inteira: DP, jurídico, RH, operação, marketing e administrativo, todos reconstruídos pelo mesmo método.</p>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 40px); padding: clamp(32px, 4vw, 48px); background: #12100E; border: 1px solid rgba(186,177,150,0.2); border-radius: 16px">
+      <div style="display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 40px); padding: clamp(32px, 4vw, 48px); background: #FCFCFB; border: 1px solid rgba(19,23,17,0.1); border-radius: 16px">
         <div style="display: flex; align-items: center; gap: 20px">
-          <div style="position: relative; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: #F5F1E8; padding: 6px">
+          <div style="position: relative; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: #FFFFFF; padding: 6px">
             <image-slot id="avior-foco-logo" shape="circle" fit="contain" placeholder="Logo da FOCO" src="assets/0064a66e-b40c-4569-81c5-96458950d1bf.webp"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; gap: 3px">
-            <span style="font-size: 19px; font-weight: 400; color: #F5F1E8">FOCO Serviços Terceirizados</span>
-            <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8574">Facilities · 100+ pessoas na operação</span>
+            <span style="font-size: 19px; font-weight: 400; color: #131711">FOCO Serviços Terceirizados</span>
+            <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5F665A">Facilities · 100+ pessoas na operação</span>
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 14px">
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">DP</span>
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Jurídico</span>
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">RH</span>
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Operação</span>
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Marketing</span>
-          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(186,177,150,0.25); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Administrativo</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">DP</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Jurídico</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">RH</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Operação</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Marketing</span>
+          <span style="padding: 10px 16px; text-align: center; border: 1px solid rgba(19,23,17,0.125); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Administrativo</span>
         </div>
 
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #8C8574; max-width: 56em; text-wrap: pretty">Mais de 100 pessoas dependiam da fundadora para receber no dia certo, com contratos de facilities atendidos sem margem de erro. O método ÓRBITA entrou em cada uma dessas áreas, na mesma ordem: cultura, processo e só então inteligência.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #5F665A; max-width: 56em; text-wrap: pretty">Mais de 100 pessoas dependiam da fundadora para receber no dia certo, com contratos de facilities atendidos sem margem de erro. O método ÓRBITA entrou em cada uma dessas áreas, na mesma ordem: cultura, processo e só então inteligência.</p>
 
       </div>
     </div>
   </section>
 
   <section style="padding: clamp(64px, 8vw, 100px) clamp(20px, 5vw, 72px)">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 26px; padding: clamp(40px, 5vw, 60px) clamp(28px, 4vw, 52px); background: linear-gradient(160deg, rgba(186,177,150,0.1), rgba(0,0,0,0)); border: 1px solid rgba(186,177,150,0.32); border-radius: 20px">
-      <span style="font-size: 10px; letter-spacing: 0.34em; color: #BAB196; font-weight: 500">SELEÇÃO 2026</span>
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 26px; padding: clamp(40px, 5vw, 60px) clamp(28px, 4vw, 52px); background: linear-gradient(160deg, rgba(170,225,40,0.1), rgba(40,52,24,0)); border: 1px solid rgba(19,23,17,0.16); border-radius: 20px">
+      <span style="font-size: 10px; letter-spacing: 0.34em; color: #4A7A00; font-weight: 500">SELEÇÃO 2026</span>
       <h2 style="margin: 0; font-weight: 200; font-size: clamp(24px, 3.2vw, 36px); line-height: 1.28; max-width: 26em; text-wrap: pretty">Em 2026, a FOCO foi nossa prova. Agora vamos escolher quem vem depois dela.</h2>
-      <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #8C8574; max-width: 40em; text-wrap: pretty">O método já provou que funciona numa operação inteira, não numa área isolada. Por isso a AVIOR está selecionando apenas <span style="color: #F5F1E8; font-weight: 400">3 empresas</span> para a próxima turma de implementação, com acompanhamento próximo do início ao fim.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #5F665A; max-width: 40em; text-wrap: pretty">O método já provou que funciona numa operação inteira, não numa área isolada. Por isso a AVIOR está selecionando apenas <span style="color: #131711; font-weight: 400">3 empresas</span> para a próxima turma de implementação, com acompanhamento próximo do início ao fim.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 6px">
-        <span style="padding: 9px 18px; border: 1px solid rgba(186,177,150,0.3); border-radius: 20px; font-size: 12.5px; color: #C2B89D">3 vagas abertas</span>
-        <span style="padding: 9px 18px; border: 1px solid rgba(186,177,150,0.3); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Seleção por diagnóstico</span>
-        <span style="padding: 9px 18px; border: 1px solid rgba(186,177,150,0.3); border-radius: 20px; font-size: 12.5px; color: #C2B89D">Acompanhamento próximo</span>
+        <span style="padding: 9px 18px; border: 1px solid rgba(19,23,17,0.15); border-radius: 20px; font-size: 12.5px; color: #4A7A00">3 vagas abertas</span>
+        <span style="padding: 9px 18px; border: 1px solid rgba(19,23,17,0.15); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Seleção por diagnóstico</span>
+        <span style="padding: 9px 18px; border: 1px solid rgba(19,23,17,0.15); border-radius: 20px; font-size: 12.5px; color: #4A7A00">Acompanhamento próximo</span>
       </div>
-      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 8px; padding: 21px 42px; border-radius: 1px; background: linear-gradient(100deg, #C2B89D 0%, #BAB196 60%, #A9A085 100%); color: #000000; font-weight: 500; font-size: clamp(12px, 1.3vw, 14px); letter-spacing: 0.14em; text-transform: uppercase; box-shadow: 0 16px 44px -22px rgba(186,177,150,0.75); transition: transform 180ms ease, box-shadow 180ms ease" style-hover="transform: translateY(-2px); box-shadow: 0 26px 56px -22px rgba(186,177,150,0.9); color: #000000">Quero disputar uma vaga</a>
+      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 8px; padding: 21px 42px; border-radius: 1px; background: linear-gradient(100deg, #C6F23E 0%, #B4E62A 60%, #A3D61C 100%); color: #131711; font-weight: 500; font-size: clamp(12px, 1.3vw, 14px); letter-spacing: 0.14em; text-transform: uppercase; box-shadow: 0 16px 44px -22px rgba(140,200,20,0.525); transition: transform 180ms ease, box-shadow 180ms ease" style-hover="transform: translateY(-2px); box-shadow: 0 26px 56px -22px rgba(140,200,20,0.63); color: #131711">Quero disputar uma vaga</a>
     </div>
   </section>
 
-  <section style="padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px); background: #12100E; border-top: 1px solid rgba(186,177,150,0.14); border-bottom: 1px solid rgba(186,177,150,0.14)">
+  <section style="padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px); background: #FCFCFB; border-top: 1px solid rgba(19,23,17,0.07); border-bottom: 1px solid rgba(19,23,17,0.07)">
     <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(40px, 5vw, 62px)">
       <div style="display: flex; flex-direction: column; gap: 18px; max-width: 40em">
-        <span id="time" style="display: block; position: relative; top: -110px"></span><span style="font-size: 10px; letter-spacing: 0.34em; color: #BAB196; font-weight: 500">QUEM ESTÁ POR TRÁS</span>
+        <span id="time" style="display: block; position: relative; top: -110px"></span><span style="font-size: 10px; letter-spacing: 0.34em; color: #4A7A00; font-weight: 500">QUEM ESTÁ POR TRÁS</span>
         <h2 style="margin: 0; font-weight: 200; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.25; text-wrap: pretty">Gente que operou antes de ensinar.</h2>
-        <p style="margin: 0; font-size: clamp(15px, 1.5vw, 16.5px); line-height: 1.8; color: #8C8574; text-wrap: pretty">Quase ninguém que mexe com inteligência artificial veio da operação. A AVIOR nasceu dentro de uma, com folha, escala, ponto e passivo trabalhista para resolver todo mês.</p>
+        <p style="margin: 0; font-size: clamp(15px, 1.5vw, 16.5px); line-height: 1.8; color: #5F665A; text-wrap: pretty">Quase ninguém que mexe com inteligência artificial veio da operação. A AVIOR nasceu dentro de uma, com folha, escala, ponto e passivo trabalhista para resolver todo mês.</p>
       </div>
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(14px, 2vw, 32px); padding: 6px 4px 10px">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-0" shape="circle" fit="cover" src="assets/2072757f-c094-420a-81f4-819e4c51c070.png" placeholder="Foto de Juliana Anhaia, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Juliana Anhaia</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">FUNDADORA</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Juliana Anhaia</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">FUNDADORA</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-1" shape="circle" fit="cover" src="assets/ab286b8f-a1aa-4f9f-a0bf-b2fa8395dd05.png" placeholder="Foto de Vera, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Vera</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">OPERACIONAL</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Vera</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">OPERACIONAL</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-1b" shape="circle" fit="cover" src="assets/62384698-5ca2-4c70-bd3c-0518f6aac90e.jpg" placeholder="Foto de Dargiele, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Dargiele</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">OPERACIONAL</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Dargiele</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">OPERACIONAL</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-2" shape="circle" fit="cover" src="assets/aac15677-38db-48fe-9ea7-46986d7ee28d.jpg" placeholder="Foto de Glaucia, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Glaucia</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">CLOSER</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Glaucia</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">CLOSER</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-3" shape="circle" fit="cover" src="assets/b3dd3c79-bd0b-46b8-87de-d832a964cff7.jpg" placeholder="Foto de Laura, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Laura</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">SUCESSO DO CLIENTE</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Laura</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">SUCESSO DO CLIENTE</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-6" shape="circle" fit="cover" src="assets/08d40824-6b0e-416d-8b90-d5712a23174a.png" placeholder="Foto de Lauren, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Lauren</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">SUCESSO DO CLIENTE</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Lauren</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">SUCESSO DO CLIENTE</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-4" shape="circle" fit="cover" src="assets/6f790918-7498-4822-ae17-bb159590c522.png" placeholder="Foto de Maria Carolina, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Maria Carolina</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">ARQUITETA DE SOLUÇÕES</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Maria Carolina</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">ARQUITETA DE SOLUÇÕES</span>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; flex-shrink: 0; text-align: center">
-          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(186,177,150,0.3)">
+          <div style="position: relative; width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(19,23,17,0.15)">
             <image-slot id="avior-time-5" shape="circle" fit="cover" src="assets/2aad8fdc-a3ce-47ca-aced-1ba82c97a970.png" placeholder="Foto de Larissa, retrato"></image-slot>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%">
-            <span style="font-size: 16px; font-weight: 300; color: #F5F1E8; line-height: 1.3; white-space: nowrap">Larissa</span>
-            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #BAB196; line-height: 1.4; white-space: nowrap">FINANCEIRO</span>
+            <span style="font-size: 16px; font-weight: 300; color: #131711; line-height: 1.3; white-space: nowrap">Larissa</span>
+            <span style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A7A00; line-height: 1.4; white-space: nowrap">FINANCEIRO</span>
           </div>
         </div>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-top: clamp(26px, 3vw, 36px); border-top: 1px solid rgba(186,177,150,0.2)">
-        <p style="margin: 0; max-width: 34em; font-size: 14.5px; line-height: 1.7; color: #8C8574; text-wrap: pretty">Quem atende a sua empresa é esse time, não um consultor terceirizado que você conhece na primeira reunião e nunca mais vê.</p>
-        <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; padding: 17px 32px; border-radius: 1px; border: 1px solid rgba(186,177,150,0.5); color: #C2B89D; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; transition: background 170ms ease, color 170ms ease" style-hover="background: #BAB196; color: #000000">Quero conhecer mais</a>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-top: clamp(26px, 3vw, 36px); border-top: 1px solid rgba(19,23,17,0.1)">
+        <p style="margin: 0; max-width: 34em; font-size: 14.5px; line-height: 1.7; color: #5F665A; text-wrap: pretty">Quem atende a sua empresa é esse time, não um consultor terceirizado que você conhece na primeira reunião e nunca mais vê.</p>
+        <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; padding: 17px 32px; border-radius: 1px; border: 1px solid rgba(19,23,17,0.2); color: #4A7A00; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; transition: background 170ms ease, color 170ms ease" style-hover="background: #B4E62A; color: #131711">Quero conhecer mais</a>
       </div>
     </div>
   </section>
 
-  <footer style="padding: clamp(56px, 7vw, 80px) clamp(20px, 5vw, 72px) 30px; background: #0B0A09; border-top: 1px solid rgba(186,177,150,0.16)">
+  <footer style="padding: clamp(56px, 7vw, 80px) clamp(20px, 5vw, 72px) 30px; background: #F7F8F4; border-top: 1px solid rgba(19,23,17,0.08)">
     <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(36px, 5vw, 52px)">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(32px, 5vw, 60px)">
         <div style="display: flex; flex-direction: column; gap: 18px; max-width: 30em">
-          <span style="font-weight: 200; font-size: 18px; letter-spacing: 0.44em; text-indent: 0.44em; background: linear-gradient(100deg, #C2B89D 0%, #FFFBF0 32%, #C2B89D 60%, #FFFBF0 80%, #BAB196 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 14px rgba(194,184,157,0.35))">AVIOR</span>
-          <p style="margin: 0; font-size: 14px; line-height: 1.72; color: #8C8574; text-wrap: pretty">Consultoria que transforma operações em liberdade para o dono: cultura, processo e inteligência artificial, nessa ordem.</p>
+          <span style="font-weight: 200; font-size: 18px; letter-spacing: 0.44em; text-indent: 0.44em; background: linear-gradient(100deg, #2F5200 0%, #4A7A00 32%, #2F5200 60%, #4A7A00 80%, #4A7A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 14px rgba(140,200,20,0.245))">AVIOR</span>
+          <p style="margin: 0; font-size: 14px; line-height: 1.72; color: #5F665A; text-wrap: pretty">Consultoria que transforma operações em liberdade para o dono: cultura, processo e inteligência artificial, nessa ordem.</p>
           <div style="display: flex; align-items: center; gap: 12px; margin-top: 4px">
-            <a href="https://instagram.com/sejaavior" target="_blank" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(186,177,150,0.1); border: 1px solid rgba(186,177,150,0.25); color: #C2B89D; transition: background 160ms ease" style-hover="background: rgba(186,177,150,0.22)">
+            <a href="https://instagram.com/sejaavior" target="_blank" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(170,225,40,0.1); border: 1px solid rgba(19,23,17,0.125); color: #4A7A00; transition: background 160ms ease" style-hover="background: rgba(170,225,40,0.22)">
               <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(186,177,150,0.1); border: 1px solid rgba(186,177,150,0.25); color: #C2B89D; transition: background 160ms ease" style-hover="background: rgba(186,177,150,0.22)">
+            <a href="#" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(170,225,40,0.1); border: 1px solid rgba(19,23,17,0.125); color: #4A7A00; transition: background 160ms ease" style-hover="background: rgba(170,225,40,0.22)">
               <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5zM.24 8.25H4.7V23H.24V8.25zM8.36 8.25h4.27v2.02h.06c.6-1.13 2.05-2.32 4.22-2.32 4.52 0 5.35 2.97 5.35 6.84V23h-4.45v-6.67c0-1.59-.03-3.63-2.21-3.63-2.22 0-2.56 1.73-2.56 3.52V23H8.36V8.25z"></path></svg>
             </a>
-            <a href="#" aria-label="YouTube" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(186,177,150,0.1); border: 1px solid rgba(186,177,150,0.25); color: #C2B89D; transition: background 160ms ease" style-hover="background: rgba(186,177,150,0.22)">
+            <a href="#" aria-label="YouTube" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(170,225,40,0.1); border: 1px solid rgba(19,23,17,0.125); color: #4A7A00; transition: background 160ms ease" style-hover="background: rgba(170,225,40,0.22)">
               <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"></rect><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon></svg>
             </a>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-size: 10px; letter-spacing: 0.24em; color: rgba(140,133,116,0.85); font-weight: 500">CONTATO</span>
-          <a href="mailto:aviorsejaavior@gmail.com.br" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #EDEAE4">
+          <span style="font-size: 10px; letter-spacing: 0.24em; color: rgba(95,102,90,0.85); font-weight: 500">CONTATO</span>
+          <a href="mailto:aviorsejaavior@gmail.com.br" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2A3026">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7 10-7"></path></svg>
             aviorsejaavior@gmail.com.br
           </a>
-          <span style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #EDEAE4">
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2A3026">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.5 7-12.5A7 7 0 0 0 5 9.5C5 14.5 12 22 12 22z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
             Porto Alegre · RS
           </span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-size: 10px; letter-spacing: 0.24em; color: rgba(140,133,116,0.85); font-weight: 500">COMECE AGORA</span>
-          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #8C8574; max-width: 22em">Marque seu diagnóstico gratuito e veja por onde a sua operação pode começar a mudar.</p>
-          <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; color: #C2B89D; font-weight: 500; width: fit-content">Quero conhecer mais <span style="font-size: 16px">↗</span></a>
+          <span style="font-size: 10px; letter-spacing: 0.24em; color: rgba(95,102,90,0.85); font-weight: 500">COMECE AGORA</span>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #5F665A; max-width: 22em">Marque seu diagnóstico gratuito e veja por onde a sua operação pode começar a mudar.</p>
+          <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; color: #4A7A00; font-weight: 500; width: fit-content">Quero conhecer mais <span style="font-size: 16px">↗</span></a>
         </div>
       </div>
 
-      <div style="height: 1px; background: rgba(186,177,150,0.16)"></div>
+      <div style="height: 1px; background: rgba(170,225,40,0.16)"></div>
 
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
-        <span style="font-size: 12.5px; color: rgba(140,133,116,0.75)">© 2026 AVIOR. Todos os direitos reservados.</span>
+        <span style="font-size: 12.5px; color: rgba(95,102,90,0.85)">© 2026 AVIOR. Todos os direitos reservados.</span>
         <div style="display: flex; align-items: center; gap: 24px">
-          <a href="/blog/" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Blog</a>
-          <a href="#" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Política de Privacidade</a>
-          <a href="#" style="font-size: 12.5px; color: rgba(140,133,116,0.75)">Termos de Uso</a>
+          <a href="/blog/" style="font-size: 12.5px; color: rgba(95,102,90,0.85)">Blog</a>
+          <a href="#" style="font-size: 12.5px; color: rgba(95,102,90,0.85)">Política de Privacidade</a>
+          <a href="#" style="font-size: 12.5px; color: rgba(95,102,90,0.85)">Termos de Uso</a>
         </div>
       </div>
 
-      <p style="margin: 0; font-size: 12px; line-height: 1.65; color: rgba(140,133,116,0.55); max-width: 62em">AVIOR é uma consultoria de transformação operacional. Os resultados mencionados são baseados em dados reais de clientes, mas resultados individuais podem variar. Esta consultoria não garante resultados específicos.</p>
+      <p style="margin: 0; font-size: 12px; line-height: 1.65; color: rgba(95,102,90,0.85); max-width: 62em">AVIOR é uma consultoria de transformação operacional. Os resultados mencionados são baseados em dados reais de clientes, mas resultados individuais podem variar. Esta consultoria não garante resultados específicos.</p>
     </div>
   </footer>
 
   <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
-    <div sc-camel-on-click="{{ closeModal }}" style="position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.72); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px">
-      <div sc-camel-on-click="{{ stopClick }}" style="position: relative; width: 100%; max-width: 460px; max-height: 90vh; overflow-y: auto; background: #0C0B0A; border: 1px solid rgba(186,177,150,0.3); border-radius: 4px; padding: clamp(28px, 4vw, 42px)">
-        <button sc-camel-on-click="{{ closeModal }}" aria-label="Fechar" style="position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; border: none; background: transparent; color: #8C8574; font-size: 20px; cursor: pointer; line-height: 1">×</button>
+    <div sc-camel-on-click="{{ closeModal }}" style="position: fixed; inset: 0; z-index: 100; background: rgba(40,52,24,0.144); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px">
+      <div sc-camel-on-click="{{ stopClick }}" style="position: relative; width: 100%; max-width: 460px; max-height: 90vh; overflow-y: auto; background: #F8F9F5; border: 1px solid rgba(19,23,17,0.15); border-radius: 4px; padding: clamp(28px, 4vw, 42px)">
+        <button sc-camel-on-click="{{ closeModal }}" aria-label="Fechar" style="position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; border: none; background: transparent; color: #5F665A; font-size: 20px; cursor: pointer; line-height: 1">×</button>
 
         <sc-if value="{{ !leadSubmitted }}" hint-placeholder-val="{{ true }}">
           <div style="display: flex; flex-direction: column; gap: 22px">
             <div style="display: flex; flex-direction: column; gap: 8px">
-              <span style="font-size: 10px; letter-spacing: 0.28em; color: #BAB196; font-weight: 500">DIAGNÓSTICO GRATUITO</span>
-              <h3 style="margin: 0; font-weight: 200; font-size: clamp(21px, 2.6vw, 26px); line-height: 1.25; color: #F5F1E8; text-wrap: pretty">Antes de marcar, me conta rapidinho sobre a sua operação.</h3>
+              <span style="font-size: 10px; letter-spacing: 0.28em; color: #4A7A00; font-weight: 500">DIAGNÓSTICO GRATUITO</span>
+              <h3 style="margin: 0; font-weight: 200; font-size: clamp(21px, 2.6vw, 26px); line-height: 1.25; color: #131711; text-wrap: pretty">Antes de marcar, me conta rapidinho sobre a sua operação.</h3>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 10px">
-              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #8C8574">Faturamento mensal da empresa</span>
+              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #5F665A">Faturamento mensal da empresa</span>
               <div style="display: flex; flex-wrap: wrap; gap: 8px">
                 <button sc-camel-on-click="{{ setFat0 }}" style="{{ fatStyle0 }}">Até R$ 30 mil</button>
                 <button sc-camel-on-click="{{ setFat1 }}" style="{{ fatStyle1 }}">R$ 30 a 100 mil</button>
@@ -1200,7 +1201,7 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 10px">
-              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #8C8574">Tamanho da equipe</span>
+              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #5F665A">Tamanho da equipe</span>
               <div style="display: flex; flex-wrap: wrap; gap: 8px">
                 <button sc-camel-on-click="{{ setEq0 }}" style="{{ eqStyle0 }}">Até 10</button>
                 <button sc-camel-on-click="{{ setEq1 }}" style="{{ eqStyle1 }}">11 a 30</button>
@@ -1210,7 +1211,7 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 10px">
-              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #8C8574">Maior dor da operação hoje</span>
+              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #5F665A">Maior dor da operação hoje</span>
               <div style="display: flex; flex-direction: column; gap: 8px">
                 <button sc-camel-on-click="{{ setDor0 }}" style="{{ dorStyle0 }}">Time saindo e entrando toda hora</button>
                 <button sc-camel-on-click="{{ setDor1 }}" style="{{ dorStyle1 }}">Tudo passa por mim, não saio do centro</button>
@@ -1220,25 +1221,25 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 10px">
-              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #8C8574">Seus dados</span>
-              <input value="{{ leadNome }}" sc-camel-on-change="{{ updateNome }}" placeholder="Seu nome" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #16140F; border: 1px solid rgba(186,177,150,0.28); border-radius: 2px; color: #F5F1E8; font-size: 14px; font-family: Poppins, sans-serif">
-              <input value="{{ leadWhats }}" sc-camel-on-change="{{ updateWhats }}" placeholder="WhatsApp com DDD" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #16140F; border: 1px solid rgba(186,177,150,0.28); border-radius: 2px; color: #F5F1E8; font-size: 14px; font-family: Poppins, sans-serif">
-              <input value="{{ leadEmpresa }}" sc-camel-on-change="{{ updateEmpresa }}" placeholder="Nome da empresa" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #16140F; border: 1px solid rgba(186,177,150,0.28); border-radius: 2px; color: #F5F1E8; font-size: 14px; font-family: Poppins, sans-serif">
-              <textarea value="{{ leadDescricao }}" sc-camel-on-change="{{ updateDescricao }}" placeholder="Conte um pouco sobre a empresa e o negócio" rows="3" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #16140F; border: 1px solid rgba(186,177,150,0.28); border-radius: 2px; color: #F5F1E8; font-size: 14px; font-family: Poppins, sans-serif; resize: vertical"></textarea>
+              <span style="font-size: 11.5px; letter-spacing: 0.06em; color: #5F665A">Seus dados</span>
+              <input value="{{ leadNome }}" sc-camel-on-change="{{ updateNome }}" placeholder="Seu nome" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #FFFFFF; border: 1px solid rgba(19,23,17,0.14); border-radius: 2px; color: #131711; font-size: 14px; font-family: Poppins, sans-serif">
+              <input value="{{ leadWhats }}" sc-camel-on-change="{{ updateWhats }}" placeholder="WhatsApp com DDD" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #FFFFFF; border: 1px solid rgba(19,23,17,0.14); border-radius: 2px; color: #131711; font-size: 14px; font-family: Poppins, sans-serif">
+              <input value="{{ leadEmpresa }}" sc-camel-on-change="{{ updateEmpresa }}" placeholder="Nome da empresa" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #FFFFFF; border: 1px solid rgba(19,23,17,0.14); border-radius: 2px; color: #131711; font-size: 14px; font-family: Poppins, sans-serif">
+              <textarea value="{{ leadDescricao }}" sc-camel-on-change="{{ updateDescricao }}" placeholder="Conte um pouco sobre a empresa e o negócio" rows="3" style="width: 100%; box-sizing: border-box; padding: 13px 14px; background: #FFFFFF; border: 1px solid rgba(19,23,17,0.14); border-radius: 2px; color: #131711; font-size: 14px; font-family: Poppins, sans-serif; resize: vertical"></textarea>
             </div>
 
             <button sc-camel-on-click="{{ submitLead }}" disabled="{{ !canSubmit }}" style="{{ submitStyle }}">Quero conhecer mais</button>
-            <span style="font-size: 11px; text-align: center; color: rgba(140,133,116,0.6)">Suas respostas ajudam a gente a chegar preparado para a conversa.</span>
+            <span style="font-size: 11px; text-align: center; color: rgba(95,102,90,0.85)">Suas respostas ajudam a gente a chegar preparado para a conversa.</span>
           </div>
         </sc-if>
 
         <sc-if value="{{ leadSubmitted }}" hint-placeholder-val="{{ false }}">
           <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; padding: 20px 0">
-            <span style="font-size: 10px; letter-spacing: 0.28em; color: #BAB196; font-weight: 500">RECEBIDO</span>
-            <h3 style="margin: 0; font-weight: 200; font-size: clamp(22px, 2.8vw, 27px); line-height: 1.3; color: #F5F1E8; text-wrap: pretty">Parabéns, {{ leadFirstName }}. Nosso time irá entrar em contato com você.</h3>
-            <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: #8C8574; max-width: 32em; text-wrap: pretty">Com base no que você respondeu, já sabemos por onde começar a conversa.</p>
-            <button sc-camel-on-click="{{ closeModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; border-radius: 1px; background: linear-gradient(100deg, #C2B89D 0%, #BAB196 60%, #A9A085 100%); color: #000000; font-weight: 500; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; width: 100%; box-sizing: border-box; border: none; font-family: Poppins, sans-serif; cursor: pointer">Voltar para a página</button>
-            <span style="font-size: 12px; color: rgba(140,133,116,0.65)">Em breve alguém do time entra em contato pelo WhatsApp.</span>
+            <span style="font-size: 10px; letter-spacing: 0.28em; color: #4A7A00; font-weight: 500">RECEBIDO</span>
+            <h3 style="margin: 0; font-weight: 200; font-size: clamp(22px, 2.8vw, 27px); line-height: 1.3; color: #131711; text-wrap: pretty">Parabéns, {{ leadFirstName }}. Nosso time irá entrar em contato com você.</h3>
+            <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: #5F665A; max-width: 32em; text-wrap: pretty">Com base no que você respondeu, já sabemos por onde começar a conversa.</p>
+            <button sc-camel-on-click="{{ closeModal }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; border-radius: 1px; background: linear-gradient(100deg, #C6F23E 0%, #B4E62A 60%, #A3D61C 100%); color: #131711; font-weight: 500; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; width: 100%; box-sizing: border-box; border: none; font-family: Poppins, sans-serif; cursor: pointer">Voltar para a página</button>
+            <span style="font-size: 12px; color: rgba(95,102,90,0.85)">Em breve alguém do time entra em contato pelo WhatsApp.</span>
           </div>
         </sc-if>
       </div>
@@ -1246,8 +1247,8 @@
   </sc-if>
 
   <sc-if value="{{ stickyCta }}" hint-placeholder-val="{{ false }}">
-    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(0,0,0,0.94); backdrop-filter: blur(10px); border-top: 1px solid rgba(186,177,150,0.3)">
-      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: flex; align-items: center; justify-content: center; padding: 17px 20px; border-radius: 1px; background: linear-gradient(100deg, #C2B89D, #BAB196); color: #000000; font-weight: 500; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase">Quero conhecer mais</a>
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(250,251,247,0.94); backdrop-filter: blur(10px); border-top: 1px solid rgba(19,23,17,0.15)">
+      <a href="#diagnostico" sc-camel-on-click="{{ openModal }}" style="display: flex; align-items: center; justify-content: center; padding: 17px 20px; border-radius: 1px; background: linear-gradient(100deg, #C6F23E, #B4E62A); color: #131711; font-weight: 500; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase">Quero conhecer mais</a>
     </div>
     <div style="height: 78px"></div>
   </sc-if>
@@ -1262,7 +1263,7 @@ class Component extends DCLogic {
 
   pillStyle(active) {
     return "padding: 10px 16px; border-radius: 999px; font-size: 12.5px; font-family: Poppins, sans-serif; cursor: pointer; text-align: left; transition: background 150ms ease, color 150ms ease, border-color 150ms ease; border: 1px solid " +
-      (active ? "#BAB196; background: #BAB196; color: #000000" : "rgba(186,177,150,0.3); background: transparent; color: #C2B89D");
+      (active ? "#A3D61C; background: #C6F23E; color: #131711" : "rgba(19,23,17,0.16); background: transparent; color: #4A7A00");
   }
 
   componentDidMount() {
@@ -1314,8 +1315,8 @@ class Component extends DCLogic {
       canSubmit,
       submitStyle: "padding: 17px 20px; border-radius: 1px; font-weight: 500; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; font-family: Poppins, sans-serif; border: none; width: 100%; " +
         (canSubmit
-          ? "background: linear-gradient(100deg, #C2B89D 0%, #BAB196 60%, #A9A085 100%); color: #000000; cursor: pointer"
-          : "background: rgba(186,177,150,0.15); color: rgba(140,133,116,0.6); cursor: not-allowed"),
+          ? "background: linear-gradient(100deg, #C6F23E 0%, #B4E62A 60%, #A3D61C 100%); color: #131711; cursor: pointer"
+          : "background: rgba(19,23,17,0.06); color: rgba(95,102,90,0.7); cursor: not-allowed"),
       submitLead: () => {
         if (!canSubmit) return;
         this.setState({ leadSubmitted: true });
