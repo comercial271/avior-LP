@@ -4,14 +4,18 @@ Guia para o André. Instalação: 5 minutos, uma vez só.
 
 ## 1. Instalar (no computador, em claude.ai)
 
-1. Baixe o arquivo **carrossel-aki-jardins.zip**. Não descompacte.
-2. Entre em **claude.ai** com a sua conta.
-3. Clique no seu nome (canto de baixo, à esquerda) e abra **Configurações**.
-4. Vá em **Capacidades** e ligue **Execução de código e criação de arquivos**. Sem isso a skill não consegue gerar as imagens.
-5. Na mesma tela, em **Skills**, clique em **Enviar skill** (ou "Upload skill") e escolha o **carrossel-aki-jardins.zip**.
-6. Confira se a skill **carrossel-aki-jardins** aparece na lista com o botão ligado.
+O arquivo **carrossel-aki-jardins.zip** é a "receita" dos posts da AKI. Não precisa abrir. Só salve no computador.
 
-Pronto. Ela vale também no app do celular, na mesma conta.
+1. Abra o navegador e entre em **claude.ai** com o seu e-mail.
+2. Toque em **+ Nova conversa**.
+3. Toque no **clipe 📎** e escolha o arquivo **carrossel-aki-jardins.zip**. Ou arraste o arquivo para dentro da conversa.
+4. Escreva **"Salva essa skill pra mim"** e toque na **setinha ↑** para enviar.
+5. Vai aparecer um botão **Salvar skill**. Toque nele. Pronto, está instalado. Só se faz isso uma vez.
+6. Se o Claude pedir para ligar **Execução de código e criação de arquivos**, ligue. É isso que deixa ele criar as imagens.
+
+Se o botão de salvar não aparecer, dá para instalar pelo caminho longo: clique no seu nome (canto de baixo, à esquerda), **Configurações** › **Capacidades** › **Skills** › **Enviar skill** e escolha o mesmo zip.
+
+Depois de salva, ela vale também no app do celular, na mesma conta.
 
 ## 2. Pedir um carrossel
 
