@@ -10,13 +10,7 @@
       "faixa": "preta",
       "titulo": "O ÁUDIO QUE VOCÊ MANDA PELA {QUINTA VEZ.}",
       "texto": "Toda vez que eu repetia uma instrução, eu estava treinando alguém do zero. Sem registro, sem padrão.",
-      "sintese": "Instrução repetida é {processo que ainda não foi escrito.}",
-      "pessoa": {
-        "nome": "Vera",
-        "cargo": "Operacional",
-        "foto": "assets/ab286b8f-a1aa-4f9f-a0bf-b2fa8395dd05.png"
-      },
-      "tamanho": 78
+      "sintese": "Instrução repetida é {processo que ainda não foi escrito.}"
     },
     {
       "tipo": "item",
@@ -24,12 +18,7 @@
       "faixa": "champanhe",
       "titulo": "A REUNIÃO\nSEM DONO.",
       "texto": "Saí de muita reunião achando que estava tudo combinado. Uma semana depois, nada feito. Ninguém sabia que era com ele.",
-      "sintese": "Tarefa sem nome e sem prazo {é só conversa.}",
-      "pessoa": {
-        "nome": "Maria Carolina",
-        "cargo": "Arquiteta de Soluções",
-        "foto": "assets/6f790918-7498-4822-ae17-bb159590c522.png"
-      }
+      "sintese": "Tarefa sem nome e sem prazo {é só conversa.}"
     },
     {
       "tipo": "item",
@@ -37,27 +26,15 @@
       "faixa": "preta",
       "titulo": "O SEU {HUMOR.}",
       "texto": "Nos dias em que eu chegava cansada, a equipe chegava com medo. Ninguém trazia problema. Escondia.",
-      "sintese": "Cultura é o que a equipe faz {quando lê o seu rosto.}",
-      "pessoa": {
-        "nome": "Laura",
-        "cargo": "Sucesso do Cliente",
-        "foto": "assets/b3dd3c79-bd0b-46b8-87de-d832a964cff7.jpg"
-      }
+      "sintese": "Cultura é o que a equipe faz {quando lê o seu rosto.}"
     },
     {
       "tipo": "item",
       "numero": "04",
       "faixa": "champanhe",
-      "titulo": "O PRIMEIRO DIA\nDO FUNCIONÁRIO\nNOVO.",
+      "titulo": "O PRIMEIRO DIA DO\nFUNCIONÁRIO NOVO.",
       "texto": "Eu achava que treinar era jogar a pessoa na operação e ver se ela nadava. Perdi gente boa assim.",
-      "sintese": "Quem chega sem roteiro {vai embora sem explicar por quê.}",
-      "pessoa": {
-        "nome": "Lauren",
-        "cargo": "Sucesso do Cliente",
-        "foto": "assets/08d40824-6b0e-416d-8b90-d5712a23174a.png"
-      },
-      "tamanho": 78,
-      "largura": 640
+      "sintese": "Quem chega sem roteiro {vai embora sem explicar por quê.}"
     },
     {
       "tipo": "item",
@@ -65,49 +42,15 @@
       "faixa": "preta",
       "titulo": "O QUE VOCÊ\n{NÃO MEDE.}",
       "texto": "Eu sabia quanto faturava. Não sabia quanto me custava cada retrabalho.",
-      "sintese": "O que não é medido vira opinião. {E opinião ninguém corrige.}",
-      "pessoa": {
-        "nome": "Larissa",
-        "cargo": "Financeiro",
-        "foto": "assets/2aad8fdc-a3ce-47ca-aced-1ba82c97a970.png"
-      }
+      "sintese": "O que não é medido vira opinião. {E opinião ninguém corrige.}"
     },
     {
-      "tipo": "foto",
+      "tipo": "item",
       "titulo": "QUAL DESSAS É A {SUA?}",
       "texto": "Comenta o número aqui embaixo.",
       "sintese": "Cultura, Processo e Inteligência. {É por aí que a gente organiza.}",
-      "time": [
-        {
-          "nome": "Juliana Anhaia",
-          "foto": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
-          "topo": 0.0
-        },
-        {
-          "nome": "Vera",
-          "foto": "assets/ab286b8f-a1aa-4f9f-a0bf-b2fa8395dd05.png"
-        },
-        {
-          "nome": "Glaucia",
-          "foto": "assets/aac15677-38db-48fe-9ea7-46986d7ee28d.jpg"
-        },
-        {
-          "nome": "Laura",
-          "foto": "assets/b3dd3c79-bd0b-46b8-87de-d832a964cff7.jpg"
-        },
-        {
-          "nome": "Lauren",
-          "foto": "assets/08d40824-6b0e-416d-8b90-d5712a23174a.png"
-        },
-        {
-          "nome": "Maria Carolina",
-          "foto": "assets/6f790918-7498-4822-ae17-bb159590c522.png"
-        },
-        {
-          "nome": "Larissa",
-          "foto": "assets/2aad8fdc-a3ce-47ca-aced-1ba82c97a970.png"
-        }
-      ]
+      "numero": "",
+      "faixa": "champanhe"
     }
   ]
 }

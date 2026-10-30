@@ -10,12 +10,7 @@
       "faixa": "preta",
       "titulo": "QUEM ATENDE O SEU {TELEFONE.}",
       "texto": "A primeira pessoa que fala com o cliente quase nunca é o vendedor. É quem atende. Um \"ela não está, liga mais tarde\" já esfria a conversa antes dela começar.",
-      "sintese": "A primeira impressão {já é a primeira venda.}",
-      "pessoa": {
-        "nome": "Laura",
-        "cargo": "Sucesso do Cliente",
-        "foto": "assets/b3dd3c79-bd0b-46b8-87de-d832a964cff7.jpg"
-      }
+      "sintese": "A primeira impressão {já é a primeira venda.}"
     },
     {
       "tipo": "item",
@@ -23,12 +18,7 @@
       "faixa": "champanhe",
       "titulo": "A PROPOSTA\nQUE DEMORA.",
       "texto": "Proposta que chega três dias depois da reunião encontra um cliente que já esfriou. Ou que já recebeu a do concorrente.",
-      "sintese": "Quem demora pra responder {vende pra concorrência.}",
-      "pessoa": {
-        "nome": "Glaucia",
-        "cargo": "Closer",
-        "foto": "assets/aac15677-38db-48fe-9ea7-46986d7ee28d.jpg"
-      }
+      "sintese": "Quem demora pra responder {vende pra concorrência.}"
     },
     {
       "tipo": "item",
@@ -36,12 +26,7 @@
       "faixa": "preta",
       "titulo": "A {ENTREGA.}",
       "texto": "O cliente que recebe exatamente o que foi combinado volta e indica. O que recebe menos fala de você pra muita gente.",
-      "sintese": "Operação organizada {é o melhor vendedor que você tem.}",
-      "pessoa": {
-        "nome": "Vera",
-        "cargo": "Operacional",
-        "foto": "assets/ab286b8f-a1aa-4f9f-a0bf-b2fa8395dd05.png"
-      }
+      "sintese": "Operação organizada {é o melhor vendedor que você tem.}"
     },
     {
       "tipo": "item",
@@ -49,12 +34,7 @@
       "faixa": "champanhe",
       "titulo": "O SEU PROCESSO\nINTERNO.",
       "texto": "Cliente percebe bagunça. Quando ele pergunta uma coisa e três pessoas respondem diferente, a confiança cai antes de qualquer conversa sobre preço.",
-      "sintese": "Confiança se perde no detalhe, {não no preço.}",
-      "pessoa": {
-        "nome": "Maria Carolina",
-        "cargo": "Arquiteta de Soluções",
-        "foto": "assets/6f790918-7498-4822-ae17-bb159590c522.png"
-      }
+      "sintese": "Confiança se perde no detalhe, {não no preço.}"
     },
     {
       "tipo": "item",
@@ -62,49 +42,15 @@
       "faixa": "preta",
       "titulo": "LIDERAR A\n{SUA EQUIPE.}",
       "texto": "Toda vez que você explica por que uma meta existe, você está vendendo. Equipe que não comprou a ideia entrega o mínimo.",
-      "sintese": "Quem não vende pra dentro {não escala pra fora.}",
-      "pessoa": {
-        "nome": "Lauren",
-        "cargo": "Sucesso do Cliente",
-        "foto": "assets/08d40824-6b0e-416d-8b90-d5712a23174a.png"
-      }
+      "sintese": "Quem não vende pra dentro {não escala pra fora.}"
     },
     {
-      "tipo": "foto",
+      "tipo": "item",
       "titulo": "QUAL DESSAS VOCÊ {JÁ VIVEU?}",
       "texto": "Comenta o número aqui embaixo.",
       "sintese": "Venda boa começa dentro da empresa. {Cultura, Processo e Inteligência.}",
-      "time": [
-        {
-          "nome": "Juliana Anhaia",
-          "foto": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
-          "topo": 0.0
-        },
-        {
-          "nome": "Vera",
-          "foto": "assets/ab286b8f-a1aa-4f9f-a0bf-b2fa8395dd05.png"
-        },
-        {
-          "nome": "Glaucia",
-          "foto": "assets/aac15677-38db-48fe-9ea7-46986d7ee28d.jpg"
-        },
-        {
-          "nome": "Laura",
-          "foto": "assets/b3dd3c79-bd0b-46b8-87de-d832a964cff7.jpg"
-        },
-        {
-          "nome": "Lauren",
-          "foto": "assets/08d40824-6b0e-416d-8b90-d5712a23174a.png"
-        },
-        {
-          "nome": "Maria Carolina",
-          "foto": "assets/6f790918-7498-4822-ae17-bb159590c522.png"
-        },
-        {
-          "nome": "Larissa",
-          "foto": "assets/2aad8fdc-a3ce-47ca-aced-1ba82c97a970.png"
-        }
-      ]
+      "numero": "",
+      "faixa": "champanhe"
     }
   ]
 }
