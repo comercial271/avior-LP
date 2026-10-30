@@ -25,6 +25,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import unicodedata
 import zipfile
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -332,7 +333,8 @@ def main():
         f.write(f"# Legenda: {spec.get('titulo', '')}\n\nPedido: {spec.get('pedido', '')}\n\n---\n\n"
                 f"{spec.get('legenda', '').strip()}\n")
 
-    nome = re.sub(r"[^a-z0-9]+", "-", spec.get("titulo", "carrossel").lower()).strip("-")[:50] or "carrossel"
+    nome = unicodedata.normalize("NFKD", spec.get("titulo", "carrossel")).encode("ascii", "ignore").decode()
+    nome = re.sub(r"[^a-z0-9]+", "-", nome.lower()).strip("-")[:50] or "carrossel"
     zp = os.path.join(a.out, f"carrossel-{nome}.zip")
     with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
         for g in gerados + [leg]:
