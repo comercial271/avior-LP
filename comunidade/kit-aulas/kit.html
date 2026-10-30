@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Kit das Aulas AVIOR</title>
+<style>@font-face{font-family:'Poppins';font-weight:200;src:url('../../assets/5018da12-84ed-4aa5-8a4d-fa39c1026628.woff2') format('woff2');}@font-face{font-family:'Poppins';font-weight:300;src:url('../../assets/36cda6f1-8369-4cad-9a72-c7608396a3d8.woff2') format('woff2');}@font-face{font-family:'Poppins';font-weight:400;src:url('../../assets/fddb5b02-0303-47f7-9c79-9bfbb5ac4be4.woff2') format('woff2');}@font-face{font-family:'Poppins';font-weight:500;src:url('../../assets/1f7e1e0a-dce3-4bac-beda-2017e0ce499c.woff2') format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:300;src:url('../../assets/59a3b0de-19ca-49f6-a5c7-adfe27bc0df3.woff2') format('woff2');}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #14162B; --champ: #BAB196; --champ-esc: #8C7A4E;
+  --creme: #F5F1E8; --cinza: #4B5266; --cinza-cl: #98A0AE; --linha: #E2DCCC;
+}
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Poppins', sans-serif; font-weight: 300; color: var(--navy); background: #fff; }
+.pagina { width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; position: relative; overflow: hidden; page-break-after: always; }
+.pagina:last-child { page-break-after: auto; }
+.rodape { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between;
+  font-size: 7.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--cinza-cl); }
+.escura { background: var(--navy); color: #fff; }
+.selo { font-size: 8pt; letter-spacing: .28em; text-transform: uppercase; color: var(--champ-esc); font-weight: 400; }
+.escura .selo { color: var(--champ); }
+.filete { width: 34mm; height: 1.2px; background: var(--champ); margin: 7mm 0; }
+h2 { font-weight: 300; font-size: 24pt; line-height: 1.15; margin-top: 3mm; }
+h2 b { font-weight: 500; }
+h3 { font-size: 8.5pt; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; color: var(--champ-esc); margin: 7mm 0 3mm; }
+.lead { font-size: 10.5pt; line-height: 1.6; color: var(--cinza); margin-top: 4mm; }
+.campo { color: var(--champ-esc); font-weight: 500; }
+
+/* capa */
+.capa { display: flex; flex-direction: column; justify-content: space-between; padding: 24mm 20mm 20mm; }
+.capa h1 { font-weight: 200; font-size: 46pt; line-height: 1.04; margin-top: 4mm; }
+.capa h1 b { font-weight: 500; color: var(--champ); display: block; }
+.capa .sub { font-size: 12.5pt; line-height: 1.55; color: #D5D8E2; max-width: 140mm; margin-top: 8mm; }
+.capa .sumario { margin-top: 12mm; border-top: 1px solid #343957; }
+.capa .item { display: flex; gap: 6mm; align-items: baseline; padding: 3.6mm 0; border-bottom: 1px solid #343957; }
+.capa .item .n { font-size: 15pt; font-weight: 200; color: var(--champ); min-width: 10mm; }
+.capa .item .t { font-size: 10.5pt; flex: 1; }
+.capa .item .d { font-size: 7.5pt; letter-spacing: .14em; color: #8A90A8; text-transform: uppercase; }
+.capa .marca { display: flex; justify-content: space-between; align-items: flex-end; }
+.capa .marca .logo { font-size: 20pt; font-weight: 500; letter-spacing: .32em; }
+.capa .marca .com { font-size: 8.5pt; color: #A3A8BA; text-align: right; line-height: 1.6; }
+
+/* método */
+.pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-top: 2mm; }
+.pilar { background: var(--creme); border-radius: 2mm; padding: 5mm 4.5mm; }
+.pilar .k { font-size: 18pt; font-weight: 200; color: var(--champ-esc); line-height: 1; }
+.pilar .t { font-weight: 500; font-size: 11pt; margin: 2.5mm 0 1.5mm; }
+.pilar .d { font-size: 8.8pt; color: var(--cinza); line-height: 1.5; }
+.regras { list-style: none; counter-reset: r; }
+.regras li { counter-increment: r; display: flex; gap: 5mm; padding: 3.2mm 0; border-bottom: 1px solid var(--linha); font-size: 9.6pt; line-height: 1.55; }
+.regras li::before { content: counter(r, decimal-leading-zero); font-weight: 200; font-size: 14pt; color: var(--champ); line-height: 1.1; min-width: 9mm; }
+.regras b { font-weight: 500; }
+.conferencia { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; }
+.conferencia div { border: 1px solid var(--linha); border-radius: 2mm; padding: 3.5mm; font-size: 8.4pt; line-height: 1.45; color: var(--cinza); }
+.conferencia b { display: block; color: var(--navy); font-weight: 500; font-size: 9.4pt; margin-bottom: 1mm; }
+
+/* aula: página de resumo */
+.topo-aula { display: flex; align-items: flex-end; border-bottom: 1px solid var(--linha); padding-bottom: 5mm; }
+.topo-aula .grande { font-size: 56pt; font-weight: 200; line-height: .85; color: var(--champ); }
+.topo-aula .info { flex: 1; margin-left: 6mm; }
+.topo-aula h2 { font-size: 19pt; margin-top: 1.5mm; }
+.ideia { font-size: 12.5pt; font-style: italic; line-height: 1.5; margin-top: 6mm; }
+.resumo { font-size: 9.8pt; line-height: 1.65; color: var(--cinza); margin-top: 3.5mm; }
+.aprendizados { list-style: none; counter-reset: a; }
+.aprendizados li { counter-increment: a; display: flex; gap: 4mm; padding: 2.8mm 0; border-bottom: 1px solid var(--linha); font-size: 9.5pt; line-height: 1.55; }
+.aprendizados li::before { content: counter(a); font-weight: 500; font-size: 8.5pt; color: #fff; background: var(--champ-esc);
+  border-radius: 50%; min-width: 5.4mm; height: 5.4mm; display: flex; align-items: center; justify-content: center; margin-top: .4mm; }
+.frase { margin-top: 6mm; border-left: 2px solid var(--champ); padding: 1mm 0 1mm 5mm; font-size: 12pt; font-weight: 200; line-height: 1.5; }
+.frase span { display: block; font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; color: var(--champ-esc); font-weight: 400; margin-top: 2mm; }
+.tarefa { margin-top: 6mm; background: var(--navy); color: #fff; border-radius: 2mm; padding: 5mm 6mm; font-size: 9.6pt; line-height: 1.6; }
+.tarefa .selo { display: block; margin-bottom: 1.5mm; }
+
+/* aula: página do prompt */
+.passos { display: flex; gap: 2.5mm; margin-top: 4mm; }
+.passos div { flex: 1; border: 1px solid var(--linha); border-radius: 2mm; padding: 3mm 3.5mm; font-size: 8.4pt; line-height: 1.45; color: var(--cinza); }
+.passos b { display: block; color: var(--champ-esc); font-weight: 500; font-size: 7.5pt; letter-spacing: .14em; margin-bottom: .8mm; }
+.prompt { margin-top: 5mm; background: var(--creme); border-radius: 2mm; padding: 5mm 6mm; }
+.prompt .cab { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3mm; }
+.prompt .nome { font-size: 11pt; font-weight: 500; }
+.prompt .copie { font-size: 7pt; letter-spacing: .18em; text-transform: uppercase; color: var(--champ-esc); font-weight: 500; }
+.prompt .txt { font-size: 8.9pt; line-height: 1.55; color: #2A2E45; }
+.extra { margin-top: 4mm; border: 1px solid var(--linha); border-radius: 2mm; padding: 4mm 5mm; font-size: 8.9pt; line-height: 1.55; color: var(--cinza); }
+.extra b { color: var(--navy); font-weight: 500; }
+.extra .t { font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; color: var(--champ-esc); font-weight: 500; margin-bottom: 1.5mm; }
+
+/* fechamento */
+.tabela { width: 100%; border-collapse: collapse; margin-top: 2mm; }
+.tabela td { padding: 3mm 0; border-bottom: 1px solid var(--linha); font-size: 9.3pt; vertical-align: top; }
+.tabela td:first-child { font-weight: 500; width: 32mm; }
+.tabela td:nth-child(2) { color: var(--champ-esc); width: 50mm; font-size: 8.8pt; }
+.tabela td:last-child { color: var(--cinza); }
+.fim { margin-top: 8mm; background: var(--navy); color: #fff; border-radius: 2mm; padding: 8mm 9mm; }
+.fim .citacao { font-size: 14pt; font-weight: 200; line-height: 1.45; }
+.fim .citacao b { color: var(--champ); font-weight: 400; }
+.fim p { font-size: 9.4pt; color: #C9CCD8; line-height: 1.6; margin-top: 4mm; }
+.fim p b { color: #fff; font-weight: 500; }
+</style></head>
+<body><section class="pagina escura capa">
+  <div>
+    <div class="selo">Comunidade de Tecnologia e Negócios</div>
+    <div class="filete"></div>
+    <h1>Kit das Aulas<b>IA no Negócio</b></h1>
+    <p class="sub">O resumo das 5 aulas ao vivo da comunidade, com o prompt de cada aula pronto para copiar e a tarefa para aplicar na sua empresa.</p>
+    <div class="sumario"><div class="item"><span class="n">01</span><span class="t">Tire o processo da sua cabeça e coloque a IA para trabalhar</span><span class="d">14/09</span></div><div class="item"><span class="n">02</span><span class="t">Qual IA usar em cada tarefa e como fazer uma pesquisa de mercado</span><span class="d">28/09</span></div><div class="item"><span class="n">03</span><span class="t">Como usar IA para prospectar clientes</span><span class="d">19/10</span></div><div class="item"><span class="n">04</span><span class="t">Crie seu assistente de IA para responder objeções</span><span class="d">21/09</span></div><div class="item"><span class="n">05</span><span class="t">Objeções, CRM e dashboard com IA</span><span class="d">05/10</span></div></div>
+  </div>
+  <div class="marca">
+    <div class="logo">AVIOR</div>
+    <div class="com">Material exclusivo para membros<br>@sejaavior</div>
+  </div></section><section class="pagina ">
+  <div class="selo">Antes de começar</div>
+  <h2>Como usar <b>este kit</b></h2>
+  <p class="lead">Cada aula vira duas páginas: o resumo, com o que levar e a tarefa da semana, e o prompt da aula, pronto para copiar. Não precisa seguir a ordem. Comece pela aula que resolve o que mais trava a sua empresa hoje.</p>
+  <h3>O método que atravessa todas as aulas</h3>
+  <div class="pilares"><div class="pilar"><div class="k">01</div><div class="t">Cultura</div><div class="d">O que o time faz quando você não está olhando. Sem um time que abrace a mudança, a ferramenta não pega.</div></div><div class="pilar"><div class="k">02</div><div class="t">Processos</div><div class="d">Tirar da sua cabeça o que hoje só funciona com você presente. Um processo por vez.</div></div><div class="pilar"><div class="k">03</div><div class="t">Inteligência</div><div class="d">IA e sistemas em cima de um processo que já funciona. Não o contrário.</div></div></div>
+  <h3>5 regras para a IA trabalhar bem</h3>
+  <ol class="regras"><li><span><b>Comece pela tarefa, não pela ferramenta.</b> Saiba o resultado que você quer antes de abrir a IA.</span></li><li><span><b>Dê contexto como daria a um funcionário novo.</b> Quem é a empresa, o cliente, o diferencial e o que não pode prometer. Até o óbvio precisa ser dito.</span></li><li><span><b>Diga o papel.</b> "Atue como especialista sênior em..." rende mais que um pedido solto.</span></li><li><span><b>Um objetivo por vez.</b> Pedido demais na mesma conversa faz a IA se perder. Conversa muito longa: abra um chat novo.</span></li><li><span><b>Coloque limites.</b> A IA tende a agradar quem usa. Peça para separar fato de hipótese e para não inventar número, preço ou promessa.</span></li></ol>
+  <h3>Antes de usar qualquer resposta, confira</h3>
+  <div class="conferencia"><div><b>Fonte</b>Ela mostrou de onde tirou a informação? Abra o link.</div><div><b>Fato</b>Tem número ou regra que precisa ser confirmado por você?</div><div><b>Privacidade</b>Troque nomes de clientes por fictícios antes de colar dados.</div><div><b>Decisão</b>Uma pessoa responsável aprova antes de usar.</div></div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>02</span></div></section><section class="pagina ">
+  <div class="topo-aula">
+    <div class="grande">01</div>
+    <div class="info">
+      <div class="selo">Aula 1 · Processo antes da IA · 14/09</div>
+      <h2>Tire o processo da sua cabeça e coloque a IA para trabalhar</h2>
+    </div>
+  </div>
+  <p class="ideia">Sua empresa funciona sem você? Se a resposta é não, o primeiro uso de IA não é automatizar: é escrever o processo que só você sabe fazer.</p>
+  <p class="resumo">A Foco vivia da oralidade: tudo passava pela dona e o processo morava na cabeça dela. A virada veio colocando cultura, processo e IA nessa ordem, e o back-office foi de 14 para 5 pessoas sem desmontar a operação. Na aula, um processo real de jardinagem virou procedimento e checklist com um único prompt.</p>
+  <h3>O que levar desta aula</h3>
+  <ol class="aprendizados"><li><span>Comece pelo processo que só você sabe fazer. Ele é o seu maior gargalo e o primeiro a ser escrito.</span></li><li><span>Ataque um processo por vez. Vários projetos ao mesmo tempo atrasam o resultado de todos.</span></li><li><span>Antes de automatizar: questione por que o processo é assim, elimine o que não agrega, simplifique e acelere. A automação vem por último.</span></li><li><span>A IA responde conforme o contexto que recebe. "Como se faz um ovo?" tem dez respostas certas até você dizer qual ovo quer.</span></li><li><span>Antes de criar um agente, avalie quatro coisas: complexidade, valor que gera, se a IA já faz bem e o risco de errar, como um atendente de WhatsApp que informa um preço errado.</span></li></ol>
+  <div class="frase">“Quando as coisas estão só na nossa cabeça, ninguém sabe. E até o óbvio precisa ser dito.”<span>Juliana Anhaia</span></div>
+  <div class="tarefa"><span class="selo">Tarefa da semana</span>Escolha um processo que hoje só você sabe fazer, rode o prompt da aula até chegar ao procedimento e ao checklist de uma página, e entregue para alguém do time testar e dizer o que não ficou claro.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>03</span></div></section><section class="pagina ">
+  <div class="selo">Aula 1 · O prompt da aula</div>
+  <h2>Mapeamento de processo</h2>
+  <div class="passos"><div><b>01</b>Escolha um processo só. O que mais depende de você.</div><div><b>02</b>Responda as perguntas da IA no seu jeito de falar. Pode ser por áudio.</div><div><b>03</b>Revise o checklist com quem executa a tarefa.</div></div>
+  <div class="prompt"><div class="cab"><span class="nome">Copie, preencha e cole</span><span class="copie">Use em ChatGPT ou Claude</span></div>
+  <div class="txt">Você vai me ajudar a tirar um processo da minha empresa da cabeça e colocar no papel.<br><br>Contexto: sou dono(a) de uma empresa de <span class="campo">[ramo do negócio]</span>. O processo que vamos mapear é <span class="campo">[nome do processo]</span>. Hoje ele está só na minha cabeça, gera ruído e retrabalho, e dá problema quando eu me afasto.<br><br>Seu papel: aja como um funcionário novo, curioso e inteligente, que vai assumir esse processo e executá-lo sem mim ao lado. Seu objetivo é perguntar o necessário para conseguir rodar o processo sem a minha presença.<br><br>Como perguntar: faça uma pergunta por vez e espere a minha resposta antes da próxima. Investigue como eu faço na prática, o que eu evito, o que eu decido e com base em quê, o que eu nunca deixo passar e o que é errado quando alguém faz por mim.<br><br>Resultado: quando entender o processo inteiro, me avise e escreva:<br>1. O procedimento em passos numerados, com as minhas regras.<br>2. Um checklist de uma página para quem entrou ontem.<br>3. Os três pontos onde alguém novo vai errar e o que fazer em cada caso.<br><br>Regras: use a minha forma de falar e as minhas palavras. Não invente etapas nem coisas que eu não disse. Se eu for vago, pergunte de novo.<br><br>Pode começar pela primeira pergunta.</div></div>
+  <div class="extra"><div class="t">Metaprompt: quando não souber como pedir</div>"Escreva um prompt para <span class="campo">[o que você quer]</span>. Tire suas dúvidas comigo antes e depois responda." E para conferir qualquer resposta: "O que você assumiu que eu não disse? Onde essa resposta pode estar errada?"</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>04</span></div></section><section class="pagina ">
+  <div class="topo-aula">
+    <div class="grande">02</div>
+    <div class="info">
+      <div class="selo">Aula 2 · Processo antes da IA · 28/09</div>
+      <h2>Qual IA usar em cada tarefa e como fazer uma pesquisa de mercado</h2>
+    </div>
+  </div>
+  <p class="ideia">Quando a IA decepciona, quase sempre o problema é a escolha, não a ferramenta. É como colocar a pessoa mais comunicativa do time para analisar planilha o dia inteiro.</p>
+  <p class="resumo">Modelo é a tecnologia que gera a resposta (GPT, Gemini, Claude). Ferramenta é onde você usa (o chat, o NotebookLM). Tarefa é o trabalho que você quer resolver. Ao vivo, o mesmo pedido de pesquisa de mercado rodou no Claude e no ChatGPT para uma empresa de limpeza pós-obra, e a maior descoberta não foi um número.</p>
+  <h3>O que levar desta aula</h3>
+  <ol class="aprendizados"><li><span>Identifique a tarefa, escolha a ferramenta pela função (criar, pesquisar, estudar uma fonte, analisar dados, construir) e confira o resultado.</span></li><li><span>Qual testar primeiro? Todas. Faça a mesma tarefa em duas ou três e fique com a que chega mais perto do resultado certo.</span></li><li><span>Seu concorrente não é só quem vende igual: tem o direto, o indireto (resolve a mesma necessidade com outro produto) e o substituto.</span></li><li><span>Peça para a IA separar fato de hipótese e não inventar números. Confira as fontes antes de usar.</span></li><li><span>A pesquisa mostrou para a participante um diferencial que ela já entregava e não usava na venda: voltar sem custo se sobrasse poeira fina.</span></li></ol>
+  <div class="frase">“Não adianta ter uma Ferrari nas mãos e colocar qualquer um ao volante.”<span>Juliana Anhaia</span></div>
+  <div class="tarefa"><span class="selo">Tarefa da semana</span>Escolha uma tarefa que se repete toda semana, anote quanto tempo ela leva, teste em duas IAs diferentes e conte na comunidade qual entregou melhor: menos tempo, mais clareza ou menos retrabalho.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>05</span></div></section><section class="pagina ">
+  <div class="selo">Aula 2 · O prompt da aula</div>
+  <h2>Pesquisa de mercado</h2>
+  <div class="passos"><div><b>01</b>Antes de abrir a IA, anote: o que vende, para quem, onde, 3 concorrentes e o que o cliente compraria no lugar.</div><div><b>02</b>Se puder, ative a pesquisa na internet.</div><div><b>03</b>Rode em duas IAs e compare as respostas.</div></div>
+  <div class="prompt"><div class="cab"><span class="nome">Copie, preencha e cole</span><span class="copie">Use em ChatGPT, Claude ou Gemini</span></div>
+  <div class="txt">Quero que você atue como analista de mercado e me ajude a entender o mercado do meu negócio antes de qualquer decisão.<br><br>Meu negócio: <span class="campo">[o que a empresa faz]</span><br>O que eu vendo: <span class="campo">[produtos ou serviços]</span><br>Para quem vendo hoje: <span class="campo">[público]</span><br>Onde atuo: <span class="campo">[cidade, região ou online]</span><br><br>Organize a pesquisa assim:<br>1. Um panorama do mercado em que estou: como ele funciona e quem são os principais tipos de cliente.<br>2. Qual problema o meu negócio resolve e quanto esse problema pesa para o cliente (tempo, dinheiro, risco ou incômodo).<br>3. Tamanho do mercado: quem tem esse problema na minha região e se esse público está crescendo ou diminuindo.<br>4. Tendências que podem afetar esse mercado nos próximos anos.<br>5. Concorrentes diretos: quem vende algo parecido para o mesmo público.<br>6. Concorrentes indiretos: quem atende a mesma necessidade com outro produto ou serviço.<br>7. Substitutos: o que faz o cliente desistir de comprar uma solução como a minha.<br>8. Como esses concorrentes se posicionam e o que prometem.<br>9. Os produtos e serviços mais comuns nesse mercado e o que quase todo mundo oferece igual.<br>10. Necessidades do cliente que parecem mal atendidas.<br>11. Oportunidades que a minha empresa poderia explorar.<br><br>Regras:<br>- Separe o que é fato encontrado do que é hipótese.<br>- Se não encontrar informação suficiente, diga isso claramente. Não invente números nem dados.<br>- Use linguagem simples, sem termos técnicos.<br><br>No final, monte uma tabela com as colunas: Concorrente | Tipo (direto, indireto ou substituto) | Público | Oferta principal | Como se posiciona | Diferencial | Oportunidade para mim</div></div>
+  <div class="extra"><div class="t">Depois da pesquisa, leia com olhar de dono</div>O que me surpreendeu? Que concorrentes eu não estava considerando? Onde o mercado parece saturado? Onde parece existir espaço? Qual oportunidade merece ser investigada?</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>06</span></div></section><section class="pagina ">
+  <div class="topo-aula">
+    <div class="grande">03</div>
+    <div class="info">
+      <div class="selo">Aula 3 · Vendas com IA · 19/10</div>
+      <h2>Como usar IA para prospectar clientes</h2>
+    </div>
+  </div>
+  <p class="ideia">Antes de buscar mais clientes, descubra onde a sua venda vaza. Lista nova só resolve um dos quatro problemas.</p>
+  <p class="resumo">As vendas vazam em quatro pontos: pouca gente chegando, gente que some no acompanhamento, perda no preço ou cliente que não volta. Quando o problema é falta de cliente novo, a IA localiza empresas com o seu perfil, cita as fontes, prioriza e escreve a primeira mensagem. Ao vivo, o prompt mestre achou cinco leads para uma empresa de jardinagem de Cachoeirinha.</p>
+  <h3>O que levar desta aula</h3>
+  <ol class="aprendizados"><li><span>Se o funil já está cheio de oportunidades paradas, mais lista só aumenta o caos. O problema está na abordagem, na proposta ou no acompanhamento.</span></li><li><span>Uma boa lista começa com quatro definições: cliente ideal, território, um sinal público que justifique investigar a empresa e o canal onde está o decisor.</span></li><li><span>Posicionamento também é dizer não. Diga para a IA quem excluir.</span></li><li><span>No WhatsApp, não mande bloco de texto nem PDF solto. Puxe conversa com algo em comum: seja interessante, não interesseiro.</span></li><li><span>A IA pode errar: confira a fonte, se a empresa ainda existe e se ela combina de fato com quem você quer atender.</span></li></ol>
+  <div class="frase">“Prospecção é sobre rotina. Rotina vira o jogo.”<span>Juliana Anhaia</span></div>
+  <div class="tarefa"><span class="selo">Tarefa da semana</span>Escreva no papel o que vende, para quem, onde, que sinal a IA deve observar e quem excluir. Rode o prompt mestre, confira os resultados, faça os primeiros contatos e conte no grupo como foi.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>07</span></div></section><section class="pagina ">
+  <div class="selo">Aula 3 · O prompt da aula</div>
+  <h2>Prompt mestre de prospecção</h2>
+  <div class="passos"><div><b>01</b>Um segmento e uma região por vez.</div><div><b>02</b>Fixe a conversa no ChatGPT para manter o contexto da prospecção.</div><div><b>03</b>Registre cada lead: fonte, critério, data do contato e responsável.</div></div>
+  <div class="prompt"><div class="cab"><span class="nome">Copie, preencha e cole</span><span class="copie">Use em ChatGPT ou Claude, com pesquisa na web</span></div>
+  <div class="txt">Atue como especialista em inteligência comercial, pesquisa local e prospecção de clientes. Ajude-me a encontrar potenciais clientes com critério, não apenas reunir nomes.<br><br>Meu negócio: <span class="campo">[o que você vende]</span><br>Perfil de cliente: <span class="campo">[ex.: empresas e condomínios]</span><br>Região: <span class="campo">[cidade, bairro ou raio de atendimento]</span><br>Sinal que justifica investigar: <span class="campo">[ex.: condomínio com mais de 20 unidades, área verde]</span><br>Quem excluir: <span class="campo">[ex.: pessoa física, empresa em recuperação judicial]</span><br><br>Se faltar alguma informação essencial, pergunte antes de pesquisar.<br><br>Faça um diagnóstico rápido: o principal gargalo parece estar na falta de clientes novos, no acompanhamento dos interessados, na oferta ou na experiência e recompra? Explique como hipótese, não como certeza. Se o gargalo não for falta de clientes novos, avise que aumentar a lista talvez não resolva.<br><br>Pesquise até 5 empresas que correspondam ao perfil e à região. Para cada uma, traga em tabela: nome; segmento; cidade; site, perfil público ou contato comercial; link da fonte; sinal de aderência ao perfil; motivo para investigar; confiança da informação (alta, média ou baixa). Depois, ordene por aderência e explique a prioridade de cada uma. Se não encontrar um dado, escreva "não encontrado".<br><br>Regras:<br>- Não invente empresas, contatos, necessidades ou informações.<br>- Separe o que a fonte confirma do que é inferência.<br>- Use só informação pública de empresas e cite a fonte de cada resultado.<br>- Se encontrar poucos resultados, explique e peça autorização antes de ampliar a região ou o perfil.<br><br>Depois da lista, peça que eu escolha um lead. Só então crie uma primeira mensagem breve, personalizada com informação verificada e terminando com uma pergunta simples.</div></div>
+  <div class="extra"><div class="t">Os 4 critérios para escolher quem abordar primeiro</div><b>Aderência:</b> é o tipo de cliente que você definiu? <b>Região:</b> está na sua área? <b>Sinal:</b> há algo público que justifique? <b>Canal:</b> dá para chegar no decisor?</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>08</span></div></section><section class="pagina ">
+  <div class="topo-aula">
+    <div class="grande">04</div>
+    <div class="info">
+      <div class="selo">Aula 4 · Vendas com IA · 21/09</div>
+      <h2>Crie seu assistente de IA para responder objeções</h2>
+    </div>
+  </div>
+  <p class="ideia">Quando a IA não converte o cliente, quase sempre o problema é o contexto que demos a ela, não a ferramenta.</p>
+  <p class="resumo">Um assistente de IA é como um funcionário novo: precisa de onboarding. Na aula, um assistente foi montado ao vivo no ChatGPT (em GPTs, Criar) com as instruções da empresa e uma base de arquivos, e testado com a objeção mais comum de todas: "está caro". Bem configurado, ele pergunta antes de responder e não inventa desconto.</p>
+  <h3>O que levar desta aula</h3>
+  <ol class="aprendizados"><li><span>Não adianta colocar IA num processo bagunçado. Ela só acelera a bagunça. Primeiro organize, depois decida onde a IA ajuda.</span></li><li><span>O assistente precisa de objetivo, contexto, formato e regras. Na base de conhecimento: apresentação comercial, portfólio, cases e manual da empresa.</span></li><li><span>O cliente não compra o "como" do seu método. Ele compra o resultado e a saída para o problema que não aguenta mais.</span></li><li><span>A IA sofre da síndrome de agradar. Coloque limites claros e não confie de olhos fechados.</span></li><li><span>Boa resposta a objeção primeiro acolhe e entende, depois esclarece o valor. "Meu preço é justo, se quer barato procure outro" fecha a conversa.</span></li></ol>
+  <div class="frase">“Todo cliente nunca vai comprar o como. Ele vai comprar o resultado.”<span>Juliana Anhaia</span></div>
+  <div class="tarefa"><span class="selo">Tarefa da semana</span>Reserve um tempo para detalhar a fundo o seu negócio, crie o seu assistente de objeções no ChatGPT com essas informações e teste com uma objeção real que você já recebeu.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>09</span></div></section><section class="pagina ">
+  <div class="selo">Aula 4 · O prompt da aula</div>
+  <h2>Instruções do assistente de objeções</h2>
+  <div class="passos"><div><b>01</b>No ChatGPT: + &gt; GPTs &gt; Criar. Dê nome e descrição.</div><div><b>02</b>Cole este texto em Instruções e suba seus arquivos. PDF pesado? Peça a uma IA para converter em .md.</div><div><b>03</b>Quando a objeção chegar, cole a mensagem ou o print da conversa.</div></div>
+  <div class="prompt"><div class="cab"><span class="nome">Copie, preencha e cole</span><span class="copie">Use em ChatGPT (GPTs, Criar) ou Projetos do Claude</span></div>
+  <div class="txt">Você é o assistente de objeções comerciais da <span class="campo">[nome da empresa]</span> e atua como especialista sênior em vendas consultivas de <span class="campo">[produto ou serviço]</span>.<br><br>Segmento: <span class="campo">[segmento]</span><br>Cliente ideal (quem compra hoje): <span class="campo">[descrição]</span><br>O que vendemos: <span class="campo">[oferta]</span><br>Problema que o cliente não aguenta mais: <span class="campo">[dor principal]</span><br>Diferenciais (o resultado que entregamos, não o "como"): <span class="campo">[diferenciais]</span><br>Provas: <span class="campo">[resultados, cases, depoimentos]</span><br>Limites: <span class="campo">[o que não fazemos e o que não podemos prometer]</span><br><br>Quando eu trouxer uma objeção, siga esta ordem:<br>1. Se faltar contexto, pergunte antes de responder: o valor e o que está incluso, quem é o cliente, o que ele relatou antes e as palavras exatas que usou.<br>2. Identifique a objeção real por trás da frase (orçamento, entendimento do que está incluso, comparação com outra opção, confiança ou momento).<br>3. Sugira a melhor pergunta para fazer ao cliente.<br>4. Escreva uma resposta consultiva que primeiro acolhe e depois esclarece o valor.<br>5. Proponha o próximo passo e diga o que evitar.<br><br>Regras: não invente informações, não ofereça desconto e não prometa nada que não esteja nos limites acima. Use os arquivos da base de conhecimento como fonte.</div></div>
+  <div class="extra"><div class="t">Treine antes da conversa real</div>Abra o assistente e peça: "Você será o cliente. Apresente uma objeção realista para <span class="campo">[oferta]</span>. Eu respondo como vendedor e, no fim, você me dá um feedback."</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>10</span></div></section><section class="pagina ">
+  <div class="topo-aula">
+    <div class="grande">05</div>
+    <div class="info">
+      <div class="selo">Aula 5 · Vendas com IA · 05/10</div>
+      <h2>Objeções, CRM e dashboard com IA</h2>
+    </div>
+  </div>
+  <p class="ideia">Todo cliente deixa uma pista. "Está caro" quase sempre esconde outra coisa.</p>
+  <p class="resumo">O "está caro" pode ser orçamento que não cabe, cliente que não entendeu o que está incluso ou comparação com outra opção. Na aula, dados de negociações exportados do CRM, com nomes trocados por fictícios, foram para o Claude com um prompt em quatro etapas: limpar, cruzar, achar padrões de venda ganha e perdida e desenhar um dashboard.</p>
+  <h3>O que levar desta aula</h3>
+  <ol class="aprendizados"><li><span>Separe fato de hipótese. O que o cliente disse é fato. O que você supõe sobre o bolso dele é hipótese que se testa com pergunta.</span></li><li><span>Teste rápido: tire o preço da sua proposta. Se não sobrar nada que convença, o problema é posicionamento, não o valor.</span></li><li><span>Antes de mandar dados para a IA, limpe a planilha e troque nomes de clientes por fictícios. Dado ruim gera resposta ruim, e a LGPD vale.</span></li><li><span>Cruzar dados mostra o que as vendas fechadas têm em comum: origem do lead, visita feita, proposta com valor e próximo passo combinado.</span></li><li><span>Não peça retorno, combine o próximo passo: "Posso te ligar amanhã às 10h ou às 15h para falarmos da proposta?"</span></li></ol>
+  <div class="frase">“É entender onde eu estou acertando e onde preciso apertar o parafuso para alavancar o resultado.”<span>Juliana Anhaia</span></div>
+  <div class="tarefa"><span class="selo">Tarefa da semana</span>Exporte as negociações do seu CRM ou planilha sem dados pessoais, rode o prompt da aula e saia com pelo menos um padrão mapeado. Coloque no atendimento as 2 ou 3 perguntas sugeridas para testar as hipóteses.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>11</span></div></section><section class="pagina ">
+  <div class="selo">Aula 5 · O prompt da aula</div>
+  <h2>Análise de vendas e dashboard</h2>
+  <div class="passos"><div><b>01</b>Exporte as negociações: origem, etapa, valor, objeção, motivo de perda, ganho ou perdido.</div><div><b>02</b>Troque nomes de clientes por fictícios.</div><div><b>03</b>Anexe a planilha e cole o prompt.</div></div>
+  <div class="prompt"><div class="cab"><span class="nome">Copie, preencha e cole</span><span class="copie">Use em Claude ou ChatGPT, com a planilha anexada</span></div>
+  <div class="txt">Você é especialista em análise de dados e inteligência comercial. Analise a planilha de negociações anexada para identificar padrões de venda e desenhar um dashboard. Trabalhe em etapas.<br><br>Etapa 1. Visão geral e limpeza: apresente as colunas, as variáveis e o volume de registros, e indique quais são relevantes. Aponte dados faltantes, duplicados e inconsistências e trate-os antes de seguir.<br><br>Etapa 2. Análise: olhe cada coluna separadamente e depois cruze as informações. O que acontece nas vendas ganhas que não acontece nas perdidas?<br><br>Etapa 3. Padrões:<br>a) De sucesso: origem dos leads ganhos e etapas que se repetem nas vendas fechadas.<br>b) Objeções mais frequentes, motivos de perda e taxa de conversão.<br>c) De perda: em que etapa a negociação parou ou esfriou (antes da reunião, depois da proposta, no follow-up).<br>Separe FATOS (o que o cliente disse e está registrado) de HIPÓTESES (interpretações).<br><br>Desenhe a estrutura de um dashboard em três painéis: Performance e volume; Gargalos e objeções; Oportunidades e sinais de compra. Para cada indicador, diga o tipo de gráfico e a decisão prática que ele permite tomar.<br><br>Etapa 4. Auditoria: diga o que estes dados ainda não permitem concluir, que colunas eu devo começar a registrar e sugira 2 ou 3 perguntas para o atendimento testar as hipóteses.</div></div>
+  <div class="extra"><div class="t">A conta do funil, de trás para frente</div>Meta de R$ 100 mil no mês com ticket médio de R$ 3 mil: cerca de 34 vendas. Se você fecha 3 a cada 8 conversas (37%), precisa iniciar uns 90 contatos no mês. Conversão boa e pouca venda? O problema é atração. Conversão baixa? É o processo comercial.</div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>12</span></div></section><section class="pagina ">
+  <div class="selo">Para salvar</div>
+  <h2>As ferramentas <b>das aulas</b></h2>
+  <p class="lead">Comece pela tarefa, não pela marca. Faça a mesma tarefa em duas ou três e fique com a que chega mais perto do resultado certo.</p>
+  <table class="tabela"><tr><td>ChatGPT</td><td>chatgpt.com</td><td>Rascunhos, planejamento, fluxos visuais, prospecção com pesquisa e assistentes (GPTs).</td></tr><tr><td>Claude</td><td>claude.ai</td><td>Textos longos, revisão, mapeamento de processos e análise de planilhas. Costuma inventar menos.</td></tr><tr><td>Gemini</td><td>gemini.google.com</td><td>Imagens e quando o trabalho já está no Google (Drive, Docs, Planilhas).</td></tr><tr><td>NotebookLM</td><td>notebooklm.google.com</td><td>Resposta a partir dos seus materiais: PDFs, links e vídeos viram resumo, mapa mental e slides.</td></tr><tr><td>Manus</td><td>manus.im</td><td>Tarefas de várias etapas, forte em dados, números e painéis.</td></tr><tr><td>Lovable</td><td>lovable.dev</td><td>Site ou sistema a partir de instruções em português.</td></tr><tr><td>Google Meu Negócio</td><td>business.google.com</td><td>Ser encontrado: peça avaliação a cada cliente e mantenha fotos e dados em dia.</td></tr></table>
+  <div class="fim">
+    <div class="citacao">A IA sempre vai dar suporte. Mas quem inicia a ação, quem dá o contexto e quem avalia a resposta <b>somos nós</b>.</div>
+    <p><b>Aula ao vivo toda segunda, às 20h</b>, aqui na comunidade. Traga uma tarefa real do seu negócio: é com ela que a gente testa. Quer ajuda além das aulas? Comece pelo diagnóstico em <b>avior.ia.br</b>.</p>
+  </div><div class="rodape"><span>Kit das Aulas · AVIOR</span><span>13</span></div></section></body></html>

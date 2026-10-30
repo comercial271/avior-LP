@@ -1,4 +1,4 @@
-// Converte kit.html em Kit-IA-no-Negocio.pdf (A4) e gera prévias PNG das páginas.
+// Converte kit.html em Kit-das-Aulas-AVIOR.pdf (A4) e gera prévias PNG das páginas.
 // Uso: node pdf.js [--previa]
 const { chromium } = require('playwright');
 const path = require('path');
@@ -9,7 +9,7 @@ const path = require('path');
   await page.goto('file://' + path.join(__dirname, 'kit.html'));
   await page.evaluate(() => document.fonts.ready);
   await page.pdf({
-    path: path.join(__dirname, 'Kit-IA-no-Negocio.pdf'),
+    path: path.join(__dirname, 'Kit-das-Aulas-AVIOR.pdf'),
     format: 'A4',
     printBackground: true,
     preferCSSPageSize: true,
@@ -21,5 +21,5 @@ const path = require('path');
     }
   }
   await browser.close();
-  console.log('Kit-IA-no-Negocio.pdf gerado.');
+  console.log('Kit-das-Aulas-AVIOR.pdf gerado.');
 })();
