@@ -1,7 +1,7 @@
 # 5 coisas que são gestão. @sejaavior
 
 7 slides 1080x1350 em `slides/` (zip em `slides.zip`). Spec em `spec.json`.
-Para regerar: `AVIOR_FONTS=<pasta com Lora e Poppins> python3 carrosseis/_render/render.py carrosseis/5-coisas-que-sao-gestao/spec.json --out carrosseis/5-coisas-que-sao-gestao/slides`
+Para regerar: `python3 carrosseis/_render/render_faixas.py carrosseis/5-coisas-que-sao-gestao/spec.json --out carrosseis/5-coisas-que-sao-gestao/slides`
 
 ---
 

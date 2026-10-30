@@ -1,64 +1,52 @@
 {
-  "handle": "@sejaavior",
+  "assinatura": {
+    "nome": "Juliana Anhaia",
+    "cargo": "Fundadora da AVIOR",
+    "foto": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
+    "foto_topo": 0.0
+  },
   "slides": [
     {
-      "tipo": "texto",
-      "filete": true,
-      "blocos": [
-        {"papel": "apoio", "texto": "CULTURA, PROCESSO, INTELIGÊNCIA", "cor": "cinza", "tamanho": 24},
-        {"papel": "manchete", "texto": "5 coisas que são gestão", "cor": "branco"},
-        {"papel": "manchete", "texto": "e quase ninguém trata como gestão."},
-        {"papel": "citacao", "texto": "A terceira eu demorei anos pra entender."}
-      ]
+      "tipo": "capa",
+      "titulo": "5 COISAS QUE SÃO GESTÃO {E VOCÊ NEM PERCEBE}"
     },
     {
-      "tipo": "numero", "numero": "01",
-      "titulo": [{"texto": "O áudio que você manda pela quinta vez."}],
-      "blocos": [
-        {"papel": "apoio", "texto": "Toda vez que eu repetia uma instrução, eu estava treinando alguém do zero. Sem registro, sem padrão."},
-        {"papel": "destaque", "texto": "Instrução repetida é processo que ainda não foi escrito."}
-      ]
+      "tipo": "item", "numero": "01", "faixa": "preta",
+      "titulo": "O ÁUDIO QUE VOCÊ MANDA PELA {QUINTA VEZ.}",
+      "texto": "Toda vez que eu repetia uma instrução, eu estava treinando alguém do zero. Sem registro, sem padrão.",
+      "sintese": "Instrução repetida é {processo que ainda não foi escrito.}"
     },
     {
-      "tipo": "numero", "numero": "02",
-      "titulo": [{"texto": "A reunião que termina sem dono."}],
-      "blocos": [
-        {"papel": "apoio", "texto": "Saí de muita reunião achando que estava tudo combinado. Uma semana depois, nada feito. Ninguém sabia que era com ele."},
-        {"papel": "destaque", "texto": "Tarefa sem nome e sem prazo é só conversa."}
-      ]
+      "tipo": "item", "numero": "02", "faixa": "champanhe",
+      "titulo": "A REUNIÃO\nSEM DONO.",
+      "texto": "Saí de muita reunião achando que estava tudo combinado. Uma semana depois, nada feito. Ninguém sabia que era com ele.",
+      "sintese": "Tarefa sem nome e sem prazo {é só conversa.}"
     },
     {
-      "tipo": "numero", "numero": "03",
-      "titulo": [{"texto": "O seu humor.", "papel": "impacto"}],
-      "blocos": [
-        {"papel": "apoio", "texto": "Nos dias em que eu chegava cansada, a equipe chegava com medo. Ninguém trazia problema. Escondia."},
-        {"papel": "destaque", "texto": "Cultura é o que a equipe faz quando lê o seu rosto."}
-      ]
+      "tipo": "item", "numero": "03", "faixa": "preta",
+      "titulo": "O SEU {HUMOR.}",
+      "texto": "Nos dias em que eu chegava cansada, a equipe chegava com medo. Ninguém trazia problema. Escondia.",
+      "sintese": "Cultura é o que a equipe faz {quando lê o seu rosto.}"
     },
     {
-      "tipo": "numero", "numero": "04",
-      "titulo": [{"texto": "O primeiro dia do funcionário novo."}],
-      "blocos": [
-        {"papel": "apoio", "texto": "Eu achava que treinar era jogar a pessoa na operação e ver se ela nadava. Perdi gente boa assim."},
-        {"papel": "destaque", "texto": "Quem chega sem roteiro vai embora sem explicar por quê."}
-      ]
+      "tipo": "item", "numero": "04", "faixa": "champanhe",
+      "titulo": "O PRIMEIRO DIA DO\nFUNCIONÁRIO NOVO.",
+      "texto": "Eu achava que treinar era jogar a pessoa na operação e ver se ela nadava. Perdi gente boa assim.",
+      "sintese": "Quem chega sem roteiro {vai embora sem explicar por quê.}"
     },
     {
-      "tipo": "numero", "numero": "05",
-      "titulo": [{"texto": "O que você não mede."}],
-      "blocos": [
-        {"papel": "apoio", "texto": "Eu sabia quanto faturava. Não sabia quanto me custava cada retrabalho."},
-        {"papel": "destaque", "texto": "O que não é medido vira opinião. E opinião ninguém corrige."}
-      ]
+      "tipo": "item", "numero": "05", "faixa": "preta",
+      "titulo": "O QUE VOCÊ\n{NÃO MEDE.}",
+      "texto": "Eu sabia quanto faturava. Não sabia quanto me custava cada retrabalho.",
+      "sintese": "O que não é medido vira opinião. {E opinião ninguém corrige.}"
     },
     {
-      "tipo": "texto",
-      "filete": true,
-      "blocos": [
-        {"papel": "impacto", "texto": "Qual dessas é a sua?"},
-        {"papel": "citacao", "texto": "Comenta o número aqui embaixo."},
-        {"papel": "apoio", "texto": "Cultura, Processo e Inteligência.\nÉ por aí que a gente organiza."}
-      ]
+      "tipo": "foto",
+      "imagem": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
+      "foto_topo": 0.02,
+      "titulo": "QUAL DESSAS É A {SUA?}",
+      "texto": "Comenta o número aqui embaixo.",
+      "sintese": "Cultura, Processo e Inteligência. {É por aí que a gente organiza.}"
     }
   ]
 }

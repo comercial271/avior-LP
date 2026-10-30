@@ -1,0 +1,52 @@
+{
+  "assinatura": {
+    "nome": "Juliana Anhaia",
+    "cargo": "Fundadora da AVIOR",
+    "foto": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
+    "foto_topo": 0.0
+  },
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "5 COISAS QUE SÃO VENDAS {E VOCÊ NÃO SABE}"
+    },
+    {
+      "tipo": "item", "numero": "01", "faixa": "preta",
+      "titulo": "QUEM ATENDE O SEU {TELEFONE.}",
+      "texto": "A primeira pessoa que fala com o cliente quase nunca é o vendedor. É quem atende. Um \"ela não está, liga mais tarde\" já esfria a conversa antes dela começar.",
+      "sintese": "A primeira impressão {já é a primeira venda.}"
+    },
+    {
+      "tipo": "item", "numero": "02", "faixa": "champanhe",
+      "titulo": "A PROPOSTA\nQUE DEMORA.",
+      "texto": "Proposta que chega três dias depois da reunião encontra um cliente que já esfriou. Ou que já recebeu a do concorrente.",
+      "sintese": "Quem demora pra responder {vende pra concorrência.}"
+    },
+    {
+      "tipo": "item", "numero": "03", "faixa": "preta",
+      "titulo": "A {ENTREGA.}",
+      "texto": "O cliente que recebe exatamente o que foi combinado volta e indica. O que recebe menos fala de você pra muita gente.",
+      "sintese": "Operação organizada {é o melhor vendedor que você tem.}"
+    },
+    {
+      "tipo": "item", "numero": "04", "faixa": "champanhe",
+      "titulo": "O SEU PROCESSO\nINTERNO.",
+      "texto": "Cliente percebe bagunça. Quando ele pergunta uma coisa e três pessoas respondem diferente, a confiança cai antes de qualquer conversa sobre preço.",
+      "sintese": "Confiança se perde no detalhe, {não no preço.}"
+    },
+    {
+      "tipo": "item", "numero": "05", "faixa": "preta",
+      "titulo": "LIDERAR A\n{SUA EQUIPE.}",
+      "texto": "Toda vez que você explica por que uma meta existe, você está vendendo. Equipe que não comprou a ideia entrega o mínimo.",
+      "sintese": "Quem não vende pra dentro {não escala pra fora.}"
+    },
+    {
+      "tipo": "foto",
+      "imagem": "assets/2072757f-c094-420a-81f4-819e4c51c070.png",
+      "foto_topo": 0.02,
+      "titulo": "QUAL DESSAS VOCÊ {JÁ VIVEU?}",
+      "texto": "Comenta o número aqui embaixo.",
+      "sintese": "Venda boa começa dentro da empresa. {Cultura, Processo e Inteligência.}"
+    }
+  ]
+}
