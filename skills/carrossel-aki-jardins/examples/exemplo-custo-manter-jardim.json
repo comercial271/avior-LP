@@ -1,0 +1,18 @@
+{
+  "titulo": "Como saber quanto custa manter um jardim",
+  "tipo": "Utilidade",
+  "pedido": "Salvar",
+  "slides": [
+    {"k": "capa", "titulo": "Antes de perguntar quanto custa manter o jardim, descubra o que faz esse valor subir ou cair."},
+    {"k": "texto", "titulo": "Não existe preço de prateleira", "corpo": "Dois jardins do mesmo tamanho podem custar bem diferente para manter, porque o valor nasce do trabalho que cada um pede. Entender isso antes de pedir orçamento já evita muita conversa torta."},
+    {"k": "texto", "etiqueta": "1", "titulo": "O estado de hoje", "corpo": "Um jardim que já vem cuidado pede uma visita leve. Um que ficou meses sem mexer pede mais horas, mais descarte e, às vezes, uma recuperação antes de entrar na rotina."},
+    {"k": "texto", "etiqueta": "2", "titulo": "O tamanho e o desenho", "corpo": "Área grande de grama é uma conta. Canteiro cheio de planta pequena, borda e curva é outra, porque o trabalho manual pesa mais que a máquina."},
+    {"k": "texto", "etiqueta": "3", "titulo": "A frequência", "corpo": "Quanto mais espaçada a visita, mais a grama e o mato crescem entre uma e outra, e cada visita demora mais. O intervalo certo se vê no local."},
+    {"k": "texto", "etiqueta": "4", "titulo": "O que está incluído", "corpo": "Corte, borda, canteiro, adubação, poda, recolhimento do que sai. Dois orçamentos só se comparam quando listam as mesmas coisas."},
+    {"k": "texto", "etiqueta": "5", "titulo": "Acesso e deslocamento", "corpo": "Se a equipe entra com máquina pelo portão ou carrega tudo na mão, o tempo muda. Se o jardim fica longe da rota, o caminho também entra na conta."},
+    {"k": "texto", "etiqueta": "6", "titulo": "Material e extras", "corpo": "Adubo, planta nova, terra e descarte de galho grande costumam ser à parte. O certo é saber o preço e o prazo antes e só autorizar se você concordar."},
+    {"k": "lista", "titulo": "Use como roteiro", "corpo": "Em que estado vocês acharam o jardim?\nQual a frequência?\nO que está incluído?\nO que vira extra?"},
+    {"k": "pedido", "titulo": "Salve este post para a hora de pedir orçamento.", "corpo": "E se quiser que alguém olhe o seu jardim antes de falar em valor, a AKI visita primeiro e passa o preço depois."}
+  ],
+  "legenda": "Pediram o preço da manutenção do jardim e passaram um número só. Parece resposta, mas não é.\n\nUm número sem o estado do jardim, a frequência e a lista do que entra é só um palpite com valor na frente.\n\nNos cards eu juntei as seis coisas que mexem na conta, na ordem em que eu olho quando visito um jardim. Serve para qualquer prestador, comigo ou com outro.\n\nSalva este post. Na próxima vez que alguém te passar um valor, você já sabe o que perguntar.\n\n#jardinagem #riodosul #manutencaodejardim #akijardins"
+}
