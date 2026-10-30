@@ -1,0 +1,14 @@
+{
+  "titulo": "Antes e depois com o que foi feito",
+  "tipo": "Prova",
+  "pedido": "Seguir",
+  "slides": [
+    {"k": "capa", "fundo_foto": "fotos/lateral-depois.jpg", "sobre": "ANTES E DEPOIS", "titulo": "Veja o antes e o depois deste jardim e o que foi feito entre as duas fotos."},
+    {"k": "antes_depois", "titulo": "Gramado lateral", "antes": "fotos/lateral-antes.jpg", "depois": "fotos/lateral-depois.jpg", "corpo": "Corte, limpeza das ervas daninhas e acabamento nas bordas."},
+    {"k": "antes_depois", "titulo": "Gramado da frente", "antes": "fotos/frente-antes.jpg", "depois": "fotos/frente-depois.jpg", "corpo": "Ervas daninhas removidas e gramado uniforme até o calçamento."},
+    {"k": "antes_depois", "titulo": "Arbusto esculpido", "antes": "fotos/arbusto-antes.jpg", "depois": "fotos/arbusto-depois.jpg", "corpo": "Poda de forma, volume controlado e entorno limpo."},
+    {"k": "lista", "icone": "checklist", "titulo": "O que foi feito", "corpo": "Corte do gramado\nBorda refeita\nPoda de forma no arbusto\nÁrea limpa antes de sair"},
+    {"k": "pedido", "icone": "visita", "titulo": "Siga a AKI para ver o próximo jardim.", "corpo": "E se o seu jardim precisa de um antes e depois assim, chama no WhatsApp para uma visita."}
+  ],
+  "legenda": "Antes e depois de uma manutenção aqui em Rio do Sul.\n\nEm cada foto eu coloquei o que foi feito, para você ver que o resultado vem do detalhe: borda, ervas daninhas, poda de forma e a área limpa antes de a equipe ir embora.\n\nSegue a AKI para ver o próximo jardim. E se quiser uma visita no seu, é só chamar no WhatsApp.\n\n#jardinagem #riodosul #antesedepois #akijardins"
+}

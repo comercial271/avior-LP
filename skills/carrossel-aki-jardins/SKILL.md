@@ -20,8 +20,10 @@ O Instagram da AKI existe para uma coisa: fazer o cliente certo ver o perfil e p
    python scripts/render.py spec.json --out <pasta-de-saida>
    ```
    Ele gera `slide-01.png` em diante, `legenda.md` e um `.zip`. Leia os avisos `CONFERIR:` e `ESTOUROU:` e corrija antes de entregar.
-6. **Olhe os PNGs** (pelo menos capa, um card do meio e o último) antes de entregar.
-7. **Entregue:** o zip primeiro, depois os slides, e a legenda pronta para colar.
+6. **Olhe os PNGs** (pelo menos capa, um card do meio, os slides com foto e o último) antes de entregar.
+7. **Entregue:** o zip primeiro, depois os slides, a legenda pronta para colar e o lembrete de como postar sem corte (seção abaixo).
+
+Se o renderizador reclamar que não achou o navegador, rode uma vez `pip install playwright && playwright install chromium` e tente de novo.
 
 ## Para quem o André fala
 
@@ -63,6 +65,8 @@ Público único: o cliente final de jardim. Residências, condomínios (síndico
 
 Narrativo pode ter 9 cards, Prova 7. O que não muda: capa com gancho, um pedido só no fim.
 
+**Molde de Prova (antes e depois):** capa com `fundo_foto` (a melhor foto do depois) → um slide `antes_depois` por área do jardim (2 a 5) → `lista` com o que foi feito → `pedido`. Exemplo pronto em `examples/exemplo-antes-depois.json`.
+
 **Capa boa:** "Antes de perguntar quanto custa manter o jardim, descubra o que faz esse valor subir ou cair."
 **Capa fraca:** "Dicas de manutenção de jardim." (é assunto, não promete resposta)
 
@@ -79,9 +83,37 @@ O renderizador já implementa tudo. Não troque cores nem fontes no spec. Detalh
 - Rodapé fixo: "AKI Jardins | Rio do Sul e região", "arraste →" e a numeração. No último card, @akijardins no lugar do arraste.
 - Se o André mandar a logo em PNG com fundo transparente, salve como `assets/logo.png`: o renderizador passa a usar a imagem no lugar do logotipo escrito.
 
-## Fotos
+## Fotos e imagens
 
-Para carrossel de Prova ou capa com foto, use `k: foto` e o campo `foto` no spec (caminho do arquivo). Sem foto, o slide sai com um espaço tracejado escrito "FOTO DO ANTES/DEPOIS [a preencher]", para ele saber o que falta. Antes e depois sempre do mesmo ângulo. Na dúvida sobre qual foto é antes e qual é depois, pergunte: trocar os dois é o pior erro possível.
+Carrossel com foto de serviço real é o que mais prova trabalho. Sempre que o André mandar fotos, use. As fotos que ele anexa na conversa ficam na pasta de uploads, então aponte o spec para esse caminho.
+
+Modelos com imagem (detalhes em `references/spec.md`):
+
+| Modelo | Quando usar |
+|---|---|
+| `capa` com `fundo_foto` | Capa com a foto do depois ocupando o slide inteiro e o gancho embaixo. A melhor capa para Prova. |
+| `antes_depois` | Antes e depois lado a lado, com as etiquetas ANTES e DEPOIS e uma linha do que foi feito. Um par por slide. |
+| `foto` | Uma foto grande com rótulo e texto curto. |
+| `texto` com `foto` | Card de explicação com uma foto em cima. |
+| `icone` em `texto`, `lista` ou `pedido` | Quando não tem foto: um ícone de linha dourado acima do título, no estilo das capas dos destaques. |
+
+Ícones disponíveis: folha, grama, tesoura, regador, arvore, casa, predio, calendario, checklist, pergunta, familia, visita, mensagem, estrela.
+
+Regras de foto:
+- **Antes e depois do mesmo ângulo e com luz parecida.** Se o depois parecer pior que o antes (grama mais clara, ângulo diferente), avise o André e sugira tirar esse par. Na dúvida sobre qual foto é antes e qual é depois, pergunte: trocar os dois é o pior erro possível.
+- **Olhe cada foto antes de usar.** Se o que importa (o arbusto, o canteiro) ficar fora do quadro, ajuste com `foco` (`topo`, `baixo`, `esquerda`, `direita` ou `"50% 30%"`). Se a foto não pode perder nada, use `"enquadrar": "inteira"`.
+- **Autorização.** Foto de cliente só com o termo assinado. Sem endereço, número de casa, placa de carro ou rosto de quem não autorizou. Se aparecer, avise antes de gerar.
+- Sem foto, o slide sai com um espaço tracejado escrito "FOTO DO ANTES/DEPOIS [a preencher]", para ele saber o que falta.
+- Fotos de celular giradas ou em HEIC: o renderizador corrige a rotação. Se HEIC não abrir, rode `pip install pillow-heif` ou peça a foto em JPG.
+
+## Nunca deixar o Instagram cortar
+
+O renderizador gera todos os slides em 1080x1350 (formato 4:5) e confere o tamanho de cada um antes de fechar o zip. Carrossel com slides de tamanhos diferentes é cortado pelo Instagram no formato do primeiro, e foi isso que cortou os títulos num post antigo.
+
+Na entrega, lembre o André do passo no app:
+1. Ao selecionar as imagens, toque no ícone de **várias fotos** e marque os slides **na ordem**, do 01 ao último.
+2. Antes de marcar a segunda foto, na prévia da primeira, toque no ícone de **expandir** (as duas setinhas no canto de baixo à esquerda) para a imagem aparecer inteira, em pé. Se a prévia estiver quadrada, o Instagram vai cortar.
+3. Não use zoom nem arraste a imagem na prévia.
 
 ## Calendário de referência
 
