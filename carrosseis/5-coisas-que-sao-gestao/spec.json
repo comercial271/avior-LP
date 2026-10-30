@@ -1,0 +1,64 @@
+{
+  "handle": "@sejaavior",
+  "slides": [
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {"papel": "apoio", "texto": "CULTURA, PROCESSO, INTELIGÊNCIA", "cor": "cinza", "tamanho": 24},
+        {"papel": "manchete", "texto": "5 coisas que são gestão", "cor": "branco"},
+        {"papel": "manchete", "texto": "e quase ninguém trata como gestão."},
+        {"papel": "citacao", "texto": "A terceira eu demorei anos pra entender."}
+      ]
+    },
+    {
+      "tipo": "numero", "numero": "01",
+      "titulo": [{"texto": "O áudio que você manda pela quinta vez."}],
+      "blocos": [
+        {"papel": "apoio", "texto": "Toda vez que eu repetia uma instrução, eu estava treinando alguém do zero. Sem registro, sem padrão."},
+        {"papel": "destaque", "texto": "Instrução repetida é processo que ainda não foi escrito."}
+      ]
+    },
+    {
+      "tipo": "numero", "numero": "02",
+      "titulo": [{"texto": "A reunião que termina sem dono."}],
+      "blocos": [
+        {"papel": "apoio", "texto": "Saí de muita reunião achando que estava tudo combinado. Uma semana depois, nada feito. Ninguém sabia que era com ele."},
+        {"papel": "destaque", "texto": "Tarefa sem nome e sem prazo é só conversa."}
+      ]
+    },
+    {
+      "tipo": "numero", "numero": "03",
+      "titulo": [{"texto": "O seu humor.", "papel": "impacto"}],
+      "blocos": [
+        {"papel": "apoio", "texto": "Nos dias em que eu chegava cansada, a equipe chegava com medo. Ninguém trazia problema. Escondia."},
+        {"papel": "destaque", "texto": "Cultura é o que a equipe faz quando lê o seu rosto."}
+      ]
+    },
+    {
+      "tipo": "numero", "numero": "04",
+      "titulo": [{"texto": "O primeiro dia do funcionário novo."}],
+      "blocos": [
+        {"papel": "apoio", "texto": "Eu achava que treinar era jogar a pessoa na operação e ver se ela nadava. Perdi gente boa assim."},
+        {"papel": "destaque", "texto": "Quem chega sem roteiro vai embora sem explicar por quê."}
+      ]
+    },
+    {
+      "tipo": "numero", "numero": "05",
+      "titulo": [{"texto": "O que você não mede."}],
+      "blocos": [
+        {"papel": "apoio", "texto": "Eu sabia quanto faturava. Não sabia quanto me custava cada retrabalho."},
+        {"papel": "destaque", "texto": "O que não é medido vira opinião. E opinião ninguém corrige."}
+      ]
+    },
+    {
+      "tipo": "texto",
+      "filete": true,
+      "blocos": [
+        {"papel": "impacto", "texto": "Qual dessas é a sua?"},
+        {"papel": "citacao", "texto": "Comenta o número aqui embaixo."},
+        {"papel": "apoio", "texto": "Cultura, Processo e Inteligência.\nÉ por aí que a gente organiza."}
+      ]
+    }
+  ]
+}
