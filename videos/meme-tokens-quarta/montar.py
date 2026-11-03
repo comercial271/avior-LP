@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+"""
+Meme AVIOR: faixa branca com a legenda em cima e o clipe embaixo.
+
+Uso:
+    python3 videos/meme-tokens-quarta/montar.py clipe.mp4 [saida.mp4]
+
+O clipe e recortado para preencher a area abaixo da faixa (1080x1920 no total).
+O audio do clipe sai mudo: o som da trend entra no proprio Instagram.
+"""
+import os
+import subprocess
+import sys
+
+from PIL import Image, ImageDraw, ImageFont
+
+W, H = 1080, 1920
+FAIXA = 520
+LEGENDA = "eu na quarta-feira quando o Claude avisa que meu limite acabou e só volta segunda"
+MARCA = "@sejaavior"
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+FONTS = os.path.join(AQUI, "..", "..", "carrosseis", "_render", "fonts")
+
+
+def faixa_png(caminho):
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, FAIXA], fill=(255, 255, 255, 255))
+    f = ImageFont.truetype(os.path.join(FONTS, "Poppins-SemiBold.ttf"), 58)
+    # quebra centralizada
+    linhas, cur = [], ""
+    for p in LEGENDA.split():
+        t = (cur + " " + p).strip()
+        if d.textlength(t, font=f) > W - 140:
+            linhas.append(cur)
+            cur = p
+        else:
+            cur = t
+    linhas.append(cur)
+    lh = f.size * 1.32
+    y = (FAIXA - len(linhas) * lh) / 2 + 10
+    for l in linhas:
+        d.text(((W - d.textlength(l, font=f)) / 2, y), l, font=f, fill=(17, 17, 17, 255))
+        y += lh
+    fm = ImageFont.truetype(os.path.join(FONTS, "Poppins-Medium.ttf"), 30)
+    d.text((W - 60 - d.textlength(MARCA, font=fm), H - 330), MARCA, font=fm, fill=(255, 255, 255, 200))
+    img.save(caminho)
+
+
+def main():
+    clipe = sys.argv[1]
+    saida = sys.argv[2] if len(sys.argv) > 2 else os.path.join(AQUI, "meme-tokens-quarta.mp4")
+    png = os.path.join(AQUI, "faixa.png")
+    faixa_png(png)
+    vh = H - FAIXA
+    filtro = (f"[0:v]scale={W}:{vh}:force_original_aspect_ratio=increase,crop={W}:{vh},"
+              f"pad={W}:{H}:0:{FAIXA}:white,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[out]")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", clipe, "-i", png,
+                    "-filter_complex", filtro, "-map", "[out]", "-an",
+                    "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-r", "30",
+                    "-movflags", "+faststart", saida], check=True)
+    print("ok:", saida)
+
+
+if __name__ == "__main__":
+    main()
