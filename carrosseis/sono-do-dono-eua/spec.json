@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "O QUE TIRA O SONO\nDO DONO NOS EUA\n{E COMO SAIR DISSO}",
+      "tamanho": 108,
+      "apoio": "Pesquisa com 781 donos de pequenas empresas, 2026."
+    },
+    {
+      "tipo": "item", "numero": "01", "faixa": "preta",
+      "titulo": "O {SONO.}",
+      "texto": "{Antes:} 68% dos donos perdem pelo menos uma noite de sono por mês por causa de dinheiro.\n{Depois:} o caixa fica previsível e o fim do mês para de ser surpresa.",
+      "sintese": "Insônia de dono {quase sempre é falta de visibilidade.}",
+      "fonte": "Bluevine/Centiment, 781 donos nos EUA, fev a mar/2026."
+    },
+    {
+      "tipo": "item", "numero": "02", "faixa": "champanhe",
+      "titulo": "O SALÁRIO\nDO DONO.",
+      "texto": "{Antes:} 62% reduziram ou pularam o próprio salário pelo menos uma vez no último ano.\n{Depois:} custo e margem por contrato na mão, e o pró-labore vira conta fixa.",
+      "sintese": "O dono não pode ser {o último a receber todo mês.}",
+      "fonte": "Bluevine/Centiment, 781 donos nos EUA, fev a mar/2026."
+    },
+    {
+      "tipo": "item", "numero": "03", "faixa": "preta",
+      "titulo": "AS {DECISÕES.}",
+      "texto": "{Antes:} 68% adiaram ou evitaram contratar ou expandir por pressão financeira.\n{Depois:} com números confiáveis, a decisão sai na data certa.",
+      "sintese": "Decisão adiada {também custa dinheiro.}",
+      "fonte": "Bluevine/Centiment, 781 donos nos EUA, fev a mar/2026."
+    },
+    {
+      "tipo": "item", "numero": "04", "faixa": "champanhe",
+      "titulo": "O ESTRESSE.",
+      "texto": "{Antes:} 71% vivem estresse financeiro de moderado a extremo.\n{Depois:} cada área tem dono, rotina e número. O peso sai das costas de uma pessoa só.",
+      "sintese": "Estresse de dono {é sintoma de empresa centralizada.}",
+      "fonte": "Bluevine/Centiment, 781 donos nos EUA, fev a mar/2026."
+    },
+    {
+      "tipo": "item", "numero": "05", "faixa": "preta",
+      "titulo": "VALE A {PENA?}",
+      "texto": "3 em cada 4 donos dizem que ter o próprio negócio vale a pena. Mas 27% sentem mais esgotamento do que esperavam.",
+      "sintese": "Vale a pena. {Desde que a empresa não dependa só de você.}",
+      "fonte": "Bluevine, Expectations vs. Reality, 785 donos nos EUA, abr/2026."
+    },
+    {
+      "tipo": "item", "numero": "", "faixa": "champanhe",
+      "titulo": "QUAL DESSES É\nA SUA REALIDADE?",
+      "texto": "Comenta o número aqui embaixo.",
+      "sintese": "Cultura, processo e só então inteligência. {É assim que o dono volta a dormir.}"
+    }
+  ]
+}

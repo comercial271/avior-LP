@@ -11,8 +11,11 @@
 - Só orgânico, não impulsionar.
 - Legenda: `videos/meme-bolsas/LEGENDA.md`
 
-### Carrossel: 5 sinais de que sua empresa ainda depende de você
-- Slides: `carrosseis/5-sinais-empresa-depende-de-voce/slides.zip`
-- Legenda: `carrosseis/5-sinais-empresa-depende-de-voce/LEGENDA.md`
+### Carrossel: O que tira o sono do dono nos EUA (antes x depois, Radar EUA)
+- Slides: `carrosseis/sono-do-dono-eua/slides.zip`
+- Legenda: `carrosseis/sono-do-dono-eua/LEGENDA.md`
+
+## Reserva (pronto, sem data)
+- Carrossel "5 sinais de que sua empresa ainda depende de você": `carrosseis/5-sinais-empresa-depende-de-voce/`
 
 Sugestão: carrossel de manhã e Reels no fim da tarde, para um não roubar alcance do outro.
