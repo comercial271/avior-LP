@@ -21,3 +21,18 @@ Processo escrito é o que faz a empresa continuar rodando quando alguém sai, ti
 Marca aqui aquele amigo empresário que precisa ver isso. 👇
 
 #gestao #empreendedorismo #processos #donodeempresa #sejaavior
+
+## Versão 3: empresário (IA sem processo) (escolhida)
+POV: VOCÊ DECIDE IMPLANTAR IA NA EMPRESA E DESCOBRE QUE NENHUM PROCESSO TÁ ESCRITO
+
+Legenda do post:
+
+A IA não faz milagre em cima de bagunça. 😶
+
+Muita empresa quer começar pela ferramenta. Só que a IA precisa saber como a tarefa é feita, e na maioria das empresas isso só existe na cabeça de alguém.
+
+Por isso a ordem importa: primeiro cultura, depois processo, e só então inteligência.
+
+Marca aquele empresário que tá querendo colocar IA em tudo. 👇
+
+#inteligenciaartificial #gestao #processos #empreendedorismo #sejaavior
