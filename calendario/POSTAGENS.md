@@ -21,9 +21,9 @@
 - Slides: `carrosseis/ia-pequenas-empresas-eua/slides.zip`
 - Legenda: `carrosseis/ia-pequenas-empresas-eua/LEGENDA.md`
 
-## Pronto para postar (sem data definida)
+## Já postados
 
-### Vídeo: antes x depois, Juliana no escritório x férias no Chile
+### Ter 03/11/2026: Vídeo antes x depois, Juliana no escritório x férias no Chile (postado)
 - Vídeo: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/1e643ab3-0d02-4e77-8e01-7b7191ebd262.mp4
 - Legenda e detalhes: `videos/antes-depois-chile/LEGENDA.md`
 
