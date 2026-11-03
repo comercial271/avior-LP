@@ -32,3 +32,11 @@ Processo escrito é o que corta esses "benefícios" sem cortar ninguém.
 Comenta qual bolsa tem aí na sua empresa. 👇
 
 #gestao #empreendedorismo #processos #donodeempresa #sejaavior
+
+## Capa do Reels (grade do perfil)
+
+O vídeo continua 9:16 (1080x1920). Na grade do perfil o Instagram mostra só o
+meio em 3:4 (corta ~240 px em cima e embaixo), então a capa é um quadro do empresário
+de braços abertos com o título dentro da área central:
+"POV: OS BENEFÍCIOS DA EMPRESA SEM PROCESSO" (PROCESSO em champanhe).
+Ao postar: Editar capa > Adicionar da galeria > escolher a capa e conferir o recorte da grade.
