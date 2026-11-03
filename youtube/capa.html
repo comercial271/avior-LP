@@ -7,10 +7,10 @@
 *{margin:0;box-sizing:border-box}
 body{width:2560px;height:1440px;background:#050505;overflow:hidden;font-family:P;position:relative;color:#F5F1E8}
 .bg1{position:absolute;inset:0;background:
- radial-gradient(38% 60% at 78% 50%,rgba(214,188,142,.28) 0%,rgba(214,188,142,0) 70%),
+ radial-gradient(30% 50% at 70% 50%,rgba(214,188,142,.30) 0%,rgba(214,188,142,0) 70%),
  radial-gradient(30% 45% at 18% 30%,rgba(140,122,78,.18) 0%,rgba(0,0,0,0) 70%),
  radial-gradient(60% 80% at 50% 50%,#12100c 0%,#050505 80%)}
-.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(194,184,157,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(194,184,157,.07) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(45% 55% at 72% 50%,#000 0%,transparent 80%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(194,184,157,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(194,184,157,.07) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(35% 50% at 70% 50%,#000 0%,transparent 80%)}
 svg.orbit{position:absolute;left:1130px;top:220px}
 .safe{position:absolute;left:507px;top:508px;width:1546px;height:423px}
 .left{position:absolute;left:30px;top:0;bottom:0;width:900px;display:flex;flex-direction:column;justify-content:center}
@@ -38,14 +38,7 @@ p{margin-top:22px;font-weight:300;font-size:31px;line-height:1.35;color:#B9B3A6}
 .line{position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,transparent,#D6BC8E 30%,#D6BC8E 70%,transparent);opacity:.7}
 </style></head><body>
 <div class="bg1"></div><div class="grid"></div>
-<svg class="orbit" width="1300" height="1000" viewBox="0 0 1300 1000" fill="none">
- <ellipse cx="650" cy="500" rx="600" ry="330" stroke="rgba(214,188,142,.22)" stroke-width="2"/>
- <ellipse cx="650" cy="500" rx="460" ry="420" stroke="rgba(214,188,142,.12)" stroke-width="2" transform="rotate(-25 650 500)"/>
- <ellipse cx="650" cy="500" rx="560" ry="200" stroke="rgba(214,188,142,.16)" stroke-width="2" stroke-dasharray="6 14" transform="rotate(18 650 500)"/>
- 
- <circle cx="1170" cy="300" r="7" fill="#D6BC8E"/><circle cx="1050" cy="820" r="11" fill="#F1DDB2"/><circle cx="1050" cy="820" r="32" fill="rgba(214,188,142,.12)"/>
- <circle cx="380" cy="130" r="6" fill="#C2B89D"/>
-</svg>
+<canvas id="brain" width="1100" height="900" style="position:absolute;left:1300px;top:385px;width:800px;height:655px"></canvas>
 <div class="brand">AVIOR</div>
 <div class="safe">
  <div class="left">
@@ -53,15 +46,24 @@ p{margin-top:22px;font-weight:300;font-size:31px;line-height:1.35;color:#B9B3A6}
   <h1>Experimentamos e criamos<br><span class="g">produtos com IA</span></h1>
   <p>para ajudar a resolver problemas<br>reais do seu negócio.</p>
  </div>
- <div class="right">
-  <div class="card c1"><div class="lab">Agente de atendimento</div>
-   <div class="bub">Quero um orçamento 👋</div><div class="bub me">Claro! Já te envio.</div></div>
-  <div class="card c2"><div class="lab">Automação</div>
-   <div class="flow"><div class="n">✉</div><div class="ln"></div><div class="n">⚙</div><div class="ln"></div><div class="n">✓</div></div></div>
-  <div class="card c3"><div class="lab">Painel inteligente</div>
-   <div class="bars"><i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
-   <div class="ok">● Rodando no seu negócio</div></div>
  </div>
-</div>
 <div class="site">avior.ia.br</div><div class="line"></div>
-</body></html>
+<script>
+(function(){const c=document.getElementById('brain'),x=c.getContext('2d');
+let seed=7;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+// lobos do cérebro (vista lateral) em elipses: cx,cy,rx,ry
+const L=[[430,380,270,210],[640,330,230,200],[300,470,170,140],[560,520,250,120],[780,430,150,150],[760,600,120,80],[590,650,40,90]];
+const inside=(px,py,m=1)=>L.some(([a,b,rx,ry])=>((px-a)/(rx*m))**2+((py-b)/(ry*m))**2<=1);
+const P=[];let t=0;while(P.length<620&&t<200000){t++;const px=120+r()*820,py=140+r()*640;
+ if(!inside(px,py))continue;const edge=!inside(px,py,0.9);if(!edge&&r()<0.35)continue;P.push([px,py,edge]);}
+x.lineWidth=1.2;
+for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i][0]-P[j][0],P[i][1]-P[j][1]);
+ if(d<58){x.strokeStyle=`rgba(214,188,142,${0.5*(1-d/58)})`;x.beginPath();x.moveTo(P[i][0],P[i][1]);x.lineTo(P[j][0],P[j][1]);x.stroke();}}
+// sulcos (curvas internas)
+x.strokeStyle='rgba(241,221,178,.35)';x.lineWidth=2.2;
+[[[330,250],[420,330],[400,430],[480,500]],[[560,180],[600,300],[680,360],[700,470]],[[250,420],[360,470],[470,460],[600,520]],[[760,300],[740,380],[800,440]]].forEach(p=>{x.beginPath();x.moveTo(...p[0]);
+ for(let k=1;k<p.length;k++){const[a,b]=p[k-1],[e,f]=p[k];x.quadraticCurveTo(a+(e-a)*.5+18,b+(f-b)*.5-18,e,f);}x.stroke();});
+P.forEach(([px,py,e])=>{const big=r()<0.045;const rad=big?5.5:(e?2.6:1.9);
+ if(big){const g=x.createRadialGradient(px,py,0,px,py,26);g.addColorStop(0,'rgba(241,221,178,.55)');g.addColorStop(1,'rgba(241,221,178,0)');x.fillStyle=g;x.beginPath();x.arc(px,py,26,0,7);x.fill();}
+ x.fillStyle=big?'#F6E7C4':(e?'#E2CA98':'rgba(214,188,142,.8)');x.beginPath();x.arc(px,py,rad,0,7);x.fill();});
+})();</script></body></html>
