@@ -15,6 +15,12 @@
 - Slides: `carrosseis/sono-do-dono-eua/slides.zip`
 - Legenda: `carrosseis/sono-do-dono-eua/LEGENDA.md`
 
+## Quarta, 11/11/2026
+
+### Carrossel: A IA nas pequenas empresas dos EUA, o que ninguém conta (Radar EUA)
+- Slides: `carrosseis/ia-pequenas-empresas-eua/slides.zip`
+- Legenda: `carrosseis/ia-pequenas-empresas-eua/LEGENDA.md`
+
 ## Reserva (pronto, sem data)
 - Carrossel "5 sinais de que sua empresa ainda depende de você": `carrosseis/5-sinais-empresa-depende-de-voce/`
 

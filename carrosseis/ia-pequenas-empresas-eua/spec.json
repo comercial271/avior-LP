@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "A IA NAS PEQUENAS\nEMPRESAS DOS EUA:\n{O QUE NINGUÉM CONTA}",
+      "tamanho": 108,
+      "apoio": "O que as pesquisas americanas de 2026 mostram."
+    },
+    {
+      "tipo": "item", "numero": "01", "faixa": "preta",
+      "titulo": "O {MEDO.}",
+      "texto": "{Antes:} 62% dos donos acham que vão ficar para trás em até 3 anos sem IA.\n{Depois:} em vez de correr atrás da ferramenta, escolhe um processo e começa por ele.",
+      "sintese": "Medo de ficar pra trás {não é estratégia.}",
+      "fonte": "Pax8, pequenas e médias empresas, jun/2026."
+    },
+    {
+      "tipo": "item", "numero": "02", "faixa": "champanhe",
+      "titulo": "O TUTORIAL.",
+      "texto": "{Antes:} um terço dos donos pergunta pro próprio ChatGPT como usar IA.\n{Depois:} o time aprende em cima das tarefas reais da empresa.",
+      "sintese": "Treinamento genérico {não muda a operação.}",
+      "fonte": "Thryv, 561 decisores de pequenas empresas, jun/2026."
+    },
+    {
+      "tipo": "item", "numero": "03", "faixa": "preta",
+      "titulo": "O {PREPARO.}",
+      "texto": "{Antes:} 73% dizem que precisam de mais treinamento e apoio para usar IA.\n{Depois:} o processo escrito vira o roteiro do treinamento.",
+      "sintese": "Falta preparo. {Ferramenta já tem de sobra.}",
+      "fonte": "Goldman Sachs 10,000 Small Businesses, 1.256 donos, mar/2026."
+    },
+    {
+      "tipo": "item", "numero": "04", "faixa": "champanhe",
+      "titulo": "O PILOTO.",
+      "texto": "{Antes:} 42% das empresas abandonaram a maior parte dos projetos de IA. Um ano antes eram 17%.\n{Depois:} começa por uma rotina que se repete e define antes o que é sucesso.",
+      "sintese": "Piloto bonito que não vira rotina {morre no caminho.}",
+      "fonte": "S&P Global, +1.000 empresas na América do Norte e Europa, via CIO Dive."
+    },
+    {
+      "tipo": "item", "numero": "05", "faixa": "preta",
+      "titulo": "O {GIGANTE.}",
+      "texto": "{Antes:} 74% veem a IA como forma de competir com empresas maiores.\n{Depois:} a pequena empresa organizada ganha a velocidade que a grande não tem.",
+      "sintese": "A IA nivela o jogo {só pra quem tem processo.}",
+      "fonte": "Pax8, pequenas e médias empresas, jun/2026."
+    },
+    {
+      "tipo": "item", "numero": "", "faixa": "champanhe",
+      "titulo": "SUA EMPRESA\nTÁ PRONTA PRA IA?",
+      "texto": "Comenta SIM, NÃO ou MAIS OU MENOS.",
+      "sintese": "Cultura, processo e só então inteligência. {Nessa ordem.}"
+    }
+  ]
+}
