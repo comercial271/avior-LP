@@ -15,8 +15,10 @@ import sys
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1080, 1920
-FAIXA = 520
-LEGENDA = "eu na quarta-feira quando o Claude avisa que meu limite acabou e só volta segunda"
+FAIXA = 560
+# Versões publicadas:
+#   "POV: QUANDO OS TOKENS DO CLAUDE TERMINAM NA QUARTA-FEIRA E EU SÓ CONSIGO TRABALHAR NA SEMANA QUE VEM"
+LEGENDA = "POV: O FUNCIONÁRIO QUE FAZIA TUDO PEDIU DEMISSÃO E NINGUÉM SABE COMO ELE FAZIA"
 MARCA = "@sejaavior"
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -27,7 +29,7 @@ def faixa_png(caminho):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, W, FAIXA], fill=(255, 255, 255, 255))
-    f = ImageFont.truetype(os.path.join(FONTS, "Poppins-SemiBold.ttf"), 58)
+    f = ImageFont.truetype(os.path.join(FONTS, "Poppins-Bold.ttf"), 60)
     # quebra centralizada
     linhas, cur = [], ""
     for p in LEGENDA.split():
