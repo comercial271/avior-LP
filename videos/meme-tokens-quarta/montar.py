@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Meme AVIOR: faixa branca com a legenda em cima e o clipe embaixo.
+Meme AVIOR: faixa preta com a legenda em branco em cima e o clipe embaixo.
 
 Uso:
     python3 videos/meme-tokens-quarta/montar.py clipe.mp4 [saida.mp4]
@@ -19,7 +19,6 @@ FAIXA = 560
 # Versões publicadas:
 #   "POV: QUANDO OS TOKENS DO CLAUDE TERMINAM NA QUARTA-FEIRA E EU SÓ CONSIGO TRABALHAR NA SEMANA QUE VEM"
 LEGENDA = "POV: O FUNCIONÁRIO QUE FAZIA TUDO PEDIU DEMISSÃO E NINGUÉM SABE COMO ELE FAZIA"
-MARCA = "@sejaavior"
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(AQUI, "..", "..", "carrosseis", "_render", "fonts")
@@ -28,7 +27,7 @@ FONTS = os.path.join(AQUI, "..", "..", "carrosseis", "_render", "fonts")
 def faixa_png(caminho):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, W, FAIXA], fill=(255, 255, 255, 255))
+    d.rectangle([0, 0, W, FAIXA], fill=(0, 0, 0, 255))
     f = ImageFont.truetype(os.path.join(FONTS, "Poppins-Bold.ttf"), 60)
     # quebra centralizada
     linhas, cur = [], ""
@@ -43,10 +42,8 @@ def faixa_png(caminho):
     lh = f.size * 1.32
     y = (FAIXA - len(linhas) * lh) / 2 + 10
     for l in linhas:
-        d.text(((W - d.textlength(l, font=f)) / 2, y), l, font=f, fill=(17, 17, 17, 255))
+        d.text(((W - d.textlength(l, font=f)) / 2, y), l, font=f, fill=(255, 255, 255, 255))
         y += lh
-    fm = ImageFont.truetype(os.path.join(FONTS, "Poppins-Medium.ttf"), 30)
-    d.text((W - 60 - d.textlength(MARCA, font=fm), H - 330), MARCA, font=fm, fill=(255, 255, 255, 200))
     img.save(caminho)
 
 
@@ -57,7 +54,7 @@ def main():
     faixa_png(png)
     vh = H - FAIXA
     filtro = (f"[0:v]scale={W}:{vh}:force_original_aspect_ratio=increase,crop={W}:{vh},"
-              f"pad={W}:{H}:0:{FAIXA}:white,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[out]")
+              f"pad={W}:{H}:0:{FAIXA}:black,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", clipe, "-i", png,
                     "-filter_complex", filtro, "-map", "[out]", "-an",
                     "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-r", "30",

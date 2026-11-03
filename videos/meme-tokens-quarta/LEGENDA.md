@@ -1,7 +1,7 @@
 # Memes em vídeo AVIOR (mesma cena, legendas diferentes)
 
 Cena gerada no Higgsfield (Seedance 2.5, 5 s, 9:16): pessoa no notebook trava, fecha a tela
-e encara a câmera. Montagem: faixa branca com a legenda em cima, clipe embaixo, sem áudio
+e encara a câmera. Montagem: faixa preta com a legenda em branco em cima, clipe embaixo, sem marca d'água, sem áudio
 (o som da trend entra no Instagram). Script: `montar.py`.
 
 ## Versão 1: tokens
