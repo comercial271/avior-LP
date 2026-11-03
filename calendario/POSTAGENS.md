@@ -24,7 +24,7 @@
 ## Pronto para postar (sem data definida)
 
 ### Vídeo: antes x depois, Juliana no escritório x férias no Chile
-- Vídeo: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/aa48975f-62c1-4c89-a32e-374813cc3261.mp4
+- Vídeo: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/1e643ab3-0d02-4e77-8e01-7b7191ebd262.mp4
 - Legenda e detalhes: `videos/antes-depois-chile/LEGENDA.md`
 
 ## Reserva (pronto, sem data)
