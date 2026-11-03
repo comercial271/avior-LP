@@ -1,0 +1,56 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "5 SINAIS DE QUE\nSUA EMPRESA {AINDA\nDEPENDE DE VOCÊ}"
+    },
+    {
+      "tipo": "item",
+      "numero": "01",
+      "faixa": "preta",
+      "titulo": "VOCÊ EXPLICA A MESMA COISA {TODA SEMANA.}",
+      "texto": "Se as mesmas dúvidas voltam sempre, a resposta nunca virou processo. Ela continua morando na sua cabeça.",
+      "sintese": "Pergunta repetida {é processo que ainda não existe.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "02",
+      "faixa": "champanhe",
+      "titulo": "VOCÊ SOME 3 DIAS\nE ALGO TRAVA.",
+      "texto": "Férias viram plantão no WhatsApp. A empresa não aguenta alguns dias sem você.",
+      "sintese": "Isso não é empresa. {É um emprego que não te deixa sair.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "03",
+      "faixa": "preta",
+      "titulo": "CONTRATA, TREINA\nE {PERDE.}",
+      "texto": "Sem um jeito certo e escrito de fazer as coisas, cada pessoa nova depende de você para aprender.",
+      "sintese": "E cada saída leva junto {tudo que você ensinou.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "04",
+      "faixa": "champanhe",
+      "titulo": "PAGA SISTEMA QUE\nNINGUÉM USA.",
+      "texto": "Licença cara que não encaixa na rotina vira mais uma planilha paralela.",
+      "sintese": "Não falta sistema. {Falta o seu processo dentro dele.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "05",
+      "faixa": "preta",
+      "titulo": "JÁ TENTOU IA\nE {NÃO PEGOU.}",
+      "texto": "A ferramenta não tinha um processo para seguir. Ninguém sabia dizer como a tarefa era feita.",
+      "sintese": "Sem cultura e processo, {a IA só acelera a bagunça.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "",
+      "faixa": "champanhe",
+      "titulo": "SE IDENTIFICOU\nCOM 2 OU MAIS?",
+      "texto": "Comenta quantos sinais você marcou.",
+      "sintese": "O primeiro passo não é contratar nem assinar outra ferramenta. {É tirar a operação da sua cabeça.}"
+    }
+  ]
+}
