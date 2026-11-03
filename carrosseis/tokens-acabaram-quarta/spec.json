@@ -1,0 +1,46 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "QUANDO OS TOKENS DO CLAUDE ACABAM {NA QUARTA-FEIRA}",
+      "apoio": "e só voltam na segunda."
+    },
+    {
+      "tipo": "meme", "fundo": "preto", "rotulo": "Quarta, 14h32",
+      "aviso": "Você atingiu seu limite de uso.\nSeu acesso volta segunda, às 9h.",
+      "titulo": "TÁ.", "tamanho": 200
+    },
+    {
+      "tipo": "meme", "fundo": "champanhe", "rotulo": "14h33",
+      "titulo": "FASE 1:\n{NEGAÇÃO.}",
+      "texto": "Atualizo a página sete vezes.\nVai que."
+    },
+    {
+      "tipo": "meme", "fundo": "preto", "rotulo": "14h41",
+      "titulo": "FASE 2:\n{BARGANHA.}",
+      "texto": "Prometo usar menos.\nPrometo não pedir 14 versões da legenda.\nNinguém responde."
+    },
+    {
+      "tipo": "meme", "fundo": "claro", "rotulo": "15h10",
+      "titulo": "FASE 3:\n{LEMBRAR COMO SE FAZIA ANTES.}",
+      "texto": "Abro um documento em branco.\nOlho pro cursor.\nO cursor olha pra mim."
+    },
+    {
+      "tipo": "meme", "fundo": "champanhe", "rotulo": "Quinta, 10h",
+      "titulo": "FASE 4:\n{ACEITAÇÃO.}",
+      "texto": "Descubro que o processo tá escrito, o time sabe o que fazer e a empresa continua rodando.\nUfa."
+    },
+    {
+      "tipo": "meme", "fundo": "preto",
+      "titulo": "SE A SUA EMPRESA PARA QUANDO {UMA FERRAMENTA PARA,}",
+      "texto": "o problema nunca foi a ferramenta.\nIA é a última camada. Antes vem cultura e processo.",
+      "tamanho": 104
+    },
+    {
+      "tipo": "meme", "fundo": "claro",
+      "titulo": "E AÍ, EM QUE {FASE} VOCÊ TÁ?",
+      "texto": "Comenta o número.\nA gente não julga. A gente também já atualizou a página sete vezes.",
+      "rodape": "@sejaavior"
+    }
+  ]
+}

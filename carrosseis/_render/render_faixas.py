@@ -288,7 +288,60 @@ def slide_foto(s, spec):
     return img
 
 
-TIPOS = {"capa": slide_capa, "item": slide_item, "foto": slide_foto}
+def slide_meme(s, spec):
+    """Slide so de tipografia, tom descontraido: rotulo de horario, aviso opcional,
+    frase grande e um comentario curto embaixo. O bloco fica centrado na altura."""
+    tema = s.get("fundo", "preto")
+    fundo, cor_tit, cor_ac, cor_txt, cor_rot = {
+        "preto": (PRETO, BRANCO, CHAMP, (190, 186, 180), CHAMP),
+        "champanhe": (CHAMP, PRETO, BRANCO, (60, 50, 36), PRETO),
+        "claro": (CLARO, PRETO, BRONZE, TEXTO, BRONZE),
+    }[tema]
+    img = Image.new("RGB", (W, H), fundo)
+    d = ImageDraw.Draw(img)
+    ft = anton(s.get("tamanho", 120))
+    fx = pop(40)
+    fa = pop(32, "Medium")
+    LH_T, GAP_T, GAP_A = 1.12, 64, 90
+
+    # mede o bloco inteiro para centrar
+    alt_tit = len(quebra(d, s["titulo"], ft, MAXW)) * ft.size * LH_T
+    alt_txt = len(quebra(d, s["texto"], fx, MAXW)) * fx.size * 1.5 + 85 if s.get("texto") else 0
+    alt_av = 0
+    if s.get("aviso"):
+        linhas_av = quebra(d, s["aviso"], fa, MAXW - 140)
+        ch = 72 + len(linhas_av) * fa.size * 1.45
+        alt_av = ch + GAP_A
+    y = (H - (alt_av + alt_tit + alt_txt)) / 2 - 10
+
+    if s.get("rotulo"):
+        f = pop(26, "SemiBold")
+        cx = MARGIN
+        for c in s["rotulo"].upper():
+            d.text((cx, 150), c, font=f, fill=cor_rot)
+            cx += d.textlength(c, font=f) + 6
+        d.rectangle([MARGIN, 205, MARGIN + 60, 208], fill=cor_rot)
+
+    if s.get("aviso"):
+        card = (32, 31, 29) if tema == "preto" else (250, 248, 244)
+        borda = (70, 66, 60) if tema == "preto" else (210, 204, 194)
+        d.rounded_rectangle([MARGIN, y, W - MARGIN, y + ch], radius=28, fill=card, outline=borda, width=2)
+        d.ellipse([MARGIN + 40, y + 40, MARGIN + 80, y + 80], outline=cor_ac, width=4)
+        d.rectangle([MARGIN + 58, y + 50, MARGIN + 62, y + 63], fill=cor_ac)
+        d.rectangle([MARGIN + 58, y + 67, MARGIN + 62, y + 71], fill=cor_ac)
+        escreve(d, s["aviso"], fa, MARGIN + 110, y + 36,
+                BRANCO if tema == "preto" else TEXTO, cor_ac, 1.45, maxw=MAXW - 140)
+        y += alt_av
+
+    y = escreve(d, s["titulo"], ft, MARGIN, y, cor_tit, cor_ac, LH_T)
+    if s.get("texto"):
+        escreve(d, s["texto"], fx, MARGIN, y + 85, cor_txt, cor_ac, 1.5)
+    if s.get("rodape"):
+        escreve(d, s["rodape"], pop(26, "Medium"), MARGIN, H - 140, cor_rot, cor_rot, 1.4)
+    return img
+
+
+TIPOS = {"meme": slide_meme, "capa": slide_capa, "item": slide_item, "foto": slide_foto}
 
 
 def verifica(img, idx, avisos):
