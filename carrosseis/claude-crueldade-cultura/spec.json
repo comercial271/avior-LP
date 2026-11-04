@@ -1,0 +1,53 @@
+{
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "A EMPRESA DO\nCLAUDE PROIBIU\n{SER GROSSO COM A IA}",
+      "apoio": "E o motivo não é sentimento. É resultado.",
+      "tamanho": 108
+    },
+    {
+      "tipo": "item",
+      "numero": "01",
+      "faixa": "preta",
+      "titulo": "O QUE {MUDOU.}",
+      "texto": "A Anthropic atualizou a política de uso: comportamento cruel ou abusivo com o Claude agora é proibido. Em casos extremos, o usuário pode ser banido de vez.",
+      "sintese": "O Claude já podia {encerrar conversas abusivas.}",
+      "fonte": "CNN, 01/11/2026."
+    },
+    {
+      "tipo": "item",
+      "numero": "02",
+      "faixa": "champanhe",
+      "titulo": "O QUE\nNÃO VALE.",
+      "texto": "Ficar frustrado, fazer crítica direta ou testar a IA não entra na regra.",
+      "sintese": "Crítica pode. {Crueldade, não.}",
+      "fonte": "CNN, 01/11/2026."
+    },
+    {
+      "tipo": "item",
+      "numero": "03",
+      "faixa": "preta",
+      "titulo": "O {MOTIVO.}",
+      "texto": "A empresa não afirma que a IA sente. Diz que não tem certeza e que proibir crueldade é um seguro barato. Em pesquisa, levar o modelo a imitar desespero deixou ações ruins mais prováveis.",
+      "sintese": "Pressão e grosseria {pioram o resultado.}",
+      "fonte": "CNN, 01/11/2026, e CNN Brasil."
+    },
+    {
+      "tipo": "item",
+      "numero": "04",
+      "faixa": "champanhe",
+      "titulo": "E NA SUA\nEMPRESA?",
+      "texto": "Se até uma IA entrega pior sob grosseria e desespero, imagina a sua equipe.",
+      "sintese": "Cultura não é discurso. {É como você fala com quem executa.}"
+    },
+    {
+      "tipo": "item",
+      "numero": "",
+      "faixa": "preta",
+      "titulo": "VOCÊ JÁ XINGOU\n{A IA?}",
+      "texto": "Comenta com sinceridade. A gente não conta pra ninguém.",
+      "sintese": "Cultura, processo e só então inteligência. {Começando pela cultura.}"
+    }
+  ]
+}

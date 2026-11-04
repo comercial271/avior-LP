@@ -28,6 +28,7 @@
 - Legenda e detalhes: `videos/antes-depois-chile/LEGENDA.md`
 
 ## Reserva (pronto, sem data)
+- Carrossel "A empresa do Claude proibiu ser grosso com a IA" (notícia, cultura): `carrosseis/claude-crueldade-cultura/`
 - Carrossel "5 sinais de que sua empresa ainda depende de você": `carrosseis/5-sinais-empresa-depende-de-voce/`
 
 Sugestão: carrossel de manhã e Reels no fim da tarde, para um não roubar alcance do outro.
