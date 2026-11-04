@@ -1,13 +1,13 @@
 # Antes × depois: seu Jean (A SELVA), orçamento na mão × orçamento pelo Selva App
 
 Imagem (1080x1350, identidade da Selva: fundo verde-floresta #2E3A24, título creme, "Selva App" e bordas em dourado #C79B50, "A SELVA" em dourado no rodapé):
-https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/e8826153-007d-4497-a139-5d3839fe1b9a.jpg
+https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/3491c324-5b3c-4a10-b2e7-dbc42f67c34a.jpg
 
 Título: "Eu antes, fazendo orçamento na mão × eu depois, mandando orçamento pelo Selva App..."
 
 - Antes: Jean à noite na mesa da cozinha, escrevendo orçamento no papel, com calculadora e papel amassado.
-- Depois: Jean de verdade na neve, no Chile (Drive, IMG_5579). O orçamento sai pelo app enquanto ele viaja.
-- A foto do antes foi gerada por IA (Higgsfield), com o rosto do Jean como referência. A do depois é real.
+- Depois: Jean na neve, no Chile, segurando o celular com o app aberto. A base é a foto real IMG_5579 do Drive; o celular na mão foi colocado por edição de IA.
+- O antes foi gerado por IA (Higgsfield), com o rosto do Jean como referência.
 
 ## Legenda sugerida
 
