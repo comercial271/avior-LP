@@ -9,13 +9,21 @@ Título: "Eu antes, fazendo orçamento na mão × eu depois, mandando orçamento
 - Depois: Jean na neve, no Chile, olhando para o celular e digitando, com a tela virada para ele. A base é a foto real IMG_5579 do Drive; o celular na mão foi colocado por edição de IA.
 - O antes foi gerado por IA (Higgsfield), com o rosto do Jean como referência.
 
-## Legenda (curta, com link do app)
+## Legenda (curta, chamada para o teste grátis)
 
 Eu já perdi muita noite fazendo orçamento no caderno. 📝
 
 Hoje eu monto no Selva App em poucos minutos e mando de onde estiver. Até da neve, no Chile. 🏔️🇨🇱
 
-Quer parar de fazer orçamento na mão? Testa grátis 👇
-https://selvaapp.com.br
+Quer testar grátis? Comenta "TESTE" que eu te mando o link no direct. 👇
 
 #jardinagem #paisagismo #orcamento #selvaapp #donodeempresa
+
+## Como a pessoa chega no teste
+
+1. Comenta "TESTE" e recebe no direct:
+   "Fala! Aqui está o link pra testar o Selva App grátis: https://selvaapp.com.br
+   Cria a conta, coloca o nome e o logo da empresa e já monta o primeiro orçamento. Qualquer dúvida me chama aqui."
+   (Automático com ManyChat, ou respondendo à mão.)
+2. Link na bio: https://selvaapp.com.br
+3. No dia do post, story com o post + adesivo de link para https://selvaapp.com.br ("Testa grátis").
