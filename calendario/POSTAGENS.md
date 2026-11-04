@@ -28,6 +28,10 @@
 - Legenda e detalhes: `videos/antes-depois-chile/LEGENDA.md`
 
 ## Reserva (pronto, sem data)
+### Vídeo antes x depois: seu Jean (Selva), qualquer cliente x Chile
+- Vídeo: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/f2740908-42fb-40cf-83fc-7e343dc24208.mp4
+- Legenda: `videos/antes-depois-jean-chile/LEGENDA.md`
+
 - Carrossel "A empresa do Claude proibiu ser grosso com a IA" (notícia, cultura): `carrosseis/claude-crueldade-cultura/`
 - Carrossel "5 sinais de que sua empresa ainda depende de você": `carrosseis/5-sinais-empresa-depende-de-voce/`
 
