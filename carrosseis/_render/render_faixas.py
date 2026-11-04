@@ -341,7 +341,38 @@ def slide_meme(s, spec):
     return img
 
 
-TIPOS = {"meme": slide_meme, "capa": slide_capa, "item": slide_item, "foto": slide_foto}
+def slide_noticia(s, spec):
+    """Recorte de noticia: cartao com veiculo, data e manchete, sem imitar a marca do site."""
+    img = Image.new("RGB", (W, H), CLARO)
+    d = ImageDraw.Draw(img)
+    f_rot = pop(26, "SemiBold")
+    cx = MARGIN
+    for c in s.get("rotulo", "A NOTÍCIA"):
+        d.text((cx, 260), c, font=f_rot, fill=BRONZE)
+        cx += d.textlength(c, font=f_rot) + 6
+    d.rectangle([MARGIN, 312, MARGIN + 60, 315], fill=BRONZE)
+
+    fm = pop(48, "Bold")
+    linhas = quebra(d, s["manchete"], fm, MAXW - 100)
+    alt_m = len(linhas) * fm.size * 1.3
+    fv = pop(26, "Medium")
+    top, pad = 390, 50
+    ch = pad + fv.size * 1.4 + 30 + alt_m + 30 + fv.size * 1.4 + pad
+    d.rounded_rectangle([MARGIN, top + 10, W - MARGIN, top + 10 + ch], radius=30, fill=(222, 218, 211))
+    d.rounded_rectangle([MARGIN, top, W - MARGIN, top + ch], radius=30, fill=(255, 255, 255), outline=(214, 209, 200), width=2)
+    x = MARGIN + 50
+    y = top + pad
+    d.text((x, y), s["veiculo"].upper(), font=fv, fill=CINZA)
+    y += fv.size * 1.4 + 30
+    y = escreve(d, s["manchete"], fm, x, y, PRETO, BRONZE, 1.3, maxw=MAXW - 100) + 30
+    d.text((x, y), s.get("data", ""), font=pop(24), fill=CINZA)
+
+    if s.get("texto"):
+        escreve(d, s["texto"], pop(34), MARGIN, top + ch + 80, TEXTO, BRONZE, 1.5)
+    return img
+
+
+TIPOS = {"noticia": slide_noticia, "meme": slide_meme, "capa": slide_capa, "item": slide_item, "foto": slide_foto}
 
 
 def verifica(img, idx, avisos):

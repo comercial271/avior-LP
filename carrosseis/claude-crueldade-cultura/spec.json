@@ -7,11 +7,18 @@
       "tamanho": 108
     },
     {
+      "tipo": "noticia",
+      "veiculo": "R7 · Tecnologia e Ciência",
+      "manchete": "Anthropic diz que você não pode ser cruel com Claude, e {não é por causa dos sentimentos}",
+      "data": "02/11/2026. A mesma notícia saiu na CNN em 01/11/2026.",
+      "texto": "A empresa que criou o Claude mudou as regras de uso da IA. Arrasta pro lado que a gente explica o que mudou e o que isso tem a ver com a sua empresa."
+    },
+    {
       "tipo": "item",
       "numero": "01",
       "faixa": "preta",
       "titulo": "O QUE {MUDOU.}",
-      "texto": "A Anthropic atualizou a política de uso: comportamento cruel ou abusivo com o Claude agora é proibido. Em casos extremos, o usuário pode ser banido de vez.",
+      "texto": "Segundo a reportagem, a Anthropic atualizou a política de uso: comportamento cruel ou abusivo com o Claude agora é proibido. Em casos extremos, o usuário pode ser banido de vez.",
       "sintese": "O Claude já podia {encerrar conversas abusivas.}",
       "fonte": "CNN, 01/11/2026."
     },
@@ -20,7 +27,7 @@
       "numero": "02",
       "faixa": "champanhe",
       "titulo": "O QUE\nNÃO VALE.",
-      "texto": "Ficar frustrado, fazer crítica direta ou testar a IA não entra na regra.",
+      "texto": "A empresa deixou claro: ficar frustrado, fazer crítica direta ou testar a IA não entra na regra.",
       "sintese": "Crítica pode. {Crueldade, não.}",
       "fonte": "CNN, 01/11/2026."
     },
@@ -29,7 +36,7 @@
       "numero": "03",
       "faixa": "preta",
       "titulo": "O {MOTIVO.}",
-      "texto": "A empresa não afirma que a IA sente. Diz que não tem certeza e que proibir crueldade é um seguro barato. Em pesquisa, levar o modelo a imitar desespero deixou ações ruins mais prováveis.",
+      "texto": "A Anthropic não afirma que a IA sente. Diz que não tem certeza e chama a regra de seguro barato. Em pesquisa, levar o modelo a imitar desespero deixou ações ruins mais prováveis.",
       "sintese": "Pressão e grosseria {pioram o resultado.}",
       "fonte": "CNN, 01/11/2026, e CNN Brasil."
     },

@@ -22,3 +22,6 @@ E aí, você já xingou a IA? Comenta com sinceridade. 👇
 Fonte: CNN (01/11/2026) e CNN Brasil.
 
 #inteligenciaartificial #cultura #lideranca #gestao #sejaavior
+
+Slide 2 é um recorte da notícia (cartão neutro com veículo, data e a manchete do R7, sem logo nem
+layout do site). Só a manchete é citada literalmente; os demais slides resumem a reportagem com fonte.
