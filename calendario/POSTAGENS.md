@@ -28,8 +28,8 @@
 - Legenda e detalhes: `videos/antes-depois-chile/LEGENDA.md`
 
 ## Reserva (pronto, sem data)
-### Post antes x depois: seu Jean (Selva), orçamento na mão x Selva App
-- Imagem: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/218abe29-f0c8-41bd-803c-bb72982c56ec.jpg
+### Post antes x depois: seu Jean (Selva), orçamento na mão x Selva App (depois no Chile)
+- Imagem: https://d2ol7oe51mr4n9.cloudfront.net/user_3J17bEyLAlgN81COF4cP8eveJUW/e8826153-007d-4497-a139-5d3839fe1b9a.jpg
 - Legenda: `videos/antes-depois-jean-orcamento/LEGENDA.md`
 
 ### Vídeo antes x depois: seu Jean (Selva), qualquer cliente x Chile
