@@ -9,17 +9,22 @@ Título: "Eu antes, fazendo orçamento na mão × eu depois, mandando orçamento
 - Depois: Jean na neve, no Chile, olhando para o celular e digitando, com a tela virada para ele. A base é a foto real IMG_5579 do Drive; o celular na mão foi colocado por edição de IA.
 - O antes foi gerado por IA (Higgsfield), com o rosto do Jean como referência.
 
-## Legenda sugerida
+## Legenda
 
-Eu já perdi muita noite fazendo orçamento no caderno.
-Calcular metro, somar material, passar a limpo, mandar foto no WhatsApp...
-e o cliente ainda respondia "vou ver e te falo".
+Eu já perdi muita noite na mesa da cozinha fazendo orçamento no caderno. 📝
 
-Hoje eu monto o orçamento no Selva App em poucos minutos, com o preço certo, até de férias no Chile,
-e o cliente recebe um link bonito, organizado, com cara de empresa grande.
+Medir, calcular, somar material, passar a limpo, tirar foto e mandar no WhatsApp...
+E no outro dia o cliente respondia: "vou ver e te falo". 🙃
 
-Orçamento mal feito não é só perda de tempo. É venda que escapa.
+O problema nunca foi o preço. Era o jeito de entregar.
+Orçamento rabiscado passa a impressão de serviço improvisado.
 
-Quer ver como funciona? Comenta "APP" que eu te mostro.
+Hoje eu monto o orçamento no Selva App em poucos minutos.
+O cliente recebe um link organizado, com fotos, valores e condições, com cara de empresa grande.
+E eu consigo mandar de onde estiver. Até da neve, no Chile. 🏔️🇨🇱
 
-#jardinagem #paisagismo #orcamento #gestao #donodeempresa #selvaapp #avior
+Mais tempo com a família, menos noite perdida, mais orçamento fechado.
+
+Se você ainda faz orçamento no caderno ou no bloco de notas, comenta "APP" que eu te mostro como funciona. 👇
+
+#jardinagem #jardineiro #paisagismo #orcamento #selvaapp #donodeempresa #gestao #empreendedorismo
